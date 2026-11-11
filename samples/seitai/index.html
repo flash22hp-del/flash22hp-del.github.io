@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>整体院 かるみ（サンプル）| Flash テンプレート</title>
+<meta name="description" content="Flash のホームページ見本（架空の整体院）。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%236f8f7a'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23fff' font-family='sans-serif'%3Eか%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ▼ 配色はここだけ変えればサイト全体が変わる */
+:root{
+  --bg:#ffffff;
+  --bg2:#f3f6f2;
+  --text:#2c3a33;
+  --sub:#6b7a72;
+  --green:#6f8f7a;
+  --green-dk:#4f6f5b;
+  --deep:#2f4a3c;
+  --warm:#e7b56a;
+  --line:#dfe6e0;
+  --maru:"Zen Maru Gothic",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Noto Sans JP",sans-serif;line-height:1.9;font-size:15px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.inner{max-width:1040px;margin:0 auto;padding:0 20px}
+
+.sample-bar{background:var(--deep);color:#eaf0ec;font-size:12px;text-align:center;padding:8px 16px;line-height:1.6}
+.sample-bar a{color:#ffd400;text-decoration:underline;font-weight:700}
+
+/* header */
+.hd{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd .inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{font-family:var(--maru);font-weight:700;font-size:21px;color:var(--deep);display:flex;align-items:center;gap:8px;line-height:1.2}
+.logo i{width:30px;height:30px;border-radius:50%;background:var(--green);display:grid;place-items:center;color:#fff;font-style:normal;font-size:15px}
+.logo small{display:block;font-size:10px;color:var(--sub);font-family:"Noto Sans JP";letter-spacing:.1em;font-weight:500}
+.nav{display:flex;gap:24px;font-size:13.5px;font-weight:500}
+.nav a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:700;transition:.2s;cursor:pointer;border:0;font-family:inherit}
+.btn-green{background:var(--green);color:#fff;padding:11px 22px;font-size:13.5px}
+.btn-green:hover{background:var(--green-dk)}
+.btn-out{background:#fff;border:2px solid var(--green);color:var(--green-dk);padding:9px 20px;font-size:13.5px}
+.btn-out:hover{background:var(--bg2)}
+.btn-lg{padding:16px 30px;font-size:15.5px}
+.hd .tel{font-size:12px;color:var(--sub);text-align:right;line-height:1.3;margin-right:4px}
+.hd .tel b{display:block;font-size:17px;color:var(--deep);letter-spacing:.04em}
+.hd-right{display:flex;align-items:center;gap:14px}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--bg2),#fff);padding:56px 0 72px}
+.hero .inner{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center}
+.hero .kicker{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--green-dk);font-size:12.5px;font-weight:700;border-radius:999px;padding:4px 14px}
+.hero h1{font-family:var(--maru);font-weight:700;font-size:38px;line-height:1.55;color:var(--deep);margin:16px 0 16px}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,rgba(231,181,106,.45) 62%)}
+.hero .lead{color:var(--sub);font-size:14.5px}
+.offer{display:flex;align-items:center;gap:16px;background:#fff;border:2px solid var(--warm);border-radius:16px;padding:14px 18px;margin:24px 0}
+.offer .lbl{background:var(--warm);color:#fff;font-weight:700;font-size:12px;border-radius:8px;padding:6px 10px;text-align:center;line-height:1.4;white-space:nowrap}
+.offer p{font-size:13px;color:var(--sub);line-height:1.5}
+.offer b{font-family:var(--maru);font-size:28px;color:var(--deep);margin-right:4px}
+.offer s{font-size:12px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-img{position:relative}
+.hero-img img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:28px}
+.hero-img .badge{position:absolute;left:-16px;bottom:-18px;background:#fff;border-radius:16px;box-shadow:0 14px 30px -12px rgba(47,74,60,.35);padding:12px 18px;font-size:12.5px;line-height:1.5}
+.hero-img .badge b{display:block;font-family:var(--maru);font-size:20px;color:var(--green-dk)}
+
+/* section */
+.sec{padding:92px 0}
+.sec.alt{background:var(--bg2)}
+.sh{text-align:center;margin-bottom:46px}
+.sh .en{font-size:12px;letter-spacing:.3em;color:var(--green);font-weight:700}
+.sh h2{font-family:var(--maru);font-weight:700;font-size:28px;color:var(--deep);margin-top:4px;line-height:1.5}
+
+/* worries */
+.worries{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:880px;margin:0 auto}
+.worries li{list-style:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 52px;position:relative;font-weight:500;font-size:14.5px}
+.worries li::before{content:"";position:absolute;left:18px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:6px;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/14px no-repeat}
+.worries-msg{text-align:center;margin-top:36px;font-family:var(--maru);font-size:20px;color:var(--deep);line-height:1.7}
+.worries-msg em{font-style:normal;color:var(--green-dk);background:linear-gradient(transparent 62%,rgba(231,181,106,.45) 62%)}
+
+/* reasons */
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.reason{background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.reason img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.reason div{padding:22px 22px 26px}
+.reason .no{font-family:var(--maru);color:var(--green);font-weight:700;font-size:13px}
+.reason h3{font-family:var(--maru);font-size:18px;color:var(--deep);margin:2px 0 8px;line-height:1.5}
+.reason p{font-size:13.5px;color:var(--sub)}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;counter-reset:f}
+.flow li{list-style:none;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 16px;text-align:center}
+.flow li::before{counter-increment:f;content:counter(f);display:grid;place-items:center;width:34px;height:34px;margin:0 auto 10px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;font-family:var(--maru)}
+.flow h3{font-family:var(--maru);font-size:15.5px;color:var(--deep)}
+.flow p{font-size:12.5px;color:var(--sub);margin-top:4px;text-align:left}
+
+/* price */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.price{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 24px;text-align:center;position:relative}
+.price.first{border:2px solid var(--warm)}
+.price.first::before{content:"はじめての方";position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--warm);color:#fff;font-size:12px;font-weight:700;padding:3px 14px;border-radius:999px;white-space:nowrap}
+.price h3{font-family:var(--maru);font-size:17px;color:var(--deep)}
+.price .yen{font-family:var(--maru);font-size:36px;color:var(--deep);font-weight:700;line-height:1.3;margin:8px 0 2px}
+.price .yen small{font-size:14px;margin-left:2px}
+.price s{font-size:12.5px;color:var(--sub)}
+.price p{font-size:12.5px;color:var(--sub);margin-top:10px;text-align:left}
+.note{font-size:12px;color:var(--sub);margin-top:16px;text-align:center}
+
+/* greeting */
+.greet{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:center}
+.greet img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:24px}
+.greet h3{font-family:var(--maru);font-size:22px;color:var(--deep);line-height:1.6;margin-bottom:14px}
+.greet p{font-size:14px;margin-bottom:12px}
+.greet .name{font-family:var(--maru);color:var(--deep);font-weight:700;text-align:right;margin-top:16px}
+.greet .name small{display:block;font-size:12px;color:var(--sub);font-weight:500}
+
+/* voice */
+.voice{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.voice div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.voice .who{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:12.5px;color:var(--sub)}
+.voice .who i{width:36px;height:36px;border-radius:50%;background:var(--bg2);display:grid;place-items:center;font-style:normal;color:var(--green-dk);font-weight:700}
+.voice h3{font-family:var(--maru);font-size:15.5px;color:var(--deep);margin-bottom:6px}
+.voice p{font-size:13.5px}
+
+/* faq */
+.faq{max-width:780px;margin:0 auto}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px}
+.faq summary{list-style:none;cursor:pointer;padding:18px 48px 18px 54px;font-weight:700;position:relative;font-size:14.5px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";position:absolute;left:18px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:13px}
+.faq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--green)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 22px 20px 54px;font-size:13.5px;color:var(--sub)}
+
+/* access */
+.access{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.hours{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:22px;background:#fff;border-radius:12px;overflow:hidden}
+.hours th,.hours td{border:1px solid var(--line);padding:8px 4px;text-align:center}
+.hours th{background:var(--green);color:#fff;font-weight:500}
+.hours td:first-child{white-space:nowrap;padding:8px 10px}
+.hours .o{color:var(--green-dk);font-weight:700}
+.hours .x{color:#c0675a;font-weight:700}
+.info dl{display:grid;grid-template-columns:90px 1fr;border-bottom:1px solid var(--line);padding:11px 0;font-size:14px}
+.info dt{color:var(--sub);font-size:13px}
+.map{border-radius:20px;border:1px solid var(--line);min-height:320px;position:relative;overflow:hidden;background:
+  linear-gradient(90deg,transparent 0 46%,#fff 46% 50%,transparent 50%),
+  linear-gradient(0deg,transparent 0 58%,#fff 58% 62%,transparent 62%),
+  linear-gradient(35deg,transparent 0 70%,#f7faf7 70% 73%,transparent 73%),
+  #e2eae3}
+.map .pin{position:absolute;left:calc(48% - 14px);top:calc(60% - 40px);width:28px;height:28px;background:var(--green-dk);border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 4px 10px rgba(0,0,0,.2)}
+.map .pin::after{content:"";position:absolute;inset:9px;background:#fff;border-radius:50%}
+.map span{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);font-size:11.5px;padding:4px 10px;border-radius:999px;color:var(--sub)}
+
+/* form */
+.form{max-width:640px;margin:0 auto;background:#fff;border-radius:22px;padding:40px;border:1px solid var(--line)}
+.form label{display:block;font-size:13.5px;font-weight:700;margin:18px 0 6px}
+.form label:first-child{margin-top:0}
+.form label em{font-style:normal;background:#c0675a;color:#fff;font-size:10.5px;padding:1px 7px;border-radius:4px;margin-left:8px}
+.form input,.form select,.form textarea{width:100%;border:1px solid var(--line);background:#fbfcfb;border-radius:10px;padding:12px 14px;font-size:15px;font-family:inherit;color:var(--text)}
+.form textarea{min-height:110px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--green);border-color:transparent}
+.form .btn{width:100%;margin-top:26px}
+
+/* footer */
+.ft{background:var(--deep);color:#cfdcd3;padding:48px 0 110px;font-size:12.5px}
+.ft .logo{color:#fff}
+.ft-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+.ft .sns{display:flex;gap:16px;margin-top:12px}
+.ft .sns a{text-decoration:underline}
+.flash-cta{margin-top:40px;border-top:1px solid #456152;padding-top:32px;text-align:center}
+.flash-cta p{color:#fff;font-size:14px;margin-bottom:14px}
+.flash-cta p b{color:#ffd400}
+.flash-cta .row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-line{background:#06c755;color:#fff;padding:13px 26px;font-size:14px}
+.btn-flash{background:#ffd400;color:#141414;padding:13px 26px;font-size:14px}
+
+/* SP固定ボタン */
+.float{position:fixed;left:10px;right:10px;bottom:10px;z-index:30;display:none;gap:8px;opacity:0;transform:translateY(20px);pointer-events:none;transition:.25s}
+.float.show{opacity:1;transform:none;pointer-events:auto}
+.float .btn{flex:1;padding:15px 8px;font-size:14px;box-shadow:0 10px 24px -8px rgba(47,74,60,.6)}
+
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:var(--deep);color:#fff;font-size:13px;padding:12px 20px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:50;width:max-content;max-width:calc(100% - 32px);text-align:center;line-height:1.6}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:900px){
+  .flow{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:767px){
+  body{font-size:14px}
+  .nav,.hd .tel{display:none}
+  .hd .btn-green{padding:8px 14px;font-size:12px}
+  .hero{padding:36px 0 56px}
+  .hero .inner{grid-template-columns:1fr;gap:40px}
+  .hero h1{font-size:27px}
+  .offer b{font-size:24px}
+  .hero-img .badge{left:12px;bottom:-16px}
+  .sec{padding:68px 0}
+  .sh h2{font-size:22px}
+  .worries,.reasons,.prices,.voice,.access,.greet{grid-template-columns:1fr}
+  .worries-msg{font-size:17px}
+  .flow{grid-template-columns:1fr 1fr}
+  .greet{gap:24px}
+  .greet img{max-width:320px;margin:0 auto}
+  .form{padding:28px 20px}
+  .info dl{grid-template-columns:80px 1fr}
+  .float{display:flex}
+}
+</style>
+</head>
+<body>
+
+<div class="sample-bar">これは <b>Flash</b> のホームページ見本です（架空のお店）。この見た目で月額9,900円。<a href="https://flash22hp-del.github.io/">Flashについて見る</a></div>
+
+<header class="hd">
+  <div class="inner">
+    <a href="#top" class="logo"><i>か</i><span>整体院 かるみ<small>肩こり・腰痛・姿勢のお悩みに</small></span></a>
+    <nav class="nav">
+      <a href="#worries">お悩み</a>
+      <a href="#reasons">選ばれる理由</a>
+      <a href="#price">料金</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#access">アクセス</a>
+    </nav>
+    <div class="hd-right">
+      <p class="tel">ご予約・お問い合わせ<b>000-0000-0000</b></p>
+      <a href="#contact" class="btn btn-green">予約する</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="inner">
+    <div>
+      <span class="kicker">〇〇駅から徒歩4分・完全予約制</span>
+      <h1>つらい肩こり・腰痛を、<br><em>からだの土台から</em><br>整えます。</h1>
+      <p class="lead">マッサージで一時的にほぐすのではなく、姿勢や骨盤のバランスを見ながら、不調が戻りにくいからだづくりをお手伝いします。</p>
+      <div class="offer">
+        <span class="lbl">初回<br>限定</span>
+        <p><b>¥2,980</b><s>通常 ¥6,600</s><br>カウンセリング・姿勢チェック込み（約60分）</p>
+      </div>
+      <div class="cta">
+        <a href="#" class="btn btn-green btn-lg" data-sample="ここにお店のLINE予約が入ります">LINEで予約する</a>
+        <a href="#" class="btn btn-out btn-lg" data-sample="スマホではここを押すとお店に電話がかかります">電話で予約する</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="img/hero.jpg" alt="明るい施術室と施術ベッド" width="1200" height="800">
+      <p class="badge">平日 20時まで受付<b>土日も営業</b></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="worries">
+  <div class="inner">
+    <div class="sh"><p class="en">CHECK</p><h2>こんなお悩みはありませんか？</h2></div>
+    <ul class="worries">
+      <li>肩や首がいつも重い</li>
+      <li>朝起きると腰が痛い</li>
+      <li>デスクワークで頭痛がする</li>
+      <li>猫背・姿勢が気になる</li>
+      <li>産後の骨盤が気になる</li>
+      <li>マッサージに通ってもすぐ戻る</li>
+    </ul>
+    <p class="worries-msg">ひとつでも当てはまる方は、<br><em>からだのバランス</em>が原因かもしれません。</p>
+  </div>
+</section>
+
+<section class="sec alt" id="reasons">
+  <div class="inner">
+    <div class="sh"><p class="en">REASON</p><h2>かるみが選ばれる3つの理由</h2></div>
+    <div class="reasons">
+      <div class="reason"><img src="img/s1.jpg" alt="肩から首をほぐす施術の手元" loading="lazy" width="600" height="600"><div><p class="no">REASON 01</p><h3>原因を見つける<br>カウンセリング</h3><p>痛む場所だけでなく、姿勢や生活習慣までお聞きして、不調の原因を一緒に探します。</p></div></div>
+      <div class="reason"><img src="img/s2.jpg" alt="腰と骨盤まわりを整える施術の手元" loading="lazy" width="600" height="600"><div><p class="no">REASON 02</p><h3>ボキボキしない<br>やさしい施術</h3><p>強い力や急な動きは使いません。はじめての方やご年配の方も安心して受けられます。</p></div></div>
+      <div class="reason"><img src="img/s3.jpg" alt="首まわりのストレッチ" loading="lazy" width="600" height="600"><div><p class="no">REASON 03</p><h3>おうちでできる<br>セルフケアも</h3><p>施術のあとに、ご自宅でできるストレッチをお伝えします。通う回数を減らすのが目標です。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="flow">
+  <div class="inner">
+    <div class="sh"><p class="en">FLOW</p><h2>はじめての方へ　施術の流れ</h2></div>
+    <ol class="flow">
+      <li><h3>ご予約</h3><p>LINEかお電話で。当日のご予約もお気軽に。</p></li>
+      <li><h3>カウンセリング</h3><p>お悩みや生活習慣を詳しくお聞きします。</p></li>
+      <li><h3>姿勢チェック</h3><p>立ち姿や関節の動きを一緒に確認します。</p></li>
+      <li><h3>施術</h3><p>からだの状態に合わせて約40分。</p></li>
+      <li><h3>セルフケア</h3><p>おうちでできるケアと通い方をご提案。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec alt" id="price">
+  <div class="inner">
+    <div class="sh"><p class="en">PRICE</p><h2>料金</h2></div>
+    <div class="prices">
+      <div class="price first"><h3>初回体験</h3><p class="yen">¥2,980<small>税込</small></p><s>通常 ¥6,600</s><p>カウンセリング・姿勢チェック・施術・セルフケア指導まで、約60分。</p></div>
+      <div class="price"><h3>通常施術</h3><p class="yen">¥6,600<small>税込</small></p><p>2回目以降。施術とセルフケアのフォローで約45分。</p></div>
+      <div class="price"><h3>回数券（5回）</h3><p class="yen">¥29,700<small>税込</small></p><p>1回あたり ¥5,940。有効期限3か月。ご家族と共有できます。</p></div>
+    </div>
+    <p class="note">※金額はサンプルです　※施術の効果には個人差があります</p>
+  </div>
+</section>
+
+<section class="sec" id="greeting">
+  <div class="inner">
+    <div class="sh"><p class="en">GREETING</p><h2>院長あいさつ</h2></div>
+    <div class="greet">
+      <img src="img/s4.jpg" alt="整体院の待合スペース" loading="lazy" width="600" height="600">
+      <div>
+        <h3>「もっと早く来ればよかった」<br>そう言っていただけるように。</h3>
+        <p>はじめまして。整体院かるみ院長の〇〇です。私自身、長年の腰痛に悩んだ経験から、この仕事を選びました。</p>
+        <p>痛みがあると、仕事も家事も趣味も楽しめなくなります。ひとりひとりのお話をじっくり聞き、無理のない施術で、毎日を軽やかに過ごせるお手伝いをします。どうぞお気軽にご相談ください。</p>
+        <p class="name"><small>整体院 かるみ 院長</small>〇〇 〇〇</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="voice">
+  <div class="inner">
+    <div class="sh"><p class="en">VOICE</p><h2>お客様の声</h2></div>
+    <div class="voice">
+      <div><p class="who"><i>A</i>40代・女性・事務職</p><h3>デスクワークの肩こりが楽に</h3><p>夕方になると頭まで重かったのが、通ううちに気にならない日が増えました。教わったストレッチを毎日続けています。</p></div>
+      <div><p class="who"><i>B</i>30代・女性・主婦</p><h3>産後の骨盤ケアで通っています</h3><p>子どもを連れて行っても大丈夫と言ってもらえて安心しました。施術がやさしいので怖くありません。</p></div>
+      <div><p class="who"><i>C</i>50代・男性・自営業</p><h3>朝の腰の痛みが軽くなった</h3><p>マッサージ店を転々としていましたが、姿勢から見てもらえたのは初めて。説明が分かりやすいです。</p></div>
+    </div>
+    <p class="note">※このページの文章・お客様の声はすべてサンプルです　※感想は個人のものであり、効果を保証するものではありません</p>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="inner">
+    <div class="sh"><p class="en">FAQ</p><h2>よくあるご質問</h2></div>
+    <div class="faq">
+      <details><summary>どんな服装で行けばいいですか？</summary><p>動きやすい服装でお越しください。お着替えもご用意しています。</p></details>
+      <details><summary>どのくらいの頻度で通えばいいですか？</summary><p>からだの状態によって違います。初回にお話を伺ったうえで、無理のない通い方をご提案します。</p></details>
+      <details><summary>子ども連れでも大丈夫ですか？</summary><p>はい。ベビーカーのまま入れます。ご予約時にお知らせください。</p></details>
+      <details><summary>健康保険は使えますか？</summary><p>当院の施術は保険適用外の自費施術です。</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="access">
+  <div class="inner">
+    <div class="sh"><p class="en">ACCESS</p><h2>営業時間・アクセス</h2></div>
+    <div class="access">
+      <div>
+        <table class="hours">
+          <tr><th>受付時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
+          <tr><td>10:00〜13:00</td><td class="o">●</td><td class="o">●</td><td class="x">休</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="o">●</td></tr>
+          <tr><td>15:00〜20:00</td><td class="o">●</td><td class="o">●</td><td class="x">休</td><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="x">休</td></tr>
+        </table>
+        <div class="info">
+          <dl><dt>院名</dt><dd>整体院 かるみ</dd></dl>
+          <dl><dt>住所</dt><dd>〇〇県〇〇市〇〇町7-8-9 〇〇ビル1F</dd></dl>
+          <dl><dt>アクセス</dt><dd>〇〇駅 南口から徒歩4分</dd></dl>
+          <dl><dt>定休日</dt><dd>水曜日・日曜午後</dd></dl>
+          <dl><dt>駐車場</dt><dd>院の前に2台</dd></dl>
+        </div>
+      </div>
+      <div class="map" aria-label="地図（サンプル）"><i class="pin"></i><span>ここにGoogleマップが入ります</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="inner">
+    <div class="sh"><p class="en">CONTACT</p><h2>ご予約・お問い合わせ</h2></div>
+    <form class="form" id="form">
+      <label>お名前<em>必須</em></label>
+      <input type="text" required placeholder="山田 太郎">
+      <label>電話番号<em>必須</em></label>
+      <input type="tel" required placeholder="090-0000-0000">
+      <label>ご希望のメニュー</label>
+      <select><option>初回体験（¥2,980）</option><option>通常施術</option><option>回数券</option><option>相談だけしたい</option></select>
+      <label>ご希望の日時</label>
+      <input type="text" placeholder="例）11月20日 18時以降">
+      <label>気になる症状・ご質問</label>
+      <textarea placeholder="例）デスクワークで肩と首がつらい"></textarea>
+      <button class="btn btn-green btn-lg" type="submit">送信する</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="inner">
+    <div class="ft-row">
+      <div>
+        <a href="#top" class="logo"><i>か</i>整体院 かるみ</a>
+        <div class="sns"><a href="#" data-sample="ここにお店のInstagramが入ります">Instagram</a><a href="#" data-sample="ここにお店のLINEが入ります">LINE</a></div>
+      </div>
+      <p>© 整体院 かるみ（架空の院）</p>
+    </div>
+    <div class="flash-cta">
+      <p>このホームページは <b>Flash</b> の見本です。<br>お店の写真と文章に差し替えて、月額9,900円でお作りします。</p>
+      <div class="row">
+        <a href="https://line.me/R/ti/p/@667amiig" class="btn btn-line" target="_blank" rel="noopener">Flashに LINEで相談する</a>
+        <a href="https://flash22hp-del.github.io/" class="btn btn-flash">Flashのページを見る</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="float" id="float">
+  <a href="#" class="btn btn-out" data-sample="スマホではここを押すとお店に電話がかかります">電話で予約</a>
+  <a href="#" class="btn btn-green" data-sample="ここにお店のLINE予約が入ります">LINEで予約</a>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+// 見本用：お店のリンクが入る場所を押したら説明を出す（実際の納品では href を差し替えて data-sample を消す）
+const toast = document.getElementById("toast");
+let timer;
+const showToast = (msg) => {
+  toast.textContent = "見本のため移動しません：" + msg;
+  toast.classList.add("show");
+  clearTimeout(timer);
+  timer = setTimeout(() => toast.classList.remove("show"), 2600);
+};
+document.querySelectorAll("[data-sample]").forEach((a) => {
+  a.addEventListener("click", (e) => { e.preventDefault(); showToast(a.dataset.sample); });
+});
+// SP: 最初の画面を過ぎたら下部の予約ボタンを出す
+const fl = document.getElementById("float");
+new IntersectionObserver(([e]) => fl.classList.toggle("show", !e.isIntersecting))
+  .observe(document.querySelector(".hero .cta"));
+document.getElementById("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  showToast("ここで入力内容がお店のメールに届きます");
+});
+</script>
+</body>
+</html>

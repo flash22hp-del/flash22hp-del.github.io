@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>酒と肴 ともしび（サンプル）| Flash テンプレート</title>
+<meta name="description" content="Flash のホームページ見本（架空の居酒屋）。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23b5452f'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23fff' font-family='serif'%3E灯%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ▼ 配色はここだけ変えればサイト全体が変わる */
+:root{
+  --ink:#1f1b18;
+  --ink2:#2b2622;
+  --paper:#f4ede2;
+  --paper2:#ebe1d2;
+  --text:#2a241f;
+  --sub:#7a6d61;
+  --red:#b5452f;
+  --red-dk:#963624;
+  --gold:#c9a463;
+  --line:#d9ccb9;
+  --mincho:"Shippori Mincho",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--text);font-family:"Noto Sans JP",sans-serif;line-height:1.9;font-size:15px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.inner{max-width:1080px;margin:0 auto;padding:0 20px}
+
+.sample-bar{background:#000;color:#eee;font-size:12px;text-align:center;padding:8px 16px;line-height:1.6}
+.sample-bar a{color:#ffd400;text-decoration:underline;font-weight:700}
+
+/* header */
+.hd{position:sticky;top:0;z-index:20;background:rgba(31,27,24,.95);color:var(--paper);border-bottom:1px solid #3a332d}
+.hd .inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-family:var(--mincho);font-weight:700;font-size:22px;letter-spacing:.12em;line-height:1.2}
+.logo small{display:block;font-size:10px;letter-spacing:.3em;color:var(--gold);font-family:"Noto Sans JP"}
+.nav{display:flex;gap:26px;font-size:13px;letter-spacing:.1em}
+.nav a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;letter-spacing:.08em;transition:.2s;cursor:pointer;border:0;font-family:inherit;border-radius:4px}
+.btn-red{background:var(--red);color:#fff;padding:11px 22px;font-size:13px}
+.btn-red:hover{background:var(--red-dk)}
+.btn-line-w{border:1px solid rgba(244,237,226,.7);color:var(--paper);padding:11px 22px;font-size:13px}
+.btn-line-w:hover{background:var(--paper);color:var(--ink)}
+.btn-lg{padding:16px 32px;font-size:15px}
+
+/* hero */
+.hero{position:relative;min-height:620px;display:flex;align-items:flex-end;color:var(--paper);background:var(--ink)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,16,13,.85) 0%,rgba(20,16,13,.45) 55%,rgba(20,16,13,.1) 100%)}
+.hero .inner{position:relative;z-index:1;width:100%;padding-top:80px;padding-bottom:80px}
+.hero .kicker{font-size:12px;letter-spacing:.4em;color:var(--gold)}
+.hero h1{font-family:var(--mincho);font-weight:700;font-size:44px;line-height:1.55;letter-spacing:.1em;margin:14px 0 18px}
+.hero p{font-size:14.5px;max-width:460px;opacity:.92}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .hours{margin-top:24px;font-size:12.5px;letter-spacing:.08em;opacity:.85}
+
+/* section */
+.sec{padding:96px 0}
+.sec.dark{background:var(--ink);color:var(--paper)}
+.sec.alt{background:var(--paper2)}
+.sh{margin-bottom:48px;text-align:center}
+.sh .en{font-size:11px;letter-spacing:.5em;color:var(--red)}
+.dark .sh .en{color:var(--gold)}
+.sh h2{font-family:var(--mincho);font-weight:700;font-size:30px;letter-spacing:.14em;margin-top:6px}
+
+/* news */
+.news{max-width:760px;margin:0 auto;border-top:1px solid var(--line)}
+.news li{list-style:none;display:flex;gap:24px;padding:16px 4px;border-bottom:1px solid var(--line);font-size:14px}
+.news time{color:var(--sub);font-size:13px;white-space:nowrap;font-family:var(--mincho)}
+.news .tag{background:var(--red);color:#fff;font-size:11px;padding:1px 8px;border-radius:2px;margin-right:8px;white-space:nowrap}
+
+/* kodawari */
+.kodawari{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.kodawari img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px}
+.kodawari ol{list-style:none;counter-reset:k}
+.kodawari li{counter-increment:k;padding:20px 0;border-bottom:1px solid #3a332d}
+.kodawari li:first-child{padding-top:0}
+.kodawari h3{font-family:var(--mincho);font-size:20px;letter-spacing:.08em;margin-bottom:6px}
+.kodawari h3::before{content:"其の" counter(k);display:block;font-size:12px;color:var(--gold);letter-spacing:.3em;margin-bottom:2px}
+.kodawari p{font-size:13.5px;opacity:.85}
+
+/* menu */
+.dishes{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.dish img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:4px}
+.dish h3{font-family:var(--mincho);font-size:16px;margin-top:12px;letter-spacing:.06em}
+.dish p{font-size:12.5px;color:var(--sub)}
+.dish b{display:block;color:var(--red);font-size:15px;margin-top:2px}
+.drinks{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.drinks div{background:#fffaf2;border:1px solid var(--line);border-radius:4px;padding:24px}
+.drinks h3{font-family:var(--mincho);font-size:17px;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:8px;letter-spacing:.08em}
+.drinks dl{display:flex;justify-content:space-between;font-size:13.5px;padding:5px 0}
+.drinks dd{font-weight:700}
+.note{font-size:12px;color:var(--sub);margin-top:16px;text-align:right}
+.dark .note{color:#a89a8b}
+
+/* course */
+.course-top{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;margin-bottom:40px}
+.course-top img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
+.course-top h3{font-family:var(--mincho);font-size:24px;letter-spacing:.08em;line-height:1.6}
+.course-top h3 em{font-style:normal;color:var(--gold)}
+.course-top p{font-size:14px;opacity:.88;margin-top:12px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.plan{border:1px solid #4a4038;border-radius:4px;padding:28px 24px;position:relative}
+.plan.pop{border-color:var(--gold)}
+.plan.pop::before{content:"いちばん人気";position:absolute;top:-12px;left:24px;background:var(--gold);color:var(--ink);font-size:11px;font-weight:700;padding:2px 10px;border-radius:2px}
+.plan h4{font-family:var(--mincho);font-size:19px;letter-spacing:.08em}
+.plan .price{font-family:var(--mincho);font-size:30px;color:var(--gold);margin:6px 0 2px}
+.plan .price small{font-size:13px;color:var(--paper);margin-left:4px}
+.plan .meta{font-size:12px;opacity:.75;margin-bottom:12px}
+.plan ul{list-style:none;font-size:13px;border-top:1px solid #4a4038;padding-top:12px}
+.plan li{padding:3px 0}
+.plan li::before{content:"・";color:var(--gold)}
+.center{text-align:center;margin-top:40px}
+
+/* room */
+.room{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.room img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
+.seats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.seats div{background:#fffaf2;border:1px solid var(--line);border-radius:4px;text-align:center;padding:14px 6px}
+.seats b{display:block;font-family:var(--mincho);font-size:26px;color:var(--red);line-height:1.3}
+.seats span{font-size:12px;color:var(--sub)}
+.room p{font-size:14px}
+
+/* info */
+.info-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.info dl{display:grid;grid-template-columns:96px 1fr;border-bottom:1px solid var(--line);padding:13px 0;font-size:14px}
+.info dt{color:var(--sub);font-size:13px}
+.map{border-radius:4px;border:1px solid var(--line);min-height:300px;position:relative;overflow:hidden;background:
+  linear-gradient(90deg,transparent 0 46%,#fff 46% 50%,transparent 50%),
+  linear-gradient(0deg,transparent 0 58%,#fff 58% 62%,transparent 62%),
+  linear-gradient(35deg,transparent 0 70%,#fbf6ee 70% 73%,transparent 73%),
+  #e4d9c8}
+.map .pin{position:absolute;left:calc(48% - 14px);top:calc(60% - 40px);width:28px;height:28px;background:var(--red);border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 4px 10px rgba(0,0,0,.2)}
+.map .pin::after{content:"";position:absolute;inset:9px;background:#fff;border-radius:50%}
+.map span{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.9);font-size:11.5px;padding:4px 10px;border-radius:999px;color:var(--sub)}
+
+/* reserve */
+.reserve{text-align:center}
+.reserve .tel{font-family:var(--mincho);font-size:40px;letter-spacing:.08em;color:var(--gold);display:inline-block;margin:6px 0 4px}
+.reserve .small{font-size:13px;opacity:.8}
+.reserve .cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+
+/* footer */
+.ft{background:#120f0d;color:#bfb2a3;padding:48px 0 110px;font-size:12.5px}
+.ft-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+.ft .logo{color:var(--paper)}
+.ft .sns{display:flex;gap:16px;margin-top:12px}
+.ft .sns a{text-decoration:underline}
+.flash-cta{margin-top:40px;border-top:1px solid #2e2925;padding-top:32px;text-align:center}
+.flash-cta p{color:#fff;font-size:14px;margin-bottom:14px}
+.flash-cta p b{color:#ffd400}
+.flash-cta .row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-line{background:#06c755;color:#fff;padding:13px 26px;font-size:14px;border-radius:999px}
+.btn-flash{background:#ffd400;color:#141414;padding:13px 26px;font-size:14px;border-radius:999px}
+
+/* SP固定ボタン */
+.float{position:fixed;left:10px;right:10px;bottom:10px;z-index:30;display:none;gap:8px;opacity:0;transform:translateY(20px);pointer-events:none;transition:.25s}
+.float.show{opacity:1;transform:none;pointer-events:auto}
+.float .btn{flex:1;padding:15px 8px;font-size:14px;box-shadow:0 10px 24px -8px rgba(0,0,0,.5)}
+.float .btn-dark{background:var(--ink);color:var(--paper);border:1px solid var(--gold)}
+
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:#000;color:#fff;font-size:13px;padding:12px 20px;border-radius:10px;opacity:0;pointer-events:none;transition:.25s;z-index:50;width:max-content;max-width:calc(100% - 32px);text-align:center;line-height:1.6}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:767px){
+  body{font-size:14px}
+  .nav{display:none}
+  .hd .btn-red{padding:8px 14px;font-size:12px}
+  .hero{min-height:560px}
+  .hero::after{background:linear-gradient(0deg,rgba(20,16,13,.9) 0%,rgba(20,16,13,.55) 55%,rgba(20,16,13,.25) 100%)}
+  .hero h1{font-size:30px}
+  .hero .inner{padding-top:60px;padding-bottom:48px}
+  .sec{padding:72px 0}
+  .sh h2{font-size:24px}
+  .news li{flex-direction:column;gap:2px}
+  .kodawari,.course-top,.room,.info-wrap{grid-template-columns:1fr;gap:28px}
+  .dishes{grid-template-columns:1fr 1fr;gap:16px}
+  .drinks,.plans{grid-template-columns:1fr}
+  .reserve .tel{font-size:30px}
+  .info dl{grid-template-columns:80px 1fr}
+  .float{display:flex}
+}
+</style>
+</head>
+<body>
+
+<div class="sample-bar">これは <b>Flash</b> のホームページ見本です（架空のお店）。この見た目で月額9,900円。<a href="https://flash22hp-del.github.io/">Flashについて見る</a></div>
+
+<header class="hd">
+  <div class="inner">
+    <a href="#top" class="logo">酒と肴 ともしび<small>TOMOSHIBI</small></a>
+    <nav class="nav">
+      <a href="#kodawari">こだわり</a>
+      <a href="#menu">お品書き</a>
+      <a href="#course">宴会コース</a>
+      <a href="#room">店内</a>
+      <a href="#access">アクセス</a>
+    </nav>
+    <a href="#reserve" class="btn btn-red">ご予約</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <img src="img/hero.jpg" alt="木のカウンターに並ぶ料理と日本酒" width="1200" height="800">
+  <div class="inner">
+    <p class="kicker">SAKE &amp; SAKANA</p>
+    <h1>旬の肴と、<br>ちょうどいい一杯。</h1>
+    <p>駅から歩いて2分。カウンター8席と個室2部屋の、小さな居酒屋です。仕事帰りのひとり飲みから、宴会まで。</p>
+    <div class="cta">
+      <a href="#" class="btn btn-red btn-lg" data-sample="ここにネット予約のページが入ります">ネットで予約する</a>
+      <a href="#" class="btn btn-line-w btn-lg" data-sample="スマホではここを押すとお店に電話がかかります">電話で予約する</a>
+    </div>
+    <p class="hours">営業 17:00〜24:00（L.O. 23:00）／ 日曜定休</p>
+  </div>
+</section>
+
+<section class="sec" id="news">
+  <div class="inner">
+    <div class="sh"><p class="en">NEWS</p><h2>お知らせ</h2></div>
+    <ul class="news">
+      <li><time>2026.11.10</time><span><span class="tag">宴会</span>忘年会のご予約を受け付けています。12月の金・土は埋まりやすいのでお早めに。</span></li>
+      <li><time>2026.11.01</time><span><span class="tag">新メニュー</span>冬季限定「牡蠣と白菜の土鍋ご飯」はじめました。</span></li>
+      <li><time>2026.10.20</time><span><span class="tag">営業</span>年末年始の営業日のお知らせ（12/30〜1/3 休業）</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec dark" id="kodawari">
+  <div class="inner">
+    <div class="sh"><p class="en">KODAWARI</p><h2>ともしびのこだわり</h2></div>
+    <div class="kodawari">
+      <img src="img/k1.jpg" alt="板前が魚をさばく手元" loading="lazy" width="600" height="600">
+      <ol>
+        <li><h3>朝どれの魚</h3><p>毎朝、市場で店主が目利きした魚だけを仕入れています。その日のおすすめは黒板でご案内。</p></li>
+        <li><h3>だしから手づくり</h3><p>だし巻き玉子もおでんも、昆布とかつお節でひいた一番だしから。やさしい味わいです。</p></li>
+        <li><h3>料理に合う地酒</h3><p>全国の地酒を常時15種類。料理に合わせたおすすめもお気軽にどうぞ。</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="menu">
+  <div class="inner">
+    <div class="sh"><p class="en">MENU</p><h2>お品書き</h2></div>
+    <div class="dishes">
+      <div class="dish"><img src="img/d1.jpg" alt="旬の刺身の盛り合わせ" loading="lazy" width="600" height="600"><h3>旬の刺身 五種盛り</h3><p>その日の朝どれから</p><b>¥1,680</b></div>
+      <div class="dish"><img src="img/d2.jpg" alt="だし巻き玉子" loading="lazy" width="600" height="600"><h3>だし巻き玉子</h3><p>注文を受けてから焼きます</p><b>¥680</b></div>
+      <div class="dish"><img src="img/d3.jpg" alt="鶏の唐揚げ" loading="lazy" width="600" height="600"><h3>名物 鶏の唐揚げ</h3><p>しょうが醤油の二度揚げ</p><b>¥780</b></div>
+      <div class="dish"><img src="img/d4.jpg" alt="土鍋の炊き込みご飯" loading="lazy" width="600" height="600"><h3>季節の土鍋ご飯</h3><p>2〜3人前・炊き上がり30分</p><b>¥1,480</b></div>
+    </div>
+    <div class="drinks">
+      <div><h3>ビール・サワー</h3><dl><dt>生ビール（中）</dt><dd>¥600</dd></dl><dl><dt>瓶ビール</dt><dd>¥700</dd></dl><dl><dt>レモンサワー</dt><dd>¥500</dd></dl><dl><dt>ハイボール</dt><dd>¥500</dd></dl></div>
+      <div><h3>日本酒</h3><dl><dt>本日の地酒（一合）</dt><dd>¥750〜</dd></dl><dl><dt>飲み比べ三種</dt><dd>¥1,200</dd></dl><dl><dt>熱燗（一合）</dt><dd>¥600</dd></dl></div>
+      <div><h3>焼酎・ソフトドリンク</h3><dl><dt>芋・麦（グラス）</dt><dd>¥550〜</dd></dl><dl><dt>ウーロン茶</dt><dd>¥350</dd></dl><dl><dt>自家製ジンジャーエール</dt><dd>¥450</dd></dl></div>
+    </div>
+    <p class="note">※価格はすべて税込です（金額はサンプルです）</p>
+  </div>
+</section>
+
+<section class="sec dark" id="course">
+  <div class="inner">
+    <div class="sh"><p class="en">COURSE</p><h2>宴会コース</h2></div>
+    <div class="course-top">
+      <img src="img/course.jpg" alt="宴会コースの料理が並んだ座卓" loading="lazy" width="1200" height="800">
+      <div>
+        <h3>忘年会・新年会、<br><em>4名様から</em>承ります。</h3>
+        <p>すべて2時間飲み放題付き。個室は最大10名様まで。アレルギーや苦手な食材は、ご予約時にお知らせください。</p>
+      </div>
+    </div>
+    <div class="plans">
+      <div class="plan"><h4>竹コース</h4><p class="price">¥4,000<small>税込</small></p><p class="meta">全6品・飲み放題2時間</p><ul><li>前菜三種</li><li>刺身三種盛り</li><li>名物 鶏の唐揚げ</li><li>季節の焼き物</li><li>土鍋ご飯</li><li>甘味</li></ul></div>
+      <div class="plan pop"><h4>松コース</h4><p class="price">¥5,000<small>税込</small></p><p class="meta">全7品・飲み放題2時間</p><ul><li>前菜三種</li><li>刺身五種盛り</li><li>だし巻き玉子</li><li>名物 鶏の唐揚げ</li><li>季節の鍋</li><li>土鍋ご飯</li><li>甘味</li></ul></div>
+      <div class="plan"><h4>特選コース</h4><p class="price">¥6,500<small>税込</small></p><p class="meta">全8品・飲み放題2.5時間</p><ul><li>先付</li><li>刺身七種盛り</li><li>和牛の炙り</li><li>天ぷら盛り合わせ</li><li>季節の鍋</li><li>土鍋ご飯</li><li>甘味</li><li>地酒も飲み放題</li></ul></div>
+    </div>
+    <p class="note">※コース内容は仕入れにより変わります（内容・金額はサンプルです）</p>
+    <div class="center"><a href="#" class="btn btn-red btn-lg" data-sample="ここに宴会予約のページが入ります">宴会を予約する</a></div>
+  </div>
+</section>
+
+<section class="sec alt" id="room">
+  <div class="inner">
+    <div class="sh"><p class="en">INSIDE</p><h2>店内・個室</h2></div>
+    <div class="room">
+      <img src="img/room.jpg" alt="掘りごたつの個室" loading="lazy" width="1200" height="800">
+      <div>
+        <div class="seats">
+          <div><b>8</b><span>カウンター席</span></div>
+          <div><b>12</b><span>テーブル席</span></div>
+          <div><b>2</b><span>個室（4〜10名）</span></div>
+        </div>
+        <p>掘りごたつの個室は、足を伸ばしてゆっくりくつろげます。接待や顔合わせにもご利用ください。全席禁煙（店外に喫煙所あり）。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="access">
+  <div class="inner">
+    <div class="sh"><p class="en">ACCESS</p><h2>店舗情報</h2></div>
+    <div class="info-wrap">
+      <div class="info">
+        <dl><dt>店名</dt><dd>酒と肴 ともしび</dd></dl>
+        <dl><dt>住所</dt><dd>〇〇県〇〇市〇〇町4-5-6 1F</dd></dl>
+        <dl><dt>アクセス</dt><dd>〇〇駅 西口から徒歩2分</dd></dl>
+        <dl><dt>営業時間</dt><dd>17:00〜24:00（L.O. 23:00）</dd></dl>
+        <dl><dt>定休日</dt><dd>日曜日（祝前日は営業）</dd></dl>
+        <dl><dt>席数</dt><dd>30席（個室2部屋）</dd></dl>
+        <dl><dt>お支払い</dt><dd>現金・クレジットカード・QRコード決済</dd></dl>
+      </div>
+      <div class="map" aria-label="地図（サンプル）"><i class="pin"></i><span>ここにGoogleマップが入ります</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="reserve">
+  <div class="inner reserve">
+    <div class="sh"><p class="en">RESERVATION</p><h2>ご予約・お問い合わせ</h2></div>
+    <p class="small">お電話でのご予約</p>
+    <a href="#" class="tel" data-sample="スマホではここを押すとお店に電話がかかります">000-0000-0000</a>
+    <p class="small">受付 15:00〜23:00（日曜除く）</p>
+    <div class="cta">
+      <a href="#" class="btn btn-red btn-lg" data-sample="ここにネット予約のページが入ります">ネットで予約する（24時間）</a>
+      <a href="#" class="btn btn-line-w btn-lg" data-sample="ここにお店のLINEが入ります">LINEで問い合わせる</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="inner">
+    <div class="ft-row">
+      <div>
+        <a href="#top" class="logo">酒と肴 ともしび</a>
+        <div class="sns"><a href="#" data-sample="ここにお店のInstagramが入ります">Instagram</a><a href="#" data-sample="ここにお店のLINEが入ります">LINE</a></div>
+      </div>
+      <p>© 酒と肴 ともしび（架空の店舗）</p>
+    </div>
+    <div class="flash-cta">
+      <p>このホームページは <b>Flash</b> の見本です。<br>お店の写真と文章に差し替えて、月額9,900円でお作りします。</p>
+      <div class="row">
+        <a href="https://line.me/R/ti/p/@667amiig" class="btn btn-line" target="_blank" rel="noopener">Flashに LINEで相談する</a>
+        <a href="https://flash22hp-del.github.io/" class="btn btn-flash">Flashのページを見る</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="float" id="float">
+  <a href="#" class="btn btn-dark" data-sample="スマホではここを押すとお店に電話がかかります">電話で予約</a>
+  <a href="#" class="btn btn-red" data-sample="ここにネット予約のページが入ります">ネット予約</a>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+// 見本用：お店のリンクが入る場所を押したら説明を出す（実際の納品では href を差し替えて data-sample を消す）
+const toast = document.getElementById("toast");
+let timer;
+const showToast = (msg) => {
+  toast.textContent = "見本のため移動しません：" + msg;
+  toast.classList.add("show");
+  clearTimeout(timer);
+  timer = setTimeout(() => toast.classList.remove("show"), 2600);
+};
+document.querySelectorAll("[data-sample]").forEach((a) => {
+  a.addEventListener("click", (e) => { e.preventDefault(); showToast(a.dataset.sample); });
+});
+// SP: 最初の画面を過ぎたら下部の予約ボタンを出す
+const fl = document.getElementById("float");
+new IntersectionObserver(([e]) => fl.classList.toggle("show", !e.isIntersecting))
+  .observe(document.querySelector(".hero .cta"));
+</script>
+</body>
+</html>
