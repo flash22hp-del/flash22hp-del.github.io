@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>nail salon mellow（サンプル）| Flash テンプレート</title>
+<meta name="description" content="Flash のホームページ見本（架空のネイルサロン）。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23b98e7e'/%3E%3Ctext x='16' y='22' font-size='17' text-anchor='middle' fill='%23fff' font-family='serif'%3Em%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* ▼ 配色はここだけ変えればサイト全体が変わる */
+:root{
+  --bg:#f8f3ee;
+  --bg2:#efe6de;
+  --card:#fffdfb;
+  --ink:#3b312c;
+  --sub:#7d6f67;
+  --accent:#b98e7e;
+  --accent-dk:#9a7060;
+  --line:#e4d8ce;
+  --serif:"Noto Serif JP",serif;
+  --en:"Cormorant Garamond",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.9;font-size:15px;-webkit-font-smoothing:antialiased}
+img,svg{display:block}
+a{color:inherit;text-decoration:none}
+.inner{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* サンプル表示 */
+.sample-bar{background:#2f2824;color:#f3e9e1;font-size:12px;text-align:center;padding:8px 16px;line-height:1.6}
+.sample-bar a{color:#ffd400;text-decoration:underline;font-weight:700}
+
+/* header */
+.hd{position:sticky;top:0;z-index:20;background:rgba(248,243,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd .inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--en);font-size:28px;font-weight:600;letter-spacing:.04em;line-height:1}
+.logo small{display:block;font-family:"Noto Sans JP";font-size:10px;letter-spacing:.2em;color:var(--sub);margin-top:4px}
+.nav{display:flex;gap:28px;font-size:13px;letter-spacing:.08em}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:700;letter-spacing:.06em;transition:.2s;cursor:pointer;border:0;font-family:inherit}
+.btn-rsv{background:var(--accent);color:#fff;padding:10px 22px;font-size:13px}
+.btn-rsv:hover{background:var(--accent-dk)}
+
+/* hero */
+.hero{padding:72px 0 88px;overflow:hidden}
+.hero .inner{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.eyebrow{font-family:var(--en);font-style:italic;color:var(--accent);font-size:20px;letter-spacing:.06em}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:40px;line-height:1.6;margin:14px 0 22px;letter-spacing:.04em}
+.hero p.lead{color:var(--sub);font-size:15px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 32px}
+.hero-tags span{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:4px 14px;font-size:12px;color:var(--sub)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn-lg{padding:16px 30px;font-size:15px}
+.btn-ghost{background:transparent;border:1px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.visual{position:relative;width:100%;max-width:440px;justify-self:center;aspect-ratio:4/5;border-radius:220px 220px 24px 24px;overflow:hidden;background:var(--bg2);box-shadow:0 30px 60px -30px rgba(120,80,60,.45)}
+.visual img{width:100%;height:100%;object-fit:cover;object-position:center 70%}
+.visual::before{content:"";position:absolute;inset:16px;z-index:1;border:1px solid rgba(255,255,255,.7);border-radius:204px 204px 12px 12px;pointer-events:none}
+
+/* section common */
+.sec{padding:96px 0}
+.sec.alt{background:var(--bg2)}
+.sh{text-align:center;margin-bottom:52px}
+.sh .en{font-family:var(--en);font-style:italic;color:var(--accent);font-size:22px;letter-spacing:.1em}
+.sh h2{font-family:var(--serif);font-weight:600;font-size:26px;letter-spacing:.08em;margin-top:4px}
+
+/* concept */
+.concept{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.concept div{background:var(--card);border-radius:16px;padding:32px 26px;text-align:center;border:1px solid var(--line)}
+.concept .num{font-family:var(--en);font-size:40px;color:var(--accent);line-height:1}
+.concept h3{font-family:var(--serif);font-size:17px;margin:12px 0 8px;font-weight:600}
+.concept p{font-size:13px;color:var(--sub);text-align:left}
+
+/* menu */
+.menu-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.menu-box{background:var(--card);border-radius:16px;padding:32px;border:1px solid var(--line)}
+.menu-box h3{font-family:var(--en);font-size:24px;font-weight:600;letter-spacing:.06em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:8px}
+.menu-box h3 span{font-family:"Noto Sans JP";font-size:12px;color:var(--sub);margin-left:10px;letter-spacing:.1em}
+.menu-box dl{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.menu-box dl:last-child{border-bottom:0}
+.menu-box dt small{display:block;font-size:11.5px;color:var(--sub)}
+.menu-box dd{font-weight:700;white-space:nowrap}
+.coupon{margin-top:28px;background:var(--ink);color:#f6ece4;border-radius:16px;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.coupon b{font-family:var(--serif);font-size:18px;font-weight:600}
+.coupon b em{font-style:normal;color:#f0c9a8;font-size:24px;margin:0 4px}
+.coupon small{display:block;font-size:12px;opacity:.8}
+.note{font-size:12px;color:var(--sub);margin-top:14px;text-align:right}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.g-card{background:var(--card);border-radius:16px;border:1px solid var(--line);overflow:hidden}
+.g-card img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:var(--bg2)}
+.g-card p{padding:14px 18px;font-size:13px;display:flex;justify-content:space-between;align-items:center}
+.g-card p small{color:var(--sub);font-size:11.5px}
+.center{text-align:center;margin-top:36px}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:f}
+.flow li{list-style:none;background:var(--card);border-radius:16px;padding:26px 20px;border:1px solid var(--line);position:relative}
+.flow li::before{counter-increment:f;content:"0" counter(f);font-family:var(--en);font-size:30px;color:var(--accent);line-height:1;display:block;margin-bottom:10px}
+.flow h3{font-family:var(--serif);font-size:16px;font-weight:600;margin-bottom:6px}
+.flow p{font-size:12.5px;color:var(--sub)}
+
+/* voice */
+.voice{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.voice div{background:var(--card);border-radius:16px;padding:28px 24px;border:1px solid var(--line)}
+.voice .stars{color:var(--accent);letter-spacing:.2em;font-size:13px}
+.voice p{font-size:13.5px;margin:10px 0 12px}
+.voice small{color:var(--sub);font-size:12px}
+
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px}
+.faq summary{list-style:none;cursor:pointer;padding:18px 48px 18px 22px;font-weight:500;position:relative;font-size:14.5px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q.";font-family:var(--en);color:var(--accent);font-size:19px;margin-right:10px}
+.faq summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--accent)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 22px 20px 50px;font-size:13.5px;color:var(--sub)}
+
+/* access */
+.access{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch}
+.info dl{display:grid;grid-template-columns:96px 1fr;border-bottom:1px solid var(--line);padding:14px 0;font-size:14px}
+.info dt{color:var(--sub);font-size:13px}
+.map{border-radius:16px;border:1px solid var(--line);min-height:300px;position:relative;overflow:hidden;background:
+  linear-gradient(90deg,transparent 0 46%,#fff 46% 50%,transparent 50%),
+  linear-gradient(0deg,transparent 0 58%,#fff 58% 62%,transparent 62%),
+  linear-gradient(35deg,transparent 0 70%,#fbf6f1 70% 73%,transparent 73%),
+  #e8e0d6}
+.map .pin{position:absolute;left:calc(48% - 14px);top:calc(60% - 40px);width:28px;height:28px;background:var(--accent);border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 4px 10px rgba(0,0,0,.2)}
+.map .pin::after{content:"";position:absolute;inset:9px;background:#fff;border-radius:50%}
+.map span{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.9);font-size:11.5px;padding:4px 10px;border-radius:999px;color:var(--sub)}
+
+/* form */
+.form{max-width:640px;margin:0 auto;background:var(--card);border-radius:20px;padding:40px;border:1px solid var(--line)}
+.form label{display:block;font-size:13px;font-weight:500;margin:18px 0 6px}
+.form label:first-child{margin-top:0}
+.form label em{font-style:normal;background:var(--accent);color:#fff;font-size:10.5px;padding:1px 7px;border-radius:4px;margin-left:8px}
+.form input,.form select,.form textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:10px;padding:12px 14px;font-size:15px;font-family:inherit;color:var(--ink)}
+.form textarea{min-height:110px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--accent);border-color:transparent}
+.form .btn{width:100%;margin-top:26px}
+
+/* footer */
+.ft{background:#2f2824;color:#d9cbc0;padding:48px 0 110px;font-size:12.5px}
+.ft .logo{color:#fff}
+.ft-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+.ft .sns{display:flex;gap:16px;margin-top:14px}
+.ft .sns a{text-decoration:underline}
+.flash-cta{margin-top:40px;border-top:1px solid #4a403a;padding-top:32px;text-align:center}
+.flash-cta p{color:#fff;font-size:14px;margin-bottom:14px}
+.flash-cta p b{color:#ffd400}
+.flash-cta .row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-line{background:#06c755;color:#fff;padding:13px 26px;font-size:14px}
+.btn-line:hover{background:#05a948}
+.btn-flash{background:#ffd400;color:#141414;padding:13px 26px;font-size:14px}
+
+/* SP固定ボタン */
+.float{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:none;opacity:0;transform:translateY(20px);pointer-events:none;transition:.25s}
+.float.show{opacity:1;transform:none;pointer-events:auto}
+.float .btn{width:100%;padding:15px;font-size:15px;box-shadow:0 10px 24px -8px rgba(90,60,45,.6)}
+
+/* サンプル通知 */
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:#2f2824;color:#fff;font-size:13px;padding:12px 20px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:50;width:max-content;max-width:calc(100% - 32px);text-align:center;line-height:1.6}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:767px){
+  body{font-size:14px}
+  .nav{display:none}
+  .hd .btn-rsv{padding:8px 16px;font-size:12px}
+  .hero{padding:40px 0 64px}
+  .hero .inner{grid-template-columns:1fr;gap:36px}
+  .hero h1{font-size:27px}
+  .visual{max-width:330px;border-radius:170px 170px 20px 20px}
+  .visual::before{inset:12px;border-radius:158px 158px 10px 10px}
+  .sec{padding:72px 0}
+  .sh h2{font-size:22px}
+  .concept,.menu-wrap,.gallery,.voice,.access{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr;gap:12px}
+  .g-card p{flex-direction:column;align-items:flex-start;padding:10px 12px;font-size:12.5px}
+  .flow{grid-template-columns:1fr 1fr}
+  .menu-box{padding:24px 20px}
+  .coupon{padding:20px}
+  .form{padding:28px 20px}
+  .info dl{grid-template-columns:80px 1fr}
+  .float{display:block}
+}
+</style>
+</head>
+<body>
+
+<div class="sample-bar">これは <b>Flash</b> のホームページ見本です（架空のお店）。この見た目で月額9,900円。<a href="https://flash22hp-del.github.io/">Flashについて見る</a></div>
+
+<header class="hd">
+  <div class="inner">
+    <a href="#top" class="logo">mellow<small>NAIL &amp; EYELASH</small></a>
+    <nav class="nav">
+      <a href="#concept">コンセプト</a>
+      <a href="#menu">メニュー</a>
+      <a href="#gallery">ギャラリー</a>
+      <a href="#access">アクセス</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <a href="#" class="btn btn-rsv" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります">ご予約</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="inner">
+    <div>
+      <p class="eyebrow">Private nail salon</p>
+      <h1>指先から、<br>毎日を少しだけ<br>上機嫌に。</h1>
+      <p class="lead">完全予約制のプライベートサロン。<br>1日4名様限定で、ひとりひとりの爪に合わせて丁寧に仕上げます。</p>
+      <div class="hero-tags"><span>完全予約制</span><span>マンツーマン</span><span>キッズスペースあり</span><span>駅徒歩3分</span></div>
+      <div class="hero-cta">
+        <a href="#" class="btn btn-rsv btn-lg" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります">LINEで予約する</a>
+        <a href="#menu" class="btn btn-ghost btn-lg">メニューを見る</a>
+      </div>
+    </div>
+    <div class="visual"><img src="img/hero.jpg" alt="サロンの施術席と、ヌードベージュに金箔をのせたネイル" width="800" height="1200"></div>
+  </div>
+</section>
+
+<section class="sec alt" id="concept">
+  <div class="inner">
+    <div class="sh"><p class="en">Concept</p><h2>mellow が大切にしていること</h2></div>
+    <div class="concept">
+      <div><p class="num">01</p><h3>爪にやさしい施術</h3><p>削りすぎないフィルインを基本に、自爪の状態を見ながら長く楽しめるネイルをご提案します。</p></div>
+      <div><p class="num">02</p><h3>ゆったりマンツーマン</h3><p>施術は最初から最後まで同じスタッフが担当。他のお客様と時間が重ならないよう予約を調整しています。</p></div>
+      <div><p class="num">03</p><h3>デザインの持ち込みOK</h3><p>インスタの画像をLINEで送っていただければ、事前にお見積もりをお伝えします。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="menu">
+  <div class="inner">
+    <div class="sh"><p class="en">Menu &amp; Price</p><h2>メニュー・料金</h2></div>
+    <div class="menu-wrap">
+      <div class="menu-box">
+        <h3>Nail<span>ネイル</span></h3>
+        <dl><dt>ハンド ワンカラー<small>ラメ・グラデーション可</small></dt><dd>¥5,500</dd></dl>
+        <dl><dt>ハンド 定額デザインA<small>シンプル・ニュアンス</small></dt><dd>¥6,600</dd></dl>
+        <dl><dt>ハンド 定額デザインB<small>マグネット・パーツ多め</small></dt><dd>¥7,700</dd></dl>
+        <dl><dt>フット ワンカラー</dt><dd>¥6,600</dd></dl>
+        <dl><dt>他店オフ</dt><dd>¥1,100</dd></dl>
+      </div>
+      <div class="menu-box">
+        <h3>Eyelash<span>まつげ</span></h3>
+        <dl><dt>まつげパーマ<small>トリートメント込み</small></dt><dd>¥5,500</dd></dl>
+        <dl><dt>パリジェンヌラッシュリフト</dt><dd>¥6,600</dd></dl>
+        <dl><dt>まつげエクステ 100本</dt><dd>¥6,050</dd></dl>
+        <dl><dt>まつげエクステ つけ放題</dt><dd>¥7,700</dd></dl>
+        <dl><dt>ハンドケアのみ</dt><dd>¥3,300</dd></dl>
+      </div>
+    </div>
+    <div class="coupon">
+      <div><b>はじめての方は<em>¥1,000</em>OFF</b><small>ご予約時に「ホームページを見た」とお伝えください</small></div>
+      <a href="#" class="btn btn-rsv" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります">クーポンで予約する</a>
+    </div>
+    <p class="note">※表示価格はすべて税込です（金額はサンプルです）</p>
+  </div>
+</section>
+
+<section class="sec alt" id="gallery">
+  <div class="inner">
+    <div class="sh"><p class="en">Gallery</p><h2>デザイン見本</h2></div>
+    <div class="gallery">
+      <div class="g-card"><img src="img/g1.jpg" alt="ヌーディーベージュのニュアンスネイル" loading="lazy" width="600" height="600"><p>ニュアンスベージュ<small>定額A</small></p></div>
+      <div class="g-card"><img src="img/g2.jpg" alt="ミルキーホワイトのワンカラー" loading="lazy" width="600" height="600"><p>ミルキーホワイト<small>ワンカラー</small></p></div>
+      <div class="g-card"><img src="img/g3.jpg" alt="シャンパンゴールドのマグネットネイル" loading="lazy" width="600" height="600"><p>マグネットゴールド<small>定額B</small></p></div>
+      <div class="g-card"><img src="img/g4.jpg" alt="シアーなピンクベージュに白の細いフレンチ" loading="lazy" width="600" height="600"><p>シアーフレンチ<small>定額A</small></p></div>
+      <div class="g-card"><img src="img/g5.jpg" alt="くすみピンクのグラデーション" loading="lazy" width="600" height="600"><p>ピンクグラデ<small>ワンカラー</small></p></div>
+      <div class="g-card"><img src="img/g6.jpg" alt="グレージュに2本だけシルバーラメ" loading="lazy" width="600" height="600"><p>グレージュ×ラメ<small>定額B</small></p></div>
+    </div>
+    <div class="center"><a href="#" class="btn btn-ghost btn-lg" data-sample="ここにお店のInstagramが入ります">Instagramでもっと見る</a></div>
+  </div>
+</section>
+
+<section class="sec" id="flow">
+  <div class="inner">
+    <div class="sh"><p class="en">First visit</p><h2>はじめての方へ</h2></div>
+    <ol class="flow">
+      <li><h3>ご予約</h3><p>LINEかお電話で。ご希望のデザイン画像があれば一緒に送ってください。</p></li>
+      <li><h3>カウンセリング</h3><p>爪の状態とご希望を伺い、デザインと料金を確定します。</p></li>
+      <li><h3>施術</h3><p>ハンドで約90分。お飲み物をご用意してお待ちしています。</p></li>
+      <li><h3>アフターケア</h3><p>2週間以内の浮き・欠けは無料でお直しします。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec alt" id="voice">
+  <div class="inner">
+    <div class="sh"><p class="en">Voice</p><h2>お客様の声</h2></div>
+    <div class="voice">
+      <div><p class="stars">★★★★★</p><p>持ち込みの画像どおりに仕上げてもらえました。3週間たっても浮いてこないのが嬉しいです。</p><small>20代・会社員</small></div>
+      <div><p class="stars">★★★★★</p><p>子どもを連れて行けるサロンを探していました。キッズスペースがあって助かります。</p><small>30代・主婦</small></div>
+      <div><p class="stars">★★★★★</p><p>マンツーマンなので周りを気にせずゆっくりできます。まつげと同日にできるのも便利。</p><small>40代・自営業</small></div>
+    </div>
+    <p class="note" style="text-align:center">※このページの文章・お客様の声はすべてサンプルです</p>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="inner">
+    <div class="sh"><p class="en">FAQ</p><h2>よくあるご質問</h2></div>
+    <div class="faq">
+      <details><summary>当日予約はできますか？</summary><p>空きがあればお受けしています。LINEでお気軽にお問い合わせください。</p></details>
+      <details><summary>子ども連れでも大丈夫ですか？</summary><p>はい。キッズスペースをご用意しています。ご予約時にお知らせください。</p></details>
+      <details><summary>支払い方法は？</summary><p>現金・クレジットカード・各種QRコード決済がご利用いただけます。</p></details>
+      <details><summary>駐車場はありますか？</summary><p>専用駐車場はございません。近隣のコインパーキングをご利用ください。</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="access">
+  <div class="inner">
+    <div class="sh"><p class="en">Access</p><h2>店舗情報</h2></div>
+    <div class="access">
+      <div class="info">
+        <dl><dt>店名</dt><dd>nail salon mellow</dd></dl>
+        <dl><dt>住所</dt><dd>〇〇県〇〇市〇〇町1-2-3 〇〇ビル2F</dd></dl>
+        <dl><dt>アクセス</dt><dd>〇〇駅 東口から徒歩3分</dd></dl>
+        <dl><dt>営業時間</dt><dd>10:00〜19:00（最終受付 17:30）</dd></dl>
+        <dl><dt>定休日</dt><dd>毎週火曜日・不定休</dd></dl>
+        <dl><dt>電話</dt><dd>000-0000-0000</dd></dl>
+      </div>
+      <div class="map" aria-label="地図（サンプル）"><i class="pin"></i><span>ここにGoogleマップが入ります</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="inner">
+    <div class="sh"><p class="en">Contact</p><h2>お問い合わせ</h2></div>
+    <form class="form" id="form">
+      <label>お名前<em>必須</em></label>
+      <input type="text" required placeholder="山田 花子">
+      <label>電話番号またはメールアドレス<em>必須</em></label>
+      <input type="text" required placeholder="090-0000-0000">
+      <label>ご希望のメニュー</label>
+      <select><option>ハンド ワンカラー</option><option>ハンド 定額デザイン</option><option>フット</option><option>まつげパーマ</option><option>まつげエクステ</option><option>その他・相談したい</option></select>
+      <label>ご希望の日時</label>
+      <input type="text" placeholder="例）11月20日 14時以降">
+      <label>ご質問・ご要望</label>
+      <textarea placeholder="デザインのイメージなど"></textarea>
+      <button class="btn btn-rsv btn-lg" type="submit">送信する</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="inner">
+    <div class="ft-row">
+      <div>
+        <a href="#top" class="logo">mellow</a>
+        <div class="sns"><a href="#" data-sample="ここにお店のInstagramが入ります">Instagram</a><a href="#" data-sample="ここにお店のLINEが入ります">LINE</a></div>
+      </div>
+      <p>© nail salon mellow（架空の店舗）</p>
+    </div>
+    <div class="flash-cta">
+      <p>このホームページは <b>Flash</b> の見本です。<br>お店の写真と文章に差し替えて、月額9,900円でお作りします。</p>
+      <div class="row">
+        <a href="https://line.me/R/ti/p/@667amiig" class="btn btn-line" target="_blank" rel="noopener">Flashに LINEで相談する</a>
+        <a href="https://flash22hp-del.github.io/" class="btn btn-flash">Flashのページを見る</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="float" id="float"><a href="#" class="btn btn-rsv" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります">LINEで予約する</a></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+// 見本用：お店のリンクが入る場所を押したら説明を出す（実際の納品では href を差し替えて data-sample を消す）
+const toast = document.getElementById("toast");
+let timer;
+const showToast = (msg) => {
+  toast.textContent = "見本のため移動しません：" + msg;
+  toast.classList.add("show");
+  clearTimeout(timer);
+  timer = setTimeout(() => toast.classList.remove("show"), 2600);
+};
+document.querySelectorAll("[data-sample]").forEach((a) => {
+  a.addEventListener("click", (e) => { e.preventDefault(); showToast(a.dataset.sample); });
+});
+// SP: 最初の画面を過ぎたら下部の予約ボタンを出す
+const fl = document.getElementById("float");
+new IntersectionObserver(([e]) => fl.classList.toggle("show", !e.isIntersecting))
+  .observe(document.querySelector(".hero-cta"));
+document.getElementById("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  showToast("ここで入力内容がお店のメールに届きます");
+});
+</script>
+</body>
+</html>
