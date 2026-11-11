@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><!-- 本公開時に外す -->
-<title>ホームページ制作 月額9,900円・最短3日で公開 | Flash</title>
+<title>ホームページ制作 月額9,900円〜・最短3日で公開 | Flash</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23141414'/%3E%3Cpath d='M18 4L8 18h7l-2 10 11-15h-7z' fill='%23ffd400'/%3E%3C/svg%3E">
-<meta name="description" content="LINEで写真と文章を送るだけ。最短3日でホームページを公開。月額9,900円（税込）、問い合わせフォーム・スマホ対応込み。">
+<meta name="description" content="LINEで写真と文章を送るだけ。最短3日でホームページを公開。月額9,900円〜（税込）、1ページから完全オリジナルの10ページまで。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -107,16 +107,33 @@ a{color:inherit;text-decoration:none}
 
 /* plan */
 .plan{border:4px solid var(--ink);border-radius:18px;overflow:hidden;max-width:760px;margin:0 auto}
-.plan-head{background:var(--ink);color:#fff;text-align:center;padding:26px 16px}
-.plan-head p{font-weight:700}
-.plan-head .yen{font:800 64px/1.1 Poppins;color:var(--yellow)}
-.plan-head .yen small{font:900 24px "Noto Sans JP";color:#fff;margin-left:4px}
-.plan-head .tax{font-size:13px;opacity:.7}
 .plan ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:30px}
 .plan li{display:flex;gap:14px;align-items:center;background:var(--gray);border-radius:10px;padding:16px}
 .plan li svg{flex:none;width:40px;height:40px;fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .plan li b{display:block;font-size:17px}
 .plan li span{font-size:13px;color:var(--sub);line-height:1.6}
+
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;margin-bottom:30px}
+.pl{position:relative;background:#fff;border:3px solid var(--ink);border-radius:16px;padding:28px 22px 24px;display:flex;flex-direction:column}
+.pl.is-pop{box-shadow:6px 6px 0 var(--yellow)}
+.pl.is-pop::before{content:"おすすめ";position:absolute;top:-15px;left:20px;background:var(--yellow);border:2px solid var(--ink);font-weight:900;font-size:12px;padding:2px 12px;border-radius:999px}
+.pl.is-premium{background:var(--ink);color:#fff}
+.pl-en{font:800 italic 13px Poppins,sans-serif;letter-spacing:.08em;color:#999}
+.pl-name{font-size:24px;font-weight:900;line-height:1.3}
+.pl-for{font-size:13px;color:var(--sub);margin-top:4px}
+.is-premium .pl-for,.is-premium .pl-yen small{color:#bdbdbd}
+.pl-yen{margin:16px 0 16px;font-weight:900;font-size:16px}
+.pl-yen b{font:800 44px/1 Poppins,sans-serif;margin-right:2px}
+.is-premium .pl-yen b{color:var(--yellow)}
+.pl-yen small{display:block;font-size:12px;font-weight:500;color:var(--sub);margin-top:4px}
+.pl ul{list-style:none;border-top:1px solid #e5e5e5;padding-top:16px;display:grid;gap:9px;font-size:14px}
+.is-premium ul{border-color:#3a3a3a}
+.pl li{display:flex;gap:8px;align-items:flex-start;line-height:1.6}
+.pl li::before{content:"";flex:none;width:18px;height:18px;margin-top:2px;border-radius:50%;background:var(--yellow) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8l3 3 5-6' fill='none' stroke='%23141414' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.pl-link{margin-top:auto;padding-top:20px;font-weight:700;font-size:14px}
+.pl-link a{border-bottom:3px solid var(--yellow)}
+.plan-title{background:var(--ink);color:#fff;text-align:center;font-weight:700;padding:14px 16px}
 
 /* compare */
 .cmp-wrap{max-width:860px;margin:44px auto 0}
@@ -151,6 +168,15 @@ a{color:inherit;text-decoration:none}
 .sc b{display:block;font-size:18px;margin:2px 0 10px}
 .sc span{font-weight:700;font-size:14px;border-bottom:3px solid var(--yellow)}
 .smp-note{font-size:12px;color:#9a9a9a;margin-top:26px}
+.sc-label{display:inline-block;font:700 11px Poppins,sans-serif;letter-spacing:.12em;background:#2c2c2c;color:#ddd;padding:3px 10px;border-radius:4px;margin-bottom:22px}
+.sc-premium{margin-top:64px;padding-top:56px;border-top:1px solid #333}
+.sc-premium .sc-label{background:var(--yellow);color:var(--ink)}
+.sc-big{display:grid;grid-template-columns:1.35fr 1fr;gap:52px;align-items:center}
+.sc-big .phone{width:27%}
+.sc-big b{font-size:26px;margin:4px 0 12px}
+.sc-big p{font-size:15px;color:#cfcfcf;line-height:1.9;margin-bottom:22px}
+.sc-big ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.sc-big li{font-size:12.5px;border:1px solid #555;border-radius:999px;padding:3px 12px;color:#ddd}
 
 /* reasons */
 .reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -224,6 +250,9 @@ a{color:inherit;text-decoration:none}
   .q-title{font-size:18px}
   .q-opts button{font-size:14px;padding:13px 6px}
   .showcase{grid-template-columns:1fr;gap:44px}
+  .sc-big{grid-template-columns:1fr;gap:20px}
+  .sc-big b{font-size:22px}
+  .sc-premium{margin-top:52px;padding-top:44px}
   .sec-lead{margin:-20px 0 30px;font-size:14px}
   .cta .tag{font-size:14px}
   .cta .btn-line{font-size:19px;padding:8px 18px 8px 8px}
@@ -237,8 +266,8 @@ a{color:inherit;text-decoration:none}
   .bub small{font-size:12px}
   .worries .end{font-size:18px}
   .so{font-size:25px}
-  .plan-head .yen{font-size:52px}
   .plan ul{grid-template-columns:1fr;padding:18px}
+  .plans{grid-template-columns:1fr;gap:26px}
   .cmp-table{font-size:12px}
   .cmp-table th,.cmp-table td{padding:10px 4px}
   .cmp-table tbody th{font-size:11.5px;white-space:normal}
@@ -289,7 +318,7 @@ a{color:inherit;text-decoration:none}
       <p class="fv-sub">写真と文章をLINEで送れば、<span class="nb">あとはおまかせ。</span><br>問い合わせフォームもスマホ対応も込みです。</p>
       <ul class="stats">
         <li><small>公開まで</small><b>最短<em>3</em>日</b></li>
-        <li><small>月額（税込）</small><b><em>9,900</em>円</b></li>
+        <li><small>月額（税込）</small><b><em>9,900</em>円〜</b></li>
         <li><small>電話・来店</small><b><em>不要</em></b></li>
       </ul>
     </div>
@@ -346,17 +375,32 @@ a{color:inherit;text-decoration:none}
 <section class="sec" style="padding-top:20px" id="plan">
   <div class="inner">
     <div class="sh"><h2>料金プラン</h2><p>PLAN</p></div>
-    <div class="plan">
-      <div class="plan-head">
-        <p>ホームページ制作プラン</p>
-        <div class="yen">9,900<small>円／月</small></div>
-        <p class="tax">（税込）</p>
+    <div class="plans">
+      <div class="pl">
+        <p class="pl-en">LITE</p><p class="pl-name">ライト</p><p class="pl-for">まずは1ページで始めたい方に</p>
+        <p class="pl-yen"><b>9,900</b>円<small>月額（税込）</small></p>
+        <ul><li>1ページ</li><li>業種別のテンプレート</li><li>公開まで最短3日</li></ul>
+        <p class="pl-link"><a href="#samples">テンプレートの見本 →</a></p>
       </div>
+      <div class="pl is-pop">
+        <p class="pl-en">STANDARD</p><p class="pl-name">スタンダード</p><p class="pl-for">メニューや事例もしっかり載せたい方に</p>
+        <p class="pl-yen"><b>16,500</b>円<small>月額（税込）</small></p>
+        <ul><li>5ページまで</li><li><span>テンプレートを、<span class="nb">お店に合わせて調整</span></span></li><li>公開まで最短1週間</li></ul>
+      </div>
+      <div class="pl is-premium">
+        <p class="pl-en">PREMIUM</p><p class="pl-name">プレミアム</p><p class="pl-for">ほかにはない、こだわりのサイトを作りたい方に</p>
+        <p class="pl-yen"><b>29,800</b>円<small>月額（税込）</small></p>
+        <ul><li>10ページまで</li><li><span>ゼロから作る<span class="nb">完全オリジナルデザイン</span></span></li><li>動きのある演出</li><li>公開まで最短3週間</li></ul>
+        <p class="pl-link"><a href="samples/reform/">プレミアムの見本 →</a></p>
+      </div>
+    </div>
+    <div class="plan">
+      <p class="plan-title">全プラン共通で含まれるもの</p>
       <ul>
-        <li><svg viewBox="0 0 40 40"><rect x="5" y="7" width="30" height="20" rx="2"/><path d="M15 33h10M20 27v6M9 12h22M9 17h10"/></svg><div><b>ホームページ</b><span>デザインはテンプレートから選ぶだけ</span></div></li>
         <li><svg viewBox="0 0 40 40"><rect x="12" y="4" width="16" height="32" rx="3"/><path d="M18 31h4M16 9h8"/></svg><div><b>スマホ対応</b><span>スマホでも見やすく自動で表示</span></div></li>
         <li><svg viewBox="0 0 40 40"><rect x="7" y="5" width="26" height="30" rx="2"/><path d="M12 12h16M12 18h16M12 24h9"/><path d="M24 28l3 3 5-6"/></svg><div><b>問い合わせフォーム</b><span>内容はお使いのメールに届きます</span></div></li>
         <li><svg viewBox="0 0 40 40"><path d="M20 4l3 6 6 1-4 5 1 7-6-3-6 3 1-7-4-5 6-1z"/><path d="M8 34h24"/></svg><div><b>公開までの設定一式</b><span>面倒な初期設定はこちらで対応</span></div></li>
+        <li><svg viewBox="0 0 40 40"><path d="M8 10h24v16H18l-7 6v-6H8z"/><path d="M14 16h12M14 21h7"/></svg><div><b>相談・修正の依頼はLINEで</b><span>電話や来店は不要です</span></div></li>
       </ul>
     </div>
     <div class="cmp-wrap">
@@ -364,10 +408,10 @@ a{color:inherit;text-decoration:none}
         <colgroup><col class="c-h"><col><col><col></colgroup>
         <thead><tr><th></th><th>自分で作る<small>（作成ツール）</small></th><th>一般的な<br>制作会社</th><th class="is-flash">Flash</th></tr></thead>
         <tbody>
-          <tr><th>費用</th><td>ツール代<small>＋自分の作業時間</small></td><td>一括で<br>数十万円〜</td><td class="is-flash">月額<br>9,900円</td></tr>
-          <tr><th>公開まで</th><td>自分の作業<br>しだい</td><td>1〜3か月<br>が目安</td><td class="is-flash">最短3日</td></tr>
+          <tr><th>費用</th><td>ツール代<small>＋自分の作業時間</small></td><td>一括で<br>数十万円〜</td><td class="is-flash">月額<br>9,900円〜</td></tr>
+          <tr><th>公開まで</th><td>自分の作業<br>しだい</td><td>1〜3か月<br>が目安</td><td class="is-flash">最短3日〜</td></tr>
           <tr><th>やり取り</th><td>なし<small>（すべて自分で）</small></td><td>打ち合わせ<br>メール</td><td class="is-flash">LINEだけ</td></tr>
-          <tr><th>デザイン</th><td>自分で調整</td><td>オーダーメイド</td><td class="is-flash">業種別<br>テンプレート</td></tr>
+          <tr><th>デザイン</th><td>自分で調整</td><td>オーダーメイド</td><td class="is-flash">テンプレート<br>〜オリジナル</td></tr>
           <tr><th>公開後の<br>修正</th><td>自分で</td><td>都度<br>見積もりが多い</td><td class="is-flash">LINEで依頼</td></tr>
         </tbody>
       </table>
@@ -380,13 +424,21 @@ a{color:inherit;text-decoration:none}
 <section class="sec showcase-sec" id="samples">
   <div class="inner">
     <div class="sh"><h2>ホームページの見本</h2><p>SAMPLE</p></div>
-    <p class="sec-lead">業種に合わせたテンプレートに、お店の写真と文章を入れて仕上げます。<br>パソコンでもスマホでも、そのまま見やすく表示されます。</p>
+    <p class="sec-lead">ライトは業種別のテンプレートに、お店の写真と文章を入れて仕上げます。<br>プレミアムは、ゼロからデザインする完全オリジナルです。</p>
+    <p class="sc-label">LITE ／ ライトプランの見本（1ページ）</p>
     <div class="showcase">
       <a href="samples/nail/" class="sc"><div class="devices"><div class="laptop"><img src="img/showcase/nail-pc.jpg" alt="ネイルサロンの見本（パソコン表示）" loading="lazy" width="960" height="600"></div><div class="phone"><img src="img/showcase/nail-sp.jpg" alt="ネイルサロンの見本（スマホ表示）" loading="lazy" width="390" height="844"></div></div><div class="sc-body"><small>ネイル・まつげサロン</small><b>nail &amp; lash Fuwalu</b><span>見本を見る →</span></div></a>
       <a href="samples/izakaya/" class="sc"><div class="devices"><div class="laptop"><img src="img/showcase/izakaya-pc.jpg" alt="居酒屋の見本（パソコン表示）" loading="lazy" width="960" height="600"></div><div class="phone"><img src="img/showcase/izakaya-sp.jpg" alt="居酒屋の見本（スマホ表示）" loading="lazy" width="390" height="844"></div></div><div class="sc-body"><small>居酒屋・飲食店</small><b>酒と肴 ひよりび</b><span>見本を見る →</span></div></a>
       <a href="samples/seitai/" class="sc"><div class="devices"><div class="laptop"><img src="img/showcase/seitai-pc.jpg" alt="整体院の見本（パソコン表示）" loading="lazy" width="960" height="600"></div><div class="phone"><img src="img/showcase/seitai-sp.jpg" alt="整体院の見本（スマホ表示）" loading="lazy" width="390" height="844"></div></div><div class="sc-body"><small>整体院・治療院</small><b>整体院 かるみ</b><span>見本を見る →</span></div></a>
     </div>
-    <p class="smp-note">※見本はすべて架空のお店です。写真と文章をお店のものに差し替えてお作りします。</p>
+    <div class="sc-premium">
+      <p class="sc-label">PREMIUM ／ プレミアムプランの見本（5ページ）</p>
+      <a href="samples/reform/" class="sc sc-big">
+        <div class="devices"><div class="laptop"><img src="img/showcase/reform-pc.jpg" alt="工務店の見本（パソコン表示）" loading="lazy" width="960" height="600"></div><div class="phone"><img src="img/showcase/reform-sp.jpg" alt="工務店の見本（スマホ表示）" loading="lazy" width="390" height="844"></div></div>
+        <div class="sc-body"><small>工務店・リフォーム会社</small><b>すみつぐ工務店</b><p>ゼロからデザインした完全オリジナルのサイト。写真がゆっくり動くトップ、スクロールに合わせて現れる文章、施工事例の絞り込みと詳細表示まで。</p><ul><li>トップ</li><li>施工事例</li><li>リフォームメニュー</li><li>会社案内</li><li>お問い合わせ</li></ul><span>見本を見る →</span></div>
+      </a>
+    </div>
+    <p class="smp-note">※見本はすべて架空のお店・会社です。写真と文章をお店のものに差し替えてお作りします。</p>
   </div>
 </section>
 
@@ -400,8 +452,8 @@ a{color:inherit;text-decoration:none}
   <div class="inner">
     <div class="sh"><h2>Flashが選ばれる3つの理由</h2><p>REASON</p></div>
     <div class="reasons">
-      <div class="rs"><div class="n" aria-hidden="true">01</div><h3>テンプレートだから、<span class="nb">最短3日で公開</span></h3><p>デザインをゼロから作らず、業種別のテンプレートに写真と文章を入れる方式。打ち合わせもなく、すぐに公開できます。</p></div>
-      <div class="rs"><div class="n" aria-hidden="true">02</div><h3>大きな初期投資なしで<span class="nb">始められる</span></h3><p>一括で数十万円を用意しなくても、月額9,900円でホームページを持てます。浮いた予算は広告や集客に回せます。</p></div>
+      <div class="rs"><div class="n" aria-hidden="true">01</div><h3>テンプレートだから、<span class="nb">最短3日で公開</span></h3><p>デザインをゼロから作らず、業種別のテンプレートに写真と文章を入れる方式（ライトプラン）。打ち合わせもなく、すぐに公開できます。</p></div>
+      <div class="rs"><div class="n" aria-hidden="true">02</div><h3>大きな初期投資なしで<span class="nb">始められる</span></h3><p>一括で数十万円を用意しなくても、月額9,900円からホームページを持てます。浮いた予算は広告や集客に回せます。</p></div>
       <div class="rs"><div class="n" aria-hidden="true">03</div><h3>相談も修正依頼もLINEで完結</h3><p>電話や対面の打ち合わせは不要。写真や文章もLINEで送るだけ。忙しい方でもスキマ時間で進められます。</p></div>
     </div>
   </div>
@@ -416,7 +468,7 @@ a{color:inherit;text-decoration:none}
       <div class="step"><div class="n">2</div><div class="ico"><svg viewBox="0 0 48 48"><rect x="6" y="8" width="16" height="14" rx="2" class="y"/><rect x="26" y="8" width="16" height="14" rx="2"/><rect x="6" y="26" width="16" height="14" rx="2"/><rect x="26" y="26" width="16" height="14" rx="2"/></svg></div><p class="day">DAY 2</p><h3>テンプレートで制作</h3><p>写真と文章を入れて、確認用のページをLINEでお送りします</p></div>
       <div class="step"><div class="n">3</div><div class="ico"><svg viewBox="0 0 48 48"><path d="M26 4L12 26h10l-4 18 18-24H26z" class="y"/></svg></div><p class="day">DAY 3</p><h3>OKをもらって公開</h3><p>問い合わせフォームもすぐ使えます</p></div>
     </div>
-    <p class="flow-note">※写真と文章がそろってからの目安です。修正のやり取りが多い場合は、もう少しお時間をいただきます。</p>
+    <p class="flow-note">※ライトプランで、写真と文章がそろってからの目安です。スタンダードは最短1週間、プレミアムは最短3週間です。</p>
   </div>
 </section>
 
@@ -441,7 +493,7 @@ a{color:inherit;text-decoration:none}
   <div class="inner">
     <div class="sh"><h2>よくあるご質問</h2><p>FAQ</p></div>
     <details><summary><span class="q">Q</span>相談だけでも大丈夫ですか？</summary><div class="ans"><span class="a">A</span><p>はい、大丈夫です。料金や進め方を聞くだけでもお気軽にどうぞ。無理な営業はしません。</p></div></details>
-    <details><summary><span class="q">Q</span>本当に最短3日で公開できますか？</summary><div class="ans"><span class="a">A</span><p>写真と文章がそろってから最短3日が目安です。修正のやり取りが多い場合や、載せる内容が多い場合は、もう少しお時間をいただきます。</p></div></details>
+    <details><summary><span class="q">Q</span>本当に最短3日で公開できますか？</summary><div class="ans"><span class="a">A</span><p>ライトプランなら、写真と文章がそろってから最短3日が目安です。スタンダードは最短1週間、プレミアムは最短3週間です。修正のやり取りが多い場合は、もう少しお時間をいただきます。</p></div></details>
     <details><summary><span class="q">Q</span>パソコンが苦手でも作れますか？</summary><div class="ans"><span class="a">A</span><p>はい。写真と文章をLINEで送っていただければ、設定や公開作業はこちらで行います。</p></div></details>
     <details><summary><span class="q">Q</span><span>最低契約期間や解約金は<span class="nb">ありますか？</span></span></summary><div class="ans"><span class="a">A</span><p>【要記入】契約期間・解約条件</p></div></details>
     <details><summary><span class="q">Q</span>初期費用はかかりますか？</summary><div class="ans"><span class="a">A</span><p>【要記入】初期費用の有無と金額</p></div></details>
