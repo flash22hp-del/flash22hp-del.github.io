@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><!-- 本公開時に外す -->
+<title>ホームページ制作 月額9,900円 | Flash</title>
+<meta name="description" content="ホームページを月額9,900円で。メールアドレス・問い合わせフォーム込み。相談はLINEで完結。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141414; --sub:#555; --yellow:#ffd400; --yellow-dk:#e0b800;
+  --line:#06c755; --line-dk:#04a346; --cream:#f6f4ef; --beige:#efe9dd; --gray:#f3f3f3;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.inner{max-width:1000px;margin:0 auto;padding:0 20px}
+.hl{background:linear-gradient(transparent 62%,var(--yellow) 62%)}
+
+/* header */
+.header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.header .inner{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1120px}
+.logo{display:flex;align-items:center;gap:8px;font:800 italic 28px Poppins,sans-serif;letter-spacing:.02em}
+.logo svg{width:34px;height:34px}
+.logo small{font:700 11px "Noto Sans JP";font-style:normal;color:var(--sub);margin-left:4px;align-self:flex-end;margin-bottom:5px}
+
+/* LINE button */
+.btn-line{display:flex;align-items:center;justify-content:center;gap:12px;background:var(--line);color:#fff;border-radius:999px;font-weight:900;box-shadow:0 5px 0 var(--line-dk);transition:transform .15s,box-shadow .15s;position:relative}
+.btn-line:hover{transform:translateY(3px);box-shadow:0 2px 0 var(--line-dk)}
+.btn-line .ic{flex:none;width:40px;height:40px;border-radius:10px;background:#fff;display:grid;place-items:center}
+.btn-line .ic svg{width:30px;height:30px}
+.btn-line::after{content:"";width:9px;height:9px;border-top:2.5px solid #fff;border-right:2.5px solid #fff;transform:rotate(45deg);margin-left:6px}
+.btn-head{padding:8px 20px 8px 8px;font-size:14px;box-shadow:0 3px 0 var(--line-dk)}
+.btn-head .ic{width:30px;height:30px;border-radius:8px}.btn-head .ic svg{width:22px;height:22px}
+.btn-head::after{display:none}
+
+/* FV */
+.fv{position:relative;overflow:hidden;padding:56px 0 64px;background:#fff}
+.fv::before{content:"";position:absolute;right:-8%;top:30px;width:56%;height:86%;background:var(--yellow);border-radius:240px 0 0 240px}
+.fv .inner{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:24px;align-items:center;max-width:1120px}
+.slash{display:inline-flex;align-items:center;gap:8px;font-weight:700}
+.slash::before,.slash::after{content:"";width:22px;height:22px;background:no-repeat center/contain}
+.slash::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%23141414' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M4 5l6 7M9 3l10 18M3 12l5 3'/%3E%3C/svg%3E")}
+.slash::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%23141414' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M20 5l-6 7M15 3L5 21M21 12l-5 3'/%3E%3C/svg%3E")}
+.fv-lead{font-size:22px}
+.fv h1{font-size:50px;font-weight:900;line-height:1.35;margin:8px 0 18px;letter-spacing:.01em}
+.fv h1 .price{font-family:Poppins;font-weight:800;font-size:1.25em;letter-spacing:-.01em}
+.fv-sub{font-size:17px;color:#333;margin-bottom:24px}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{display:flex;align-items:center;gap:6px;background:var(--ink);color:#fff;border-radius:999px;padding:7px 16px;font-weight:700;font-size:14px}
+.chip::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--yellow) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8l3 3 5-6' fill='none' stroke='%23141414' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+
+/* mock devices */
+.mock{position:relative;height:400px}
+.pc{position:absolute;right:-10px;top:20px;width:430px;background:#1d1d1f;border-radius:10px;padding:8px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.pc::after{content:"";position:absolute;left:50%;bottom:-26px;transform:translateX(-50%);width:120px;height:26px;background:linear-gradient(#bdbdbd,#e9e9e9);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+.sp{position:absolute;left:-20px;bottom:0;width:150px;background:#1d1d1f;border-radius:22px;padding:7px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.site{background:#fff;border-radius:4px;overflow:hidden}
+.sp .site{border-radius:16px}
+.site .nav{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;font:800 italic 11px Poppins}
+.site .nav i{display:flex;gap:6px}.site .nav i b{width:22px;height:4px;background:#ddd;border-radius:2px}
+.site .hero{height:120px;background:linear-gradient(120deg,#2b2b2b,#555);color:#fff;padding:18px 14px;font-weight:900;font-size:15px;line-height:1.35}
+.site .hero small{display:block;font-size:8px;font-weight:400;opacity:.8;margin-top:6px}
+.site .hero em{display:inline-block;margin-top:8px;background:var(--yellow);color:#141414;font-style:normal;font-size:8px;padding:3px 8px;border-radius:999px}
+.site .row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:10px}
+.site .row b{height:46px;border-radius:4px;background:var(--gray)}
+.site .form{margin:0 10px 12px;padding:8px;border:1px dashed #ccc;border-radius:4px;font-size:8px;color:#888}
+.site .form i{display:block;height:6px;background:#eee;border-radius:2px;margin-top:4px}
+.sp .site .hero{height:150px;font-size:12px;padding:16px 10px}
+.sp .site .row{grid-template-columns:1fr 1fr}
+.bolt{position:absolute;right:-6px;top:-18px;width:86px;transform:rotate(12deg);filter:drop-shadow(0 6px 10px rgba(0,0,0,.2))}
+
+/* CTA band */
+.cta{background:var(--ink);color:#fff;padding:36px 16px 42px;text-align:center}
+.cta .slash{font-size:19px;margin-bottom:14px}
+.cta .slash::before,.cta .slash::after{filter:invert(1)}
+.cta .btn-line{max-width:520px;margin:0 auto;padding:10px 26px 10px 12px;font-size:24px}
+.cta .btn-line small{display:block;font-size:13px;font-weight:700;opacity:.95}
+.cta .note{font-size:13px;opacity:.75;margin-top:14px}
+
+/* sections */
+.sec{padding:84px 0}
+.sh{position:relative;padding-left:26px;margin-bottom:40px}
+.sh::before{content:"";position:absolute;left:0;top:14px;width:14px;height:24px;background:var(--yellow);clip-path:polygon(60% 0,0 58%,45% 58%,30% 100%,100% 38%,55% 38%)}
+.sh h2{font-size:34px;font-weight:900;line-height:1.45}
+.sh p{font-family:Poppins;color:#999;font-size:13px;margin-top:2px;letter-spacing:.05em}
+.center{text-align:center}
+
+/* worries */
+.worries{background:var(--beige);border-radius:14px;padding:46px 30px 42px;text-align:center}
+.worries h3{font-size:28px;line-height:1.5}
+.bubbles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:30px 0 26px}
+.bub{background:#fff;border-radius:50%;aspect-ratio:1;display:grid;place-items:center;font-weight:700;font-size:18px;line-height:1.7;padding:16px}
+.bub small{display:block;font-size:14px;color:var(--sub)}
+.worries .end{font-size:22px;font-weight:700}
+.arrow{width:24px;height:24px;margin:40px auto 10px;border-right:4px solid var(--ink);border-bottom:4px solid var(--ink);transform:rotate(45deg)}
+.so{text-align:center;font-size:36px;font-weight:900;line-height:1.5}
+
+/* plan */
+.plan{border:4px solid var(--ink);border-radius:18px;overflow:hidden;max-width:760px;margin:0 auto}
+.plan-head{background:var(--ink);color:#fff;text-align:center;padding:26px 16px}
+.plan-head p{font-weight:700}
+.plan-head .yen{font:800 64px/1.1 Poppins;color:var(--yellow)}
+.plan-head .yen small{font:900 24px "Noto Sans JP";color:#fff;margin-left:4px}
+.plan-head .tax{font-size:13px;opacity:.7}
+.plan ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:30px}
+.plan li{display:flex;gap:14px;align-items:center;background:var(--gray);border-radius:10px;padding:16px}
+.plan li svg{flex:none;width:40px;height:40px;fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.plan li b{display:block;font-size:17px}
+.plan li span{font-size:13px;color:var(--sub);line-height:1.6}
+
+/* compare */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:40px auto 0}
+.cmp{border-radius:14px;padding:26px 22px;text-align:center}
+.cmp h4{font-size:18px;margin-bottom:8px}
+.cmp .big{font-size:30px;font-weight:900;line-height:1.3}
+.cmp p{font-size:13px;margin-top:8px}
+.cmp.other{background:var(--gray);color:#666}
+.cmp.flash{background:var(--yellow)}
+.cmp-note{max-width:760px;margin:10px auto 0;font-size:12px;color:#888}
+
+/* reasons */
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rs{background:var(--cream);border-radius:14px;padding:30px 24px}
+.rs .n{font:700 14px Poppins;color:#999;border-bottom:1px dotted #aaa;padding-bottom:6px;margin-bottom:18px;position:relative}
+.rs .n b{font-size:22px;color:var(--ink);font-weight:700}
+.rs .n::after{content:"";position:absolute;left:0;bottom:-2px;width:18px;height:3px;background:var(--yellow)}
+.rs h3{word-break:keep-all;overflow-wrap:anywhere;font-size:21px;line-height:1.5;margin-bottom:10px}
+.rs p{font-size:14px;color:#333;line-height:1.9}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{background:var(--cream);border-radius:14px;padding:22px 16px 26px;text-align:center;position:relative}
+.step+.step::before{content:"";position:absolute;left:-18px;top:50%;width:12px;height:12px;border-top:3px solid #bbb;border-right:3px solid #bbb;transform:translateY(-50%) rotate(45deg)}
+.step .n{font:700 13px Poppins;color:#999;text-align:left}
+.step .n b{font-size:20px;color:var(--ink)}
+.step .ico{width:84px;height:84px;margin:12px auto 14px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.step .ico svg{width:46px;height:46px;fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.step .ico .y{fill:var(--yellow)}
+.step .ico .g{fill:var(--line);stroke:none}
+.step h3{font-size:16px;line-height:1.6}
+.step p{font-size:13px;color:var(--sub);margin-top:6px}
+
+/* sns */
+.sns{background:var(--cream);border-radius:18px;padding:44px 30px;display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
+.sns h3{font-size:28px;line-height:1.5;margin-bottom:10px}
+.sns p{font-size:15px;color:#333}
+.sns-btns{display:grid;gap:14px}
+.sns-btns a{display:flex;align-items:center;gap:14px;background:#fff;border-radius:12px;padding:16px 20px;font-weight:700;box-shadow:0 2px 0 #e2ddd2}
+.sns-btns a i{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none}
+.sns-btns a i svg{width:24px;height:24px}
+.sns-btns small{display:block;font-size:12px;color:var(--sub);font-weight:400}
+.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
+.tt{background:#111}
+
+/* faq */
+.faq details{background:var(--gray);border-radius:10px;margin-bottom:14px}
+.faq summary{list-style:none;cursor:pointer;display:flex;gap:16px;align-items:center;padding:20px 54px 20px 22px;font-weight:700;font-size:16px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:24px;top:50%;width:10px;height:10px;border-right:2px solid #666;border-bottom:2px solid #666;transform:translateY(-70%) rotate(45deg);transition:.2s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq .q,.faq .a{font:700 18px Poppins;flex:none}
+.faq .a{color:#b89600}
+.faq .ans{display:flex;gap:16px;padding:0 22px 22px;font-size:14px;line-height:1.95;color:#333}
+
+/* footer */
+.footer{padding:50px 0 120px;border-top:1px solid #eee}
+.footer .inner{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.footer ul{list-style:none;display:flex;gap:22px;font-size:13px;color:#777}
+.copy{font-size:12px;color:#999;margin-top:14px}
+
+.float{display:none}
+
+@media (max-width:767px){
+  .inner{padding:0 16px}
+  .header .inner{height:60px}
+  .logo{font-size:24px}.logo svg{width:28px;height:28px}.logo small{display:none}
+  .btn-head{font-size:12px;padding:6px 14px 6px 6px}
+  .fv{padding:30px 0 34px}
+  .fv::before{right:-30%;top:auto;bottom:0;width:110%;height:46%;border-radius:200px 0 0 0}
+  .fv .inner{grid-template-columns:1fr;text-align:center}
+  .fv-lead{font-size:17px}
+  .fv h1{font-size:32px}
+  .fv-sub{font-size:15px;margin-bottom:16px}
+  .chips{justify-content:center;gap:8px}.chip{font-size:12px;padding:6px 12px}
+  .mock{height:300px;margin-top:10px}
+  .pc{width:280px;right:0;top:10px;padding:6px}
+  .pc::after{width:80px;height:18px;bottom:-18px}
+  .site .hero{height:86px;font-size:12px;padding:12px 10px}
+  .site .row b{height:30px}
+  .site .form{display:none}
+  .sp{width:110px;left:4px;padding:5px;border-radius:18px}
+  .sp .site .hero{height:100px;font-size:10px}
+  .sp .site .form{display:block}
+  .bolt{width:60px;right:0;top:-14px}
+  .cta .slash{font-size:15px}
+  .cta .btn-line{font-size:19px;padding:8px 18px 8px 8px}
+  .cta .btn-line small{font-size:12px}
+  .sec{padding:58px 0}
+  .sh h2{font-size:25px}.sh::before{top:8px}
+  .worries{padding:30px 16px}
+  .worries h3{font-size:21px}
+  .bubbles{grid-template-columns:1fr;gap:10px}
+  .bub{aspect-ratio:auto;border-radius:999px;padding:14px;font-size:16px}
+  .bub small{font-size:12px}
+  .worries .end{font-size:18px}
+  .so{font-size:25px}
+  .plan-head .yen{font-size:52px}
+  .plan ul{grid-template-columns:1fr;padding:18px}
+  .compare{grid-template-columns:1fr}
+  .reasons,.flow{grid-template-columns:1fr}
+  .flow{gap:34px}
+  .step+.step::before{left:50%;top:-24px;transform:translateX(-50%) rotate(135deg)}
+  .sns{grid-template-columns:1fr;padding:30px 18px}
+  .sns h3{font-size:22px}
+  .faq summary{font-size:15px;padding:18px 44px 18px 16px}
+  .footer .inner{flex-direction:column;align-items:flex-start}
+  .float{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.95);padding:8px 12px 12px;box-shadow:0 -2px 10px rgba(0,0,0,.08);transform:translateY(110%);transition:transform .3s}
+  .float.show{transform:none}
+  .float .btn-line{padding:8px 16px 8px 8px;font-size:17px;box-shadow:0 3px 0 var(--line-dk)}
+}
+</style>
+</head>
+<body>
+
+<!-- 共通アイコン -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-line" viewBox="0 0 32 32"><path fill="#06c755" d="M16 4C8.8 4 3 8.7 3 14.5c0 5.2 4.6 9.5 10.8 10.4.4.1 1 .3 1.1.7.1.4.1.9 0 1.3l-.2 1.1c-.1.3-.3 1.3 1.1.7s7.6-4.5 10.4-7.7C28.1 18.9 29 16.8 29 14.5 29 8.7 23.2 4 16 4z"/><text x="16" y="17.5" font-family="Arial" font-weight="900" font-size="6.6" fill="#fff" text-anchor="middle">LINE</text></symbol>
+  <symbol id="i-bolt" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#141414"/><path d="M22 6L11 22h8l-3 12 13-17h-8z" fill="#ffd400"/></symbol>
+</defs></svg>
+
+<header class="header">
+  <div class="inner">
+    <a href="#" class="logo"><svg><use href="#i-bolt"/></svg>Flash<small>ホームページ制作</small></a>
+    <a href="#" class="btn-line btn-head js-line"><span class="ic"><svg><use href="#i-line"/></svg></span>LINEで相談</a>
+  </div>
+</header>
+
+<!-- FV -->
+<section class="fv">
+  <div class="inner">
+    <div>
+      <p class="slash fv-lead">ホームページ制作のFlash</p>
+      <h1>ホームページを、<br>月額<span class="price">9,900</span>円で。</h1>
+      <p class="fv-sub">メールアドレスも問い合わせフォームも、まとめてお任せ。<br>相談から公開まで、LINEだけで進みます。</p>
+      <div class="chips"><span class="chip">独自メールアドレス</span><span class="chip">問い合わせフォーム</span><span class="chip">スマホ対応</span></div>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="pc"><div class="site">
+        <div class="nav">YOUR SHOP<i><b></b><b></b><b></b></i></div>
+        <div class="hero">あなたのお店の<br>ホームページ<small>Open 11:00 - 20:00</small><em>お問い合わせ</em></div>
+        <div class="row"><b></b><b></b><b></b></div>
+        <div class="form">お問い合わせフォーム<i></i><i></i></div>
+      </div></div>
+      <div class="sp"><div class="site">
+        <div class="nav">YOUR SHOP</div>
+        <div class="hero">あなたのお店の<br>ホームページ<em>お問い合わせ</em></div>
+        <div class="row"><b></b><b></b></div>
+        <div class="form">フォーム<i></i></div>
+      </div></div>
+      <svg class="bolt"><use href="#i-bolt"/></svg>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <p class="slash">まずは気軽に聞いてみませんか？</p>
+  <a href="#" class="btn-line js-line"><span class="ic"><svg><use href="#i-line"/></svg></span><span><small>友だち追加で、すぐ相談できます</small>LINEで無料相談する</span></a>
+  <p class="note">※しつこい営業はしません</p>
+</div>
+
+<!-- worries -->
+<section class="sec">
+  <div class="inner">
+    <div class="worries">
+      <h3>ホームページ、<br>こんな理由で<br>後回しにしていませんか？</h3>
+      <div class="bubbles">
+        <div class="bub"><div><small>見積もりを取ったら</small>制作費が<br>思ったより高い</div></div>
+        <div class="bub"><div><small>作ったはいいけど</small>問い合わせが<br>来ない</div></div>
+        <div class="bub"><div><small>メールやフォームの</small>設定が<br>よく分からない</div></div>
+      </div>
+      <p class="end">ホームページは、作って終わりではありません。</p>
+    </div>
+    <div class="arrow"></div>
+    <p class="so">だから、<span class="hl">月額で始めて</span><br>まず「持つ」ことから。</p>
+  </div>
+</section>
+
+<!-- plan -->
+<section class="sec" style="padding-top:20px" id="plan">
+  <div class="inner">
+    <div class="sh"><h2>料金プラン</h2><p>PLAN</p></div>
+    <div class="plan">
+      <div class="plan-head">
+        <p>ホームページ制作プラン</p>
+        <div class="yen">9,900<small>円／月</small></div>
+        <p class="tax">（税込）</p>
+      </div>
+      <ul>
+        <li><svg viewBox="0 0 40 40"><rect x="5" y="7" width="30" height="20" rx="2"/><path d="M15 33h10M20 27v6M9 12h22M9 17h10"/></svg><div><b>ホームページ</b><span>デザインはテンプレートから選ぶだけ</span></div></li>
+        <li><svg viewBox="0 0 40 40"><rect x="5" y="9" width="30" height="22" rx="2"/><path d="M5 11l15 11 15-11"/></svg><div><b>独自メールアドレス</b><span>info@お店の名前 のようなアドレス</span></div></li>
+        <li><svg viewBox="0 0 40 40"><rect x="7" y="5" width="26" height="30" rx="2"/><path d="M12 12h16M12 18h16M12 24h9"/><path d="M24 28l3 3 5-6"/></svg><div><b>問い合わせフォーム</b><span>届いた内容はメールで受け取り</span></div></li>
+        <li><svg viewBox="0 0 40 40"><path d="M20 4l3 6 6 1-4 5 1 7-6-3-6 3 1-7-4-5 6-1z"/><path d="M8 34h24"/></svg><div><b>公開までの設定一式</b><span>面倒な初期設定はこちらで対応</span></div></li>
+      </ul>
+    </div>
+    <div class="compare">
+      <div class="cmp other"><h4>一般的な制作会社</h4><div class="big">一括で<br>数十万円〜</div><p>最初にまとまった費用が必要</p></div>
+      <div class="cmp flash"><h4>Flash</h4><div class="big">月額<br>9,900円</div><p>毎月の固定費で始められる</p></div>
+    </div>
+    <p class="cmp-note">※一般的な制作費はページ数・機能により大きく異なります。</p>
+  </div>
+</section>
+
+<div class="cta">
+  <p class="slash">あなたのお店の場合を聞いてみる</p>
+  <a href="#" class="btn-line js-line"><span class="ic"><svg><use href="#i-line"/></svg></span><span><small>友だち追加で、すぐ相談できます</small>LINEで無料相談する</span></a>
+</div>
+
+<!-- reasons -->
+<section class="sec">
+  <div class="inner">
+    <div class="sh"><h2>Flashが選ばれる3つの理由</h2><p>REASON</p></div>
+    <div class="reasons">
+      <div class="rs"><div class="n">REASON <b>01</b></div><h3>大きな初期投資なしで始められる</h3><p>一括で数十万円を用意しなくても、月額9,900円でホームページを持てます。浮いた予算は広告や集客に回せます。</p></div>
+      <div class="rs"><div class="n">REASON <b>02</b></div><h3>テンプレートで、公開まで早い</h3><p>デザインをゼロから作らず、用意したテンプレートから選ぶ方式。打ち合わせの回数も少なく、すぐに公開できます。</p></div>
+      <div class="rs"><div class="n">REASON <b>03</b></div><h3>相談も修正依頼もLINEで完結</h3><p>電話や対面の打ち合わせは不要。写真や文章もLINEで送るだけ。忙しい方でもスキマ時間で進められます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- flow -->
+<section class="sec" style="padding-top:20px">
+  <div class="inner">
+    <div class="sh"><h2>公開までの流れ</h2><p>FLOW</p></div>
+    <div class="flow">
+      <div class="step"><div class="n">step <b>01</b></div><div class="ico"><svg viewBox="0 0 48 48"><use href="#i-line" x="6" y="6" width="36" height="36"/></svg></div><h3>LINEで友だち追加</h3><p>ボタンを押すだけ</p></div>
+      <div class="step"><div class="n">step <b>02</b></div><div class="ico"><svg viewBox="0 0 48 48"><path d="M8 10h32v22H20l-8 7v-7H8z" class="y"/><path d="M15 18h18M15 24h11"/></svg></div><h3>かんたんヒアリング</h3><p>業種や載せたい内容をLINEで</p></div>
+      <div class="step"><div class="n">step <b>03</b></div><div class="ico"><svg viewBox="0 0 48 48"><rect x="6" y="8" width="16" height="14" rx="2" class="y"/><rect x="26" y="8" width="16" height="14" rx="2"/><rect x="6" y="26" width="16" height="14" rx="2"/><rect x="26" y="26" width="16" height="14" rx="2"/></svg></div><h3>テンプレートを選ぶ</h3><p>写真と文章を送るだけ</p></div>
+      <div class="step"><div class="n">step <b>04</b></div><div class="ico"><svg viewBox="0 0 48 48"><path d="M26 4L12 26h10l-4 18 18-24H26z" class="y"/></svg></div><h3>ホームページ公開</h3><p>メール・フォームも開通</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- sns -->
+<section class="sec" style="padding-top:20px">
+  <div class="inner">
+    <div class="sns">
+      <div>
+        <h3>制作の様子や<br>テンプレートの紹介を発信中</h3>
+        <p>InstagramとTikTokで、ホームページづくりのコツやテンプレートを紹介しています。DMでのご相談も受け付けています。</p>
+      </div>
+      <div class="sns-btns">
+        <a href="#" class="js-ig"><i class="ig"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></i><span>Instagram<small>リール・投稿・DM相談</small></span></a>
+        <a href="#" class="js-tt"><i class="tt"><svg viewBox="0 0 24 24" fill="#fff"><path d="M16 3c.3 2.4 1.8 3.9 4 4.1v3.2c-1.5 0-2.8-.4-4-1.2v6.1A5.8 5.8 0 1 1 10.2 9.4v3.3a2.6 2.6 0 1 0 2.6 2.6V3z"/></svg></i><span>TikTok<small>ショート動画で発信中</small></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- faq -->
+<section class="sec faq" style="padding-top:20px">
+  <div class="inner">
+    <div class="sh"><h2>よくあるご質問</h2><p>FAQ</p></div>
+    <details><summary><span class="q">Q.</span>相談だけでも大丈夫ですか？</summary><div class="ans"><span class="a">A.</span><p>はい、大丈夫です。料金や進め方を聞くだけでもお気軽にどうぞ。無理な営業はしません。</p></div></details>
+    <details><summary><span class="q">Q.</span>パソコンが苦手でも作れますか？</summary><div class="ans"><span class="a">A.</span><p>はい。写真と文章をLINEで送っていただければ、設定や公開作業はこちらで行います。</p></div></details>
+    <details><summary><span class="q">Q.</span>最低契約期間や解約金はありますか？</summary><div class="ans"><span class="a">A.</span><p>【要記入】契約期間・解約条件</p></div></details>
+    <details><summary><span class="q">Q.</span>初期費用はかかりますか？</summary><div class="ans"><span class="a">A.</span><p>【要記入】初期費用の有無と金額</p></div></details>
+    <details><summary><span class="q">Q.</span>公開後の修正はお願いできますか？</summary><div class="ans"><span class="a">A.</span><p>【要記入】月額に含まれる修正の範囲・回数</p></div></details>
+  </div>
+</section>
+
+<div class="cta">
+  <p class="slash">ホームページ、今月から持ちませんか？</p>
+  <a href="#" class="btn-line js-line"><span class="ic"><svg><use href="#i-line"/></svg></span><span><small>友だち追加で、すぐ相談できます</small>LINEで無料相談する</span></a>
+</div>
+
+<footer class="footer">
+  <div class="inner">
+    <div>
+      <a href="#" class="logo"><svg><use href="#i-bolt"/></svg>Flash</a>
+      <p class="copy">© Flash</p>
+    </div>
+    <ul><li><a href="#">特定商取引法に基づく表記</a></li><li><a href="#">プライバシーポリシー</a></li></ul>
+  </div>
+</footer>
+
+<div class="float" id="float"><a href="#" class="btn-line js-line"><span class="ic"><svg><use href="#i-line"/></svg></span>LINEで無料相談する</a></div>
+
+<script>
+// ▼ ここだけ書き換える（公式LINE・SNS のURL）
+const LINKS = {
+  line: "https://lin.ee/XXXXXXX",
+  instagram: "https://www.instagram.com/XXXXXXX/",
+  tiktok: "https://www.tiktok.com/@XXXXXXX",
+};
+const setHref = (sel, url) => document.querySelectorAll(sel).forEach(a => {
+  a.href = url; a.target = "_blank"; a.rel = "noopener";
+});
+setHref(".js-line", LINKS.line);
+setHref(".js-ig", LINKS.instagram);
+setHref(".js-tt", LINKS.tiktok);
+
+// SP: FVを過ぎたら下部固定ボタンを出す
+const fl = document.getElementById("float");
+new IntersectionObserver(([e]) => fl.classList.toggle("show", !e.isIntersecting))
+  .observe(document.querySelector(".fv"));
+</script>
+</body>
+</html>
