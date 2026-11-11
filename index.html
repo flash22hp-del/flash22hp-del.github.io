@@ -351,7 +351,7 @@ a{color:inherit;text-decoration:none}
     <div class="sns">
       <div>
         <h3>制作の様子や<br>テンプレートの紹介を発信中</h3>
-        <p>InstagramとTikTokで、ホームページづくりのコツやテンプレートを紹介しています。DMでのご相談も受け付けています。</p>
+        <p>Instagramで、ホームページづくりのコツやテンプレートを紹介しています。DMでのご相談も受け付けています。</p>
       </div>
       <div class="sns-btns">
         <a href="#" class="js-ig"><i class="ig"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></i><span>Instagram<small>リール・投稿・DM相談</small></span></a>
@@ -393,11 +393,12 @@ a{color:inherit;text-decoration:none}
 <script>
 // ▼ ここだけ書き換える（公式LINE・SNS のURL）
 const LINKS = {
-  line: "https://lin.ee/XXXXXXX",
-  instagram: "https://www.instagram.com/XXXXXXX/",
-  tiktok: "https://www.tiktok.com/@XXXXXXX",
+  line: "https://line.me/R/ti/p/@667amiig",
+  instagram: "https://www.instagram.com/flashhp_/",
+  tiktok: "", // 空ならTikTokボタンを隠す
 };
 const setHref = (sel, url) => document.querySelectorAll(sel).forEach(a => {
+  if (!url) { a.style.display = "none"; return; }
   a.href = url; a.target = "_blank"; a.rel = "noopener";
 });
 setHref(".js-line", LINKS.line);
