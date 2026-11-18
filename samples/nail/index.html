@@ -6,6 +6,11 @@
 <meta name="robots" content="noindex,nofollow">
 <title>nail &amp; lash Fuwalu（サンプル）| Flash テンプレート</title>
 <meta name="description" content="Flash のホームページ見本（架空のネイルサロン）。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://flash22hp-del.github.io/samples/nail/">
+<meta property="og:title" content="nail &amp; lash Fuwalu（サンプル）| Flash テンプレート">
+<meta property="og:description" content="Flash のホームページ見本（架空のネイルサロン）。">
+<meta property="og:image" content="https://flash22hp-del.github.io/samples/nail/img/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23b98e7e'/%3E%3Ctext x='16' y='22' font-size='17' text-anchor='middle' fill='%23fff' font-family='serif'%3EF%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +22,10 @@
   --bg2:#efe6de;
   --card:#fffdfb;
   --ink:#3b312c;
-  --sub:#7d6f67;
+  --sub:#6f625a;
   --accent:#b98e7e;
   --accent-dk:#9a7060;
+  --accent-tx:#8a5e4f; /* 文字とボタン用（白文字 5.53・カード上 5.45） */
   --line:#e4d8ce;
   --serif:"Noto Serif JP",serif;
   --en:"Cormorant Garamond",serif;
@@ -30,10 +36,11 @@ body{background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif
 img,svg{display:block}
 a{color:inherit;text-decoration:none}
 .inner{max-width:1040px;margin:0 auto;padding:0 20px}
+.nb{display:inline-block}
 
 /* サンプル表示 */
 .sample-bar{background:#2f2824;color:#f3e9e1;font-size:12px;text-align:center;padding:8px 16px;line-height:1.6}
-.sample-bar a{color:#ffd400;text-decoration:underline;font-weight:700}
+.sample-bar a{color:#ffd400;text-decoration:underline;font-weight:700;display:inline-block;padding:3px 0}
 
 /* header */
 .hd{position:sticky;top:0;z-index:20;background:rgba(248,243,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
@@ -43,14 +50,13 @@ a{color:inherit;text-decoration:none}
 .nav{display:flex;gap:28px;font-size:13px;letter-spacing:.08em}
 .nav a:hover{color:var(--accent)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:700;letter-spacing:.06em;transition:.2s;cursor:pointer;border:0;font-family:inherit}
-.btn-rsv{background:var(--accent);color:#fff;padding:10px 22px;font-size:13px}
-.btn-rsv:hover{background:var(--accent-dk)}
+.btn-rsv{background:var(--accent-tx);color:#fff;padding:10px 22px;font-size:13px}
+.btn-rsv:hover{background:#74503f}
 
 /* hero */
 .hero{padding:72px 0 88px;overflow:hidden}
 .hero .inner{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
-.eyebrow{font-family:var(--en);font-style:italic;color:var(--accent);font-size:20px;letter-spacing:.06em}
-.hero h1{font-family:var(--serif);font-weight:600;font-size:40px;line-height:1.6;margin:14px 0 22px;letter-spacing:.04em}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:40px;line-height:1.6;margin:0 0 22px;letter-spacing:.04em}
 .hero p.lead{color:var(--sub);font-size:15px}
 .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 32px}
 .hero-tags span{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:4px 14px;font-size:12px;color:var(--sub)}
@@ -66,13 +72,12 @@ a{color:inherit;text-decoration:none}
 .sec{padding:96px 0}
 .sec.alt{background:var(--bg2)}
 .sh{text-align:center;margin-bottom:52px}
-.sh .en{font-family:var(--en);font-style:italic;color:var(--accent);font-size:22px;letter-spacing:.1em}
-.sh h2{font-family:var(--serif);font-weight:600;font-size:26px;letter-spacing:.08em;margin-top:4px}
+.sh h2{font-family:var(--serif);font-weight:600;font-size:26px;letter-spacing:.08em}
 
 /* concept */
 .concept{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .concept div{background:var(--card);border-radius:16px;padding:32px 26px;text-align:center;border:1px solid var(--line)}
-.concept .num{font-family:var(--en);font-size:40px;color:var(--accent);line-height:1}
+.concept .num{font-family:var(--en);font-size:40px;color:var(--accent-tx);line-height:1}
 .concept h3{font-family:var(--serif);font-size:17px;margin:12px 0 8px;font-weight:600}
 .concept p{font-size:13px;color:var(--sub);text-align:left}
 
@@ -109,7 +114,7 @@ a{color:inherit;text-decoration:none}
 /* voice */
 .voice{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .voice div{background:var(--card);border-radius:16px;padding:28px 24px;border:1px solid var(--line)}
-.voice .stars{color:var(--accent);letter-spacing:.2em;font-size:13px}
+.voice .stars{color:var(--accent-tx);letter-spacing:.2em;font-size:13px}
 .voice p{font-size:13.5px;margin:10px 0 12px}
 .voice small{color:var(--sub);font-size:12px}
 
@@ -140,7 +145,7 @@ a{color:inherit;text-decoration:none}
 .form{max-width:640px;margin:0 auto;background:var(--card);border-radius:20px;padding:40px;border:1px solid var(--line)}
 .form label{display:block;font-size:13px;font-weight:500;margin:18px 0 6px}
 .form label:first-child{margin-top:0}
-.form label em{font-style:normal;background:var(--accent);color:#fff;font-size:10.5px;padding:1px 7px;border-radius:4px;margin-left:8px}
+.form label em{font-style:normal;background:var(--accent-tx);color:#fff;font-size:10.5px;padding:1px 7px;border-radius:4px;margin-left:8px}
 .form input,.form select,.form textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:10px;padding:12px 14px;font-size:15px;font-family:inherit;color:var(--ink)}
 .form textarea{min-height:110px;resize:vertical}
 .form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--accent);border-color:transparent}
@@ -151,13 +156,13 @@ a{color:inherit;text-decoration:none}
 .ft .logo{color:#fff}
 .ft-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
 .ft .sns{display:flex;gap:16px;margin-top:14px}
-.ft .sns a{text-decoration:underline}
+.ft .sns a{text-decoration:underline;display:inline-block;padding:4px 2px}
 .flash-cta{margin-top:40px;border-top:1px solid #4a403a;padding-top:32px;text-align:center}
 .flash-cta p{color:#fff;font-size:14px;margin-bottom:14px}
 .flash-cta p b{color:#ffd400}
 .flash-cta .row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.btn-line{background:#06c755;color:#fff;padding:13px 26px;font-size:14px}
-.btn-line:hover{background:#05a948}
+.btn-line{background:#05873b;color:#fff;padding:13px 26px;font-size:14px}
+.btn-line:hover{background:#046d30}
 .btn-flash{background:#ffd400;color:#141414;padding:13px 26px;font-size:14px}
 
 /* SP固定ボタン */
@@ -190,6 +195,9 @@ a{color:inherit;text-decoration:none}
   .info dl{grid-template-columns:80px 1fr}
   .float{display:block}
 }
+@media (max-width:400px){
+  .flow{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -206,7 +214,7 @@ a{color:inherit;text-decoration:none}
       <a href="#access">アクセス</a>
       <a href="#contact">お問い合わせ</a>
     </nav>
-    <a href="#" class="btn btn-rsv" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります">ご予約</a>
+    <a href="#" class="btn btn-rsv" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります" data-budoux>ご予約</a>
   </div>
 </header>
 
@@ -214,13 +222,12 @@ a{color:inherit;text-decoration:none}
 <section class="hero">
   <div class="inner">
     <div>
-      <p class="eyebrow">Private nail salon</p>
-      <h1>指先から、<br>毎日を少しだけ<br>上機嫌に。</h1>
+      <h1 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">指先から、<br>毎日を​少しだけ<br>上機嫌に。</span></h1>
       <p class="lead">完全予約制のプライベートサロン。<br>1日4名様限定で、ひとりひとりの爪に合わせて丁寧に仕上げます。</p>
       <div class="hero-tags"><span>完全予約制</span><span>マンツーマン</span><span>キッズスペースあり</span><span>駅徒歩3分</span></div>
       <div class="hero-cta">
-        <a href="#" class="btn btn-rsv btn-lg" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります">LINEで予約する</a>
-        <a href="#menu" class="btn btn-ghost btn-lg">メニューを見る</a>
+        <a href="https://line.me/R/ti/p/%40000aaaaa" class="btn btn-rsv btn-lg" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">LINEで​予約する</span></a>
+        <a href="#menu" class="btn btn-ghost btn-lg" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">メニューを​見る</span></a>
       </div>
     </div>
     <div class="visual"><img src="img/hero.jpg" alt="サロンの施術席と、ヌードベージュに金箔をのせたネイル" width="800" height="1200"></div>
@@ -229,39 +236,39 @@ a{color:inherit;text-decoration:none}
 
 <section class="sec alt" id="concept">
   <div class="inner">
-    <div class="sh"><p class="en">Concept</p><h2>Fuwalu が大切にしていること</h2></div>
+    <div class="sh"><h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">Fuwalu が​大切に​している​こと</span></h2></div>
     <div class="concept">
-      <div><p class="num">01</p><h3>爪にやさしい施術</h3><p>削りすぎないフィルインを基本に、自爪の状態を見ながら長く楽しめるネイルをご提案します。</p></div>
-      <div><p class="num">02</p><h3>ゆったりマンツーマン</h3><p>施術は最初から最後まで同じスタッフが担当。他のお客様と時間が重ならないよう予約を調整しています。</p></div>
-      <div><p class="num">03</p><h3>デザインの持ち込みOK</h3><p>インスタの画像をLINEで送っていただければ、事前にお見積もりをお伝えします。</p></div>
+      <div><p class="num">01</p><h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">爪に​やさしい​施術</span></h3><p>削りすぎないフィルインを基本に、自爪の状態を見ながら長く楽しめるネイルをご提案します。</p></div>
+      <div><p class="num">02</p><h3 data-budoux>ゆったりマンツーマン</h3><p>施術は最初から最後まで同じスタッフが担当。他のお客様と時間が重ならないよう予約を調整しています。</p></div>
+      <div><p class="num">03</p><h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">デザインの​持ち込みOK</span></h3><p>インスタの画像をLINEで送っていただければ、事前にお見積もりをお伝えします。</p></div>
     </div>
   </div>
 </section>
 
 <section class="sec" id="menu">
   <div class="inner">
-    <div class="sh"><p class="en">Menu &amp; Price</p><h2>メニュー・料金</h2></div>
+    <div class="sh"><h2 data-budoux>メニュー・料金</h2></div>
     <div class="menu-wrap">
       <div class="menu-box">
-        <h3>Nail<span>ネイル</span></h3>
-        <dl><dt>ハンド ワンカラー<small>ラメ・グラデーション可</small></dt><dd>¥5,500</dd></dl>
-        <dl><dt>ハンド 定額デザインA<small>シンプル・ニュアンス</small></dt><dd>¥6,600</dd></dl>
-        <dl><dt>ハンド 定額デザインB<small>マグネット・パーツ多め</small></dt><dd>¥7,700</dd></dl>
-        <dl><dt>フット ワンカラー</dt><dd>¥6,600</dd></dl>
-        <dl><dt>他店オフ</dt><dd>¥1,100</dd></dl>
+        <h3 data-budoux>Nail<span>ネイル</span></h3>
+        <dl><dt data-budoux>ハンド ワンカラー<small>ラメ・グラデーション可</small></dt><dd>¥5,500</dd></dl>
+        <dl><dt data-budoux>ハンド 定額デザインA<small>シンプル・ニュアンス</small></dt><dd>¥6,600</dd></dl>
+        <dl><dt data-budoux>ハンド 定額デザインB<small>マグネット・パーツ多め</small></dt><dd>¥7,700</dd></dl>
+        <dl><dt data-budoux>フット ワンカラー</dt><dd>¥6,600</dd></dl>
+        <dl><dt data-budoux>他店オフ</dt><dd>¥1,100</dd></dl>
       </div>
       <div class="menu-box">
-        <h3>Eyelash<span>まつげ</span></h3>
-        <dl><dt>まつげパーマ<small>トリートメント込み</small></dt><dd>¥5,500</dd></dl>
-        <dl><dt>パリジェンヌラッシュリフト</dt><dd>¥6,600</dd></dl>
-        <dl><dt>まつげエクステ 100本</dt><dd>¥6,050</dd></dl>
-        <dl><dt>まつげエクステ つけ放題</dt><dd>¥7,700</dd></dl>
-        <dl><dt>ハンドケアのみ</dt><dd>¥3,300</dd></dl>
+        <h3 data-budoux>Eyelash<span>まつげ</span></h3>
+        <dl><dt data-budoux>まつげパーマ<small>トリートメント込み</small></dt><dd>¥5,500</dd></dl>
+        <dl><dt data-budoux>パリジェンヌ<span class="nb">ラッシュリフト</span></dt><dd>¥6,600</dd></dl>
+        <dl><dt data-budoux>まつげエクステ 100本</dt><dd>¥6,050</dd></dl>
+        <dl><dt data-budoux>まつげエクステ つけ放題</dt><dd>¥7,700</dd></dl>
+        <dl><dt data-budoux>ハンドケアのみ</dt><dd>¥3,300</dd></dl>
       </div>
     </div>
     <div class="coupon">
       <div><b>はじめての方は<em>¥1,000</em>OFF</b><small>ご予約時に「ホームページを見た」とお伝えください</small></div>
-      <a href="#" class="btn btn-rsv" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります">クーポンで予約する</a>
+      <a href="#" class="btn btn-rsv" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">クーポンで​予約する</span></a>
     </div>
     <p class="note">※表示価格はすべて税込です（金額はサンプルです）</p>
   </div>
@@ -269,7 +276,7 @@ a{color:inherit;text-decoration:none}
 
 <section class="sec alt" id="gallery">
   <div class="inner">
-    <div class="sh"><p class="en">Gallery</p><h2>デザイン見本</h2></div>
+    <div class="sh"><h2 data-budoux>デザイン見本</h2></div>
     <div class="gallery">
       <div class="g-card"><img src="img/g1.jpg" alt="ヌーディーベージュのニュアンスネイル" loading="lazy" width="600" height="600"><p>ニュアンスベージュ<small>定額A</small></p></div>
       <div class="g-card"><img src="img/g2.jpg" alt="ミルキーホワイトのワンカラー" loading="lazy" width="600" height="600"><p>ミルキーホワイト<small>ワンカラー</small></p></div>
@@ -278,25 +285,25 @@ a{color:inherit;text-decoration:none}
       <div class="g-card"><img src="img/g5.jpg" alt="くすみピンクのグラデーション" loading="lazy" width="600" height="600"><p>ピンクグラデ<small>ワンカラー</small></p></div>
       <div class="g-card"><img src="img/g6.jpg" alt="グレージュに2本だけシルバーラメ" loading="lazy" width="600" height="600"><p>グレージュ×ラメ<small>定額B</small></p></div>
     </div>
-    <div class="center"><a href="#" class="btn btn-ghost btn-lg" data-sample="ここにお店のInstagramが入ります">Instagramでもっと見る</a></div>
+    <div class="center"><a href="#" class="btn btn-ghost btn-lg" data-sample="ここにお店のInstagramが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">Instagramでもっと​見る</span></a></div>
   </div>
 </section>
 
 <section class="sec" id="flow">
   <div class="inner">
-    <div class="sh"><p class="en">First visit</p><h2>はじめての方へ</h2></div>
+    <div class="sh"><h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">はじめての​方へ</span></h2></div>
     <ol class="flow">
-      <li><h3>ご予約</h3><p>LINEかお電話で。ご希望のデザイン画像があれば一緒に送ってください。</p></li>
-      <li><h3>カウンセリング</h3><p>爪の状態とご希望を伺い、デザインと料金を確定します。</p></li>
-      <li><h3>施術</h3><p>ハンドで約90分。お飲み物をご用意してお待ちしています。</p></li>
-      <li><h3>アフターケア</h3><p>2週間以内の浮き・欠けは無料でお直しします。</p></li>
+      <li><h3 data-budoux>ご予約</h3><p>LINEかお電話で。ご希望のデザイン画像があれば一緒に送ってください。</p></li>
+      <li><h3 data-budoux>カウンセリング</h3><p>爪の状態とご希望を伺い、デザインと料金を確定します。</p></li>
+      <li><h3 data-budoux>施術</h3><p>ハンドで約90分。お飲み物をご用意してお待ちしています。</p></li>
+      <li><h3 data-budoux>アフターケア</h3><p>2週間以内の浮き・欠けは無料でお直しします。</p></li>
     </ol>
   </div>
 </section>
 
 <section class="sec alt" id="voice">
   <div class="inner">
-    <div class="sh"><p class="en">Voice</p><h2>お客様の声</h2></div>
+    <div class="sh"><h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">お客様の​声</span></h2></div>
     <div class="voice">
       <div><p class="stars">★★★★★</p><p>持ち込みの画像どおりに仕上げてもらえました。3週間たっても浮いてこないのが嬉しいです。</p><small>20代・会社員</small></div>
       <div><p class="stars">★★★★★</p><p>子どもを連れて行けるサロンを探していました。キッズスペースがあって助かります。</p><small>30代・主婦</small></div>
@@ -308,27 +315,27 @@ a{color:inherit;text-decoration:none}
 
 <section class="sec" id="faq">
   <div class="inner">
-    <div class="sh"><p class="en">FAQ</p><h2>よくあるご質問</h2></div>
+    <div class="sh"><h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">よく​ある​ご質問</span></h2></div>
     <div class="faq">
-      <details><summary>当日予約はできますか？</summary><p>空きがあればお受けしています。LINEでお気軽にお問い合わせください。</p></details>
-      <details><summary>子ども連れでも大丈夫ですか？</summary><p>はい。キッズスペースをご用意しています。ご予約時にお知らせください。</p></details>
-      <details><summary>支払い方法は？</summary><p>現金・クレジットカード・各種QRコード決済がご利用いただけます。</p></details>
-      <details><summary>駐車場はありますか？</summary><p>専用駐車場はございません。近隣のコインパーキングをご利用ください。</p></details>
+      <details><summary data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">当日予約は​できますか？</span></summary><p>空きがあればお受けしています。LINEでお気軽にお問い合わせください。</p></details>
+      <details><summary data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">子ども​連れでも​大丈夫ですか？</span></summary><p>はい。キッズスペースをご用意しています。ご予約時にお知らせください。</p></details>
+      <details><summary data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">支払い​方法は？</span></summary><p>現金・クレジットカード・各種QRコード決済がご利用いただけます。</p></details>
+      <details><summary data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">駐車場は​ありますか？</span></summary><p>専用駐車場はございません。近隣のコインパーキングをご利用ください。</p></details>
     </div>
   </div>
 </section>
 
 <section class="sec alt" id="access">
   <div class="inner">
-    <div class="sh"><p class="en">Access</p><h2>店舗情報</h2></div>
+    <div class="sh"><h2 data-budoux>店舗情報</h2></div>
     <div class="access">
       <div class="info">
-        <dl><dt>店名</dt><dd>nail &amp; lash Fuwalu</dd></dl>
-        <dl><dt>住所</dt><dd>〇〇県〇〇市〇〇町1-2-3 〇〇ビル2F</dd></dl>
-        <dl><dt>アクセス</dt><dd>〇〇駅 東口から徒歩3分</dd></dl>
-        <dl><dt>営業時間</dt><dd>10:00〜19:00（最終受付 17:30）</dd></dl>
-        <dl><dt>定休日</dt><dd>毎週火曜日・不定休</dd></dl>
-        <dl><dt>電話</dt><dd>000-0000-0000</dd></dl>
+        <dl><dt data-budoux>店名</dt><dd>nail &amp; lash Fuwalu</dd></dl>
+        <dl><dt data-budoux>住所</dt><dd>〇〇県〇〇市〇〇町1-2-3 〇〇ビル2F</dd></dl>
+        <dl><dt data-budoux>アクセス</dt><dd>〇〇駅 東口から徒歩3分</dd></dl>
+        <dl><dt data-budoux>営業時間</dt><dd>10:00〜19:00（最終受付 17:30）</dd></dl>
+        <dl><dt data-budoux>定休日</dt><dd>毎週火曜日・不定休</dd></dl>
+        <dl><dt data-budoux>電話</dt><dd>000-0000-0000</dd></dl>
       </div>
       <div class="map" aria-label="地図（サンプル）"><i class="pin"></i><span>ここにGoogleマップが入ります</span></div>
     </div>
@@ -337,19 +344,19 @@ a{color:inherit;text-decoration:none}
 
 <section class="sec" id="contact">
   <div class="inner">
-    <div class="sh"><p class="en">Contact</p><h2>お問い合わせ</h2></div>
+    <div class="sh"><h2 data-budoux>お問い合わせ</h2></div>
     <form class="form" id="form">
-      <label>お名前<em>必須</em></label>
-      <input type="text" required placeholder="山田 花子">
-      <label>電話番号またはメールアドレス<em>必須</em></label>
-      <input type="text" required placeholder="090-0000-0000">
-      <label>ご希望のメニュー</label>
-      <select><option>ハンド ワンカラー</option><option>ハンド 定額デザイン</option><option>フット</option><option>まつげパーマ</option><option>まつげエクステ</option><option>その他・相談したい</option></select>
-      <label>ご希望の日時</label>
-      <input type="text" placeholder="例）11月20日 14時以降">
-      <label>ご質問・ご要望</label>
-      <textarea placeholder="デザインのイメージなど"></textarea>
-      <button class="btn btn-rsv btn-lg" type="submit">送信する</button>
+      <label for="f-name">お名前<em>必須</em></label>
+      <input type="text" id="f-name" required placeholder="山田 花子">
+      <label for="f-contact">電話番号またはメールアドレス<em>必須</em></label>
+      <input type="text" id="f-contact" required placeholder="090-0000-0000">
+      <label for="f-menu">ご希望のメニュー</label>
+      <select id="f-menu"><option>ハンド ワンカラー</option><option>ハンド 定額デザイン</option><option>フット</option><option>まつげパーマ</option><option>まつげエクステ</option><option>その他・相談したい</option></select>
+      <label for="f-date">ご希望の日時</label>
+      <input type="text" id="f-date" placeholder="例）11月20日 14時以降">
+      <label for="f-msg">ご質問・ご要望</label>
+      <textarea id="f-msg" placeholder="デザインのイメージなど"></textarea>
+      <button class="btn btn-rsv btn-lg" type="submit" data-budoux>送信する</button>
     </form>
   </div>
 </section>
@@ -367,14 +374,14 @@ a{color:inherit;text-decoration:none}
     <div class="flash-cta">
       <p>このホームページは <b>Flash</b> の見本です。<br>お店の写真と文章に差し替えて、月額9,900円でお作りします。</p>
       <div class="row">
-        <a href="https://line.me/R/ti/p/@667amiig" class="btn btn-line" target="_blank" rel="noopener">Flashに LINEで相談する</a>
-        <a href="https://flash22hp-del.github.io/" class="btn btn-flash">Flashのページを見る</a>
+        <a href="https://line.me/R/ti/p/@667amiig" class="btn btn-line" target="_blank" rel="noopener" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">Flashに LINEで​相談する</span></a>
+        <a href="https://flash22hp-del.github.io/" class="btn btn-flash" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">Flashの​ページを​見る</span></a>
       </div>
     </div>
   </div>
 </footer>
 
-<div class="float" id="float"><a href="#" class="btn btn-rsv" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります">LINEで予約する</a></div>
+<div class="float" id="float"><a href="https://line.me/R/ti/p/%40000aaaaa" class="btn btn-rsv" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">LINEで​予約する</span></a></div>
 <div class="toast" id="toast" role="status"></div>
 
 <script>

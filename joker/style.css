@@ -1,7 +1,7 @@
 /* JOKER POKER HOUSE 公式サイト（下書き） */
 :root{
   --ink:#111112; --ink2:#1d1d20; --sub:#5c5c62; --bg:#fff; --soft:#f4f2ee; --line-c:#e3dfd6;
-  --gold:#c9a44c; --gold-dk:#a8852f; --red:#d7262b; --green:#06c755;
+  --gold:#c9a44c; --gold-dk:#86661c; --red:#d7262b; --green:#05873b;
   --en:"Oswald",sans-serif; --jp:"Noto Sans JP",sans-serif;
   --wrap:1120px; --r:18px;
 }
@@ -36,9 +36,8 @@ a{color:inherit}
 .hero .bg{position:absolute;inset:0;background:url(img/interior.jpg) center/cover no-repeat;opacity:.5}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.55) 55%,rgba(0,0,0,.2) 100%)}
 .hero .wrap{position:relative;z-index:2;padding-top:96px;padding-bottom:88px}
-.hero .kicker{font-family:var(--en);letter-spacing:.24em;color:var(--gold);font-size:14px}
+.hero .kicker{letter-spacing:.08em;color:var(--gold);font-size:14px;font-weight:700}
 .hero h1{font-size:clamp(34px,5.6vw,60px);font-weight:900;line-height:1.3;margin-top:14px;letter-spacing:.01em}
-.hero h1 em{font-style:normal;color:var(--gold)}
 .hero .lead{margin-top:20px;font-size:clamp(15px,1.8vw,18px);max-width:560px;color:#e6e6e6}
 .hero .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;list-style:none}
 .hero .chips li{border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:700;background:rgba(0,0,0,.35)}
@@ -48,7 +47,7 @@ a{color:inherit}
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;border-radius:999px;padding:14px 26px;font-size:15px;transition:transform .2s,box-shadow .2s}
 .btn:hover{transform:translateY(-2px)}
-.btn-line{background:var(--green);color:#fff;box-shadow:0 8px 20px rgba(6,199,85,.3)}
+.btn-line{background:var(--green);color:#fff;box-shadow:0 8px 20px rgba(5,135,59,.3)}
 .btn-gold{background:var(--gold);color:#111}
 .btn-ghost{border:1.5px solid currentColor}
 .btn svg{width:20px;height:20px;fill:currentColor}
@@ -57,8 +56,7 @@ a{color:inherit}
 .ph{background:var(--ink);color:#fff;position:relative;overflow:hidden}
 .ph .wrap{padding-top:64px;padding-bottom:56px;position:relative;z-index:2}
 .ph .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.28}
-.ph .en{color:var(--gold);font-size:14px;letter-spacing:.24em}
-.ph h1{font-size:clamp(28px,4.4vw,42px);font-weight:900;margin-top:8px;line-height:1.35}
+.ph h1{font-size:clamp(28px,4.4vw,42px);font-weight:900;line-height:1.35}
 .ph p{margin-top:12px;color:#ddd;max-width:640px}
 .crumb{font-size:12px;color:#aaa;margin-top:18px}
 .crumb a{color:#ccc}
@@ -68,9 +66,7 @@ a{color:inherit}
 .sec.soft{background:var(--soft)}
 .sec.dark{background:var(--ink);color:#fff}
 .sh{margin-bottom:40px}
-.sh .en{display:block;color:var(--gold-dk);font-size:14px;letter-spacing:.24em}
-.dark .sh .en{color:var(--gold)}
-.sh h2{font-size:clamp(24px,3.4vw,34px);font-weight:900;line-height:1.4;margin-top:6px}
+.sh h2{font-size:clamp(24px,3.4vw,34px);font-weight:900;line-height:1.4}
 .sh p{margin-top:12px;color:var(--sub);max-width:680px}
 .dark .sh p{color:#cfcfcf}
 .center{text-align:center}.center .sh p{margin-left:auto;margin-right:auto}
@@ -94,7 +90,7 @@ a{color:inherit}
 .sched{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border-radius:var(--r);overflow:hidden;background:var(--ink2);color:#fff}
 .sched .img img{width:100%;height:100%;object-fit:cover;min-height:260px}
 .sched .txt{padding:40px 36px;display:flex;flex-direction:column;justify-content:center;gap:14px}
-.sched h3{font-size:24px;font-weight:900;line-height:1.45}
+.sched h2,.sched h3{font-size:24px;font-weight:900;line-height:1.45}
 .sched p{color:#cfcfcf;font-size:15px}
 
 /* tables */
@@ -147,8 +143,7 @@ a{color:inherit}
 /* days */
 .days{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .day{border-radius:16px;padding:26px 24px;background:var(--ink2);color:#fff}
-.day .en{color:var(--gold);font-size:13px;letter-spacing:.2em}
-.day h3{font-size:21px;font-weight:900;margin-top:4px}
+.day h3{font-size:21px;font-weight:900}
 .day p{font-size:14px;color:#d0d0d0;margin-top:10px}
 
 /* access */
@@ -196,7 +191,7 @@ a{color:inherit}
 .ft{background:#0a0a0b;color:#bdbdbd;font-size:14px}
 .ft .wrap{padding-top:56px;padding-bottom:110px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
 .ft .logo img{height:56px;width:auto}
-.ft h4{color:#fff;font-size:14px;margin-bottom:10px}
+.ft .ft-h{color:#fff;font-size:14px;font-weight:700;margin-bottom:10px}
 .ft ul{list-style:none;display:grid;gap:6px}
 .ft a{text-decoration:none}
 .ft a:hover{color:var(--gold)}
