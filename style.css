@@ -292,7 +292,7 @@ small { font-size: inherit; }
 
 /* ---- 料金（黒の面） ---- */
 .fee { background: var(--ink); color: var(--white); padding: var(--section-y) var(--pad); }
-.fee .mk, .ask .mk { background: none; color: var(--yellow); }
+.fee .mk, .ask .mk, .top .mk { background: none; color: var(--yellow); }
 .badges--3 { grid-template-columns: repeat(3, minmax(0, 116px)); justify-content: center; margin-block: calc(clamp(28px, 4.5vw, 52px) * -0.35) clamp(32px, 4.5vw, 52px); }
 .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
 .plan { background: var(--white); color: var(--ink); border-radius: 22px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; box-shadow: 0 6px 0 #000; }
