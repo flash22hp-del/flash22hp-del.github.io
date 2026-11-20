@@ -1,391 +1,415 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>nail &amp; lash Fuwalu（サンプル）| Flash テンプレート</title>
-<meta name="description" content="Flash のホームページ見本（架空のネイルサロン）。">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>nail &amp; lash Fuwalu｜〇〇駅 東口 徒歩3分のネイルとまつげ（見本）</title>
+<meta name="description" content="（見本）〇〇駅 東口から徒歩3分、1日4名までのネイルとまつげの店 nail &amp; lash Fuwalu。ハンドのデザインは 5,500円・6,600円・7,700円の3つの値段（税込・約90分）、まつげは 5,500円から。10:00〜19:00、火曜・不定休。予約サイト・LINE・電話で予約できます。">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://flash22hp-del.github.io/samples/nail/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://flash22hp-del.github.io/samples/nail/">
-<meta property="og:title" content="nail &amp; lash Fuwalu（サンプル）| Flash テンプレート">
-<meta property="og:description" content="Flash のホームページ見本（架空のネイルサロン）。">
+<meta property="og:title" content="nail &amp; lash Fuwalu｜1日4名だけの、ネイルとまつげ。（見本）">
+<meta property="og:description" content="〇〇駅 東口 徒歩3分。ハンド 5,500円から（税込）。写真の爪がいくらでできるか、値段ごとに並べています。">
 <meta property="og:image" content="https://flash22hp-del.github.io/samples/nail/img/og.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23b98e7e'/%3E%3Ctext x='16' y='22' font-size='17' text-anchor='middle' fill='%23fff' font-family='serif'%3EF%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
-<style>
-/* ▼ 配色はここだけ変えればサイト全体が変わる */
-:root{
-  --bg:#f8f3ee;
-  --bg2:#efe6de;
-  --card:#fffdfb;
-  --ink:#3b312c;
-  --sub:#6f625a;
-  --accent:#b98e7e;
-  --accent-dk:#9a7060;
-  --accent-tx:#8a5e4f; /* 文字とボタン用（白文字 5.53・カード上 5.45） */
-  --line:#e4d8ce;
-  --serif:"Noto Serif JP",serif;
-  --en:"Cormorant Garamond",serif;
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NailSalon",
+  "name": "nail & lash Fuwalu",
+  "url": "https://flash22hp-del.github.io/samples/nail/",
+  "image": "https://flash22hp-del.github.io/samples/nail/img/og.jpg",
+  "telephone": "+81-00-0000-0000",
+  "address": { "@type": "PostalAddress", "addressCountry": "JP", "addressRegion": "〇〇県", "addressLocality": "〇〇市", "streetAddress": "〇〇町1-2-3 〇〇ビル2F" },
+  "priceRange": "3,300円〜7,700円",
+  "paymentAccepted": "現金, クレジットカード, QRコード決済",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "10:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday"], "opens": "00:00", "closes": "00:00" }
+  ]
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.9;font-size:15px;-webkit-font-smoothing:antialiased}
-img,svg{display:block}
-a{color:inherit;text-decoration:none}
-.inner{max-width:1040px;margin:0 auto;padding:0 20px}
-.nb{display:inline-block}
-
-/* サンプル表示 */
-.sample-bar{background:#2f2824;color:#f3e9e1;font-size:12px;text-align:center;padding:8px 16px;line-height:1.6}
-.sample-bar a{color:#ffd400;text-decoration:underline;font-weight:700;display:inline-block;padding:3px 0}
-
-/* header */
-.hd{position:sticky;top:0;z-index:20;background:rgba(248,243,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.hd .inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:var(--en);font-size:28px;font-weight:600;letter-spacing:.04em;line-height:1}
-.logo small{display:block;font-family:"Noto Sans JP";font-size:10px;letter-spacing:.2em;color:var(--sub);margin-top:4px}
-.nav{display:flex;gap:28px;font-size:13px;letter-spacing:.08em}
-.nav a:hover{color:var(--accent)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:700;letter-spacing:.06em;transition:.2s;cursor:pointer;border:0;font-family:inherit}
-.btn-rsv{background:var(--accent-tx);color:#fff;padding:10px 22px;font-size:13px}
-.btn-rsv:hover{background:#74503f}
-
-/* hero */
-.hero{padding:72px 0 88px;overflow:hidden}
-.hero .inner{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
-.hero h1{font-family:var(--serif);font-weight:600;font-size:40px;line-height:1.6;margin:0 0 22px;letter-spacing:.04em}
-.hero p.lead{color:var(--sub);font-size:15px}
-.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 32px}
-.hero-tags span{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:4px 14px;font-size:12px;color:var(--sub)}
-.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
-.btn-lg{padding:16px 30px;font-size:15px}
-.btn-ghost{background:transparent;border:1px solid var(--ink);color:var(--ink)}
-.btn-ghost:hover{background:var(--ink);color:#fff}
-.visual{position:relative;width:100%;max-width:440px;justify-self:center;aspect-ratio:4/5;border-radius:220px 220px 24px 24px;overflow:hidden;background:var(--bg2);box-shadow:0 30px 60px -30px rgba(120,80,60,.45)}
-.visual img{width:100%;height:100%;object-fit:cover;object-position:center 70%}
-.visual::before{content:"";position:absolute;inset:16px;z-index:1;border:1px solid rgba(255,255,255,.7);border-radius:204px 204px 12px 12px;pointer-events:none}
-
-/* section common */
-.sec{padding:96px 0}
-.sec.alt{background:var(--bg2)}
-.sh{text-align:center;margin-bottom:52px}
-.sh h2{font-family:var(--serif);font-weight:600;font-size:26px;letter-spacing:.08em}
-
-/* concept */
-.concept{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.concept div{background:var(--card);border-radius:16px;padding:32px 26px;text-align:center;border:1px solid var(--line)}
-.concept .num{font-family:var(--en);font-size:40px;color:var(--accent-tx);line-height:1}
-.concept h3{font-family:var(--serif);font-size:17px;margin:12px 0 8px;font-weight:600}
-.concept p{font-size:13px;color:var(--sub);text-align:left}
-
-/* menu */
-.menu-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.menu-box{background:var(--card);border-radius:16px;padding:32px;border:1px solid var(--line)}
-.menu-box h3{font-family:var(--en);font-size:24px;font-weight:600;letter-spacing:.06em;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:8px}
-.menu-box h3 span{font-family:"Noto Sans JP";font-size:12px;color:var(--sub);margin-left:10px;letter-spacing:.1em}
-.menu-box dl{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:14px}
-.menu-box dl:last-child{border-bottom:0}
-.menu-box dt small{display:block;font-size:11.5px;color:var(--sub)}
-.menu-box dd{font-weight:700;white-space:nowrap}
-.coupon{margin-top:28px;background:var(--ink);color:#f6ece4;border-radius:16px;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.coupon b{font-family:var(--serif);font-size:18px;font-weight:600}
-.coupon b em{font-style:normal;color:#f0c9a8;font-size:24px;margin:0 4px}
-.coupon small{display:block;font-size:12px;opacity:.8}
-.note{font-size:12px;color:var(--sub);margin-top:14px;text-align:right}
-
-/* gallery */
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.g-card{background:var(--card);border-radius:16px;border:1px solid var(--line);overflow:hidden}
-.g-card img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:var(--bg2)}
-.g-card p{padding:14px 18px;font-size:13px;display:flex;justify-content:space-between;align-items:center}
-.g-card p small{color:var(--sub);font-size:11.5px}
-.center{text-align:center;margin-top:36px}
-
-/* flow */
-.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:f}
-.flow li{list-style:none;background:var(--card);border-radius:16px;padding:26px 20px;border:1px solid var(--line);position:relative}
-.flow li::before{counter-increment:f;content:"0" counter(f);font-family:var(--en);font-size:30px;color:var(--accent);line-height:1;display:block;margin-bottom:10px}
-.flow h3{font-family:var(--serif);font-size:16px;font-weight:600;margin-bottom:6px}
-.flow p{font-size:12.5px;color:var(--sub)}
-
-/* voice */
-.voice{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.voice div{background:var(--card);border-radius:16px;padding:28px 24px;border:1px solid var(--line)}
-.voice .stars{color:var(--accent-tx);letter-spacing:.2em;font-size:13px}
-.voice p{font-size:13.5px;margin:10px 0 12px}
-.voice small{color:var(--sub);font-size:12px}
-
-/* faq */
-.faq{max-width:760px;margin:0 auto}
-.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px}
-.faq summary{list-style:none;cursor:pointer;padding:18px 48px 18px 22px;font-weight:500;position:relative;font-size:14.5px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::before{content:"Q.";font-family:var(--en);color:var(--accent);font-size:19px;margin-right:10px}
-.faq summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--accent)}
-.faq details[open] summary::after{content:"−"}
-.faq details p{padding:0 22px 20px 50px;font-size:13.5px;color:var(--sub)}
-
-/* access */
-.access{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch}
-.info dl{display:grid;grid-template-columns:96px 1fr;border-bottom:1px solid var(--line);padding:14px 0;font-size:14px}
-.info dt{color:var(--sub);font-size:13px}
-.map{border-radius:16px;border:1px solid var(--line);min-height:300px;position:relative;overflow:hidden;background:
-  linear-gradient(90deg,transparent 0 46%,#fff 46% 50%,transparent 50%),
-  linear-gradient(0deg,transparent 0 58%,#fff 58% 62%,transparent 62%),
-  linear-gradient(35deg,transparent 0 70%,#fbf6f1 70% 73%,transparent 73%),
-  #e8e0d6}
-.map .pin{position:absolute;left:calc(48% - 14px);top:calc(60% - 40px);width:28px;height:28px;background:var(--accent);border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 4px 10px rgba(0,0,0,.2)}
-.map .pin::after{content:"";position:absolute;inset:9px;background:#fff;border-radius:50%}
-.map span{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.9);font-size:11.5px;padding:4px 10px;border-radius:999px;color:var(--sub)}
-
-/* form */
-.form{max-width:640px;margin:0 auto;background:var(--card);border-radius:20px;padding:40px;border:1px solid var(--line)}
-.form label{display:block;font-size:13px;font-weight:500;margin:18px 0 6px}
-.form label:first-child{margin-top:0}
-.form label em{font-style:normal;background:var(--accent-tx);color:#fff;font-size:10.5px;padding:1px 7px;border-radius:4px;margin-left:8px}
-.form input,.form select,.form textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:10px;padding:12px 14px;font-size:15px;font-family:inherit;color:var(--ink)}
-.form textarea{min-height:110px;resize:vertical}
-.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--accent);border-color:transparent}
-.form .btn{width:100%;margin-top:26px}
-
-/* footer */
-.ft{background:#2f2824;color:#d9cbc0;padding:48px 0 110px;font-size:12.5px}
-.ft .logo{color:#fff}
-.ft-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
-.ft .sns{display:flex;gap:16px;margin-top:14px}
-.ft .sns a{text-decoration:underline;display:inline-block;padding:4px 2px}
-.flash-cta{margin-top:40px;border-top:1px solid #4a403a;padding-top:32px;text-align:center}
-.flash-cta p{color:#fff;font-size:14px;margin-bottom:14px}
-.flash-cta p b{color:#ffd400}
-.flash-cta .row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.btn-line{background:#05873b;color:#fff;padding:13px 26px;font-size:14px}
-.btn-line:hover{background:#046d30}
-.btn-flash{background:#ffd400;color:#141414;padding:13px 26px;font-size:14px}
-
-/* SP固定ボタン */
-.float{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:none;opacity:0;transform:translateY(20px);pointer-events:none;transition:.25s}
-.float.show{opacity:1;transform:none;pointer-events:auto}
-.float .btn{width:100%;padding:15px;font-size:15px;box-shadow:0 10px 24px -8px rgba(90,60,45,.6)}
-
-/* サンプル通知 */
-.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:#2f2824;color:#fff;font-size:13px;padding:12px 20px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:50;width:max-content;max-width:calc(100% - 32px);text-align:center;line-height:1.6}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-
-@media (max-width:767px){
-  body{font-size:14px}
-  .nav{display:none}
-  .hd .btn-rsv{padding:8px 16px;font-size:12px}
-  .hero{padding:40px 0 64px}
-  .hero .inner{grid-template-columns:1fr;gap:36px}
-  .hero h1{font-size:27px}
-  .visual{max-width:330px;border-radius:170px 170px 20px 20px}
-  .visual::before{inset:12px;border-radius:158px 158px 10px 10px}
-  .sec{padding:72px 0}
-  .sh h2{font-size:22px}
-  .concept,.menu-wrap,.gallery,.voice,.access{grid-template-columns:1fr}
-  .gallery{grid-template-columns:1fr 1fr;gap:12px}
-  .g-card p{flex-direction:column;align-items:flex-start;padding:10px 12px;font-size:12.5px}
-  .flow{grid-template-columns:1fr 1fr}
-  .menu-box{padding:24px 20px}
-  .coupon{padding:20px}
-  .form{padding:28px 20px}
-  .info dl{grid-template-columns:80px 1fr}
-  .float{display:block}
-}
-@media (max-width:400px){
-  .flow{grid-template-columns:1fr}
-}
-</style>
+</script>
 </head>
-<body>
+<body id="top">
+<svg class="fw-sprite" aria-hidden="true" focusable="false" width="0" height="0">
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14" rx="3"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M11 17.5h2"/></symbol>
+  <symbol id="i-pay" viewBox="0 0 24 24"><rect x="3.5" y="6" width="17" height="12" rx="2.5"/><path d="M3.5 10.5h17M7 14.5h3"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9 9l6 6M15 9l-6 6"/></symbol>
+  <symbol id="i-run" viewBox="0 0 24 24"><circle cx="12" cy="13" r="7.5"/><path d="M12 9v4l-2.5 2M9.5 3h5"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M3 7.5h18V10H3zM12 7.5V20M12 7.5c-1-3-5-3.5-5-1.5S10 7.5 12 7.5zm0 0c1-3 5-3.5 5-1.5S14 7.5 12 7.5z"/></symbol>
+  <symbol id="i-one" viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M3 19c.5-3.5 2.700-5.5 5.5-5.5s5 2 5.5 5.5M14.5 14c3-.800 5.800.800 6.5 4.5"/></symbol>
+  <symbol id="i-four" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></symbol>
+  <symbol id="i-kids" viewBox="0 0 24 24"><rect x="3.5" y="12" width="8" height="8" rx="1.5"/><rect x="12.5" y="12" width="8" height="8" rx="1.5"/><rect x="8" y="3.5" width="8" height="8" rx="1.5"/></symbol>
+  <symbol id="i-fix" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 1 1-2.400-5.5M19.5 4v4h-4"/><path d="M9 12.5l2 2 4-4.5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.800-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.200 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.300"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 16.5v-3.5l2-5h12l2 5v3.5zM4 13h16"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H11l-4.5 3.5V16A2.5 2.5 0 0 1 4 13.5z"/></symbol>
+</svg>
+<aside aria-label="このページについて"><a class="sample-bar" href="https://flash22hp-del.github.io/">架空の店の見本です　<u>Flash なら月額9,900円</u></a></aside>
 
-<div class="sample-bar">これは <b>Flash</b> のホームページ見本です（架空のお店）。この見た目で月額9,900円。<a href="https://flash22hp-del.github.io/">Flashについて見る</a></div>
-
-<header class="hd">
-  <div class="inner">
-    <a href="#top" class="logo">Fuwalu<small>NAIL &amp; EYELASH</small></a>
-    <nav class="nav">
-      <a href="#concept">コンセプト</a>
-      <a href="#menu">メニュー</a>
-      <a href="#gallery">ギャラリー</a>
-      <a href="#access">アクセス</a>
-      <a href="#contact">お問い合わせ</a>
-    </nav>
-    <a href="#" class="btn btn-rsv" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります" data-budoux>ご予約</a>
-  </div>
+<header class="fw-header">
+  <a class="fw-logo" href="#top"><span class="tip tip--logo t-rose" aria-hidden="true"></span><span class="fw-logo-text"><span class="fw-logo-name">Fuwalu</span><span class="fw-logo-sub">ネイル・まつげ</span></span></a>
+  <nav class="fw-nav" aria-label="ページ内">
+    <a href="#design">デザインと料金</a>
+    <a href="#lash">まつげ</a>
+    <a href="#reserve">予約</a>
+    <a href="#access">アクセス</a>
+  </nav>
+  <a class="fw-head-tel" href="tel:000-0000-0000" data-sample="スマホではここを押すとお店に電話がかかります"><span class="fw-head-tel-label">電話</span><b>000-0000-0000</b></a>
+  <a class="btn fw-head-btn" href="#" data-sample="ここにお店の予約サイトが入ります" data-budoux>予約する</a>
 </header>
 
-<main id="top">
-<section class="hero">
-  <div class="inner">
-    <div>
-      <h1 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">指先から、<br>毎日を​少しだけ<br>上機嫌に。</span></h1>
-      <p class="lead">完全予約制のプライベートサロン。<br>1日4名様限定で、ひとりひとりの爪に合わせて丁寧に仕上げます。</p>
-      <div class="hero-tags"><span>完全予約制</span><span>マンツーマン</span><span>キッズスペースあり</span><span>駅徒歩3分</span></div>
-      <div class="hero-cta">
-        <a href="https://line.me/R/ti/p/%40000aaaaa" class="btn btn-rsv btn-lg" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">LINEで​予約する</span></a>
-        <a href="#menu" class="btn btn-ghost btn-lg" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">メニューを​見る</span></a>
+<main>
+  <section class="fw-hero">
+    <div class="fw-hero-photo">
+      <img src="img/hero-magnet3.webp" srcset="img/hero-magnet3-s.webp 640w, img/hero-magnet3.webp 1280w" sizes="(min-width: 900px) 68vw, 100vw" width="1280" height="853" alt="爪2本に寄って見た、ボルドーのマグネットネイルの光の筋" fetchpriority="high">
+      <a class="fw-hero-tag" href="#d-magnet"><span class="fw-hero-tag-name">写真の爪は ボルドーのマグネット</span><span class="fw-hero-tag-yen num">7,700円</span></a>
+    </div>
+    <div class="fw-hero-body">
+      <p class="fw-pills" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="fw-pill">〇〇駅 東口から​徒歩3分</span><span class="fw-pill fw-pill--line">完全予約制</span></span></p>
+      <h1 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="fw-h1-sub">1日4名だけの、</span><span class="fw-h1-main">​ネイルと​まつげ。</span></span></h1>
+      <p class="fw-hero-price" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="fw-hero-price-label">ハンド</span><span class="fw-hero-price-num num">5,500</span><span class="fw-hero-price-unit">円<small>​（税込）から</small></span></span></p>
+      <ul class="fw-fuda" aria-label="この店のこと">
+        <li class="fw-fuda--deep"><small>はじめての方</small><b class="num">1,000円引き</b></li>
+        <li><b>キッズスペースあり</b></li>
+      </ul>
+      <div class="fw-hero-cta">
+        <a class="btn btn--light" href="#" data-sample="ここにお店の予約サイトが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">予約サイトで​予約する</span></a>
+        <a class="btn btn--line" href="https://line.me/R/ti/p/%40000aaaaa" data-sample="ここにお店のLINEが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">LINEで​予約・相談</span></a>
+      </div>
+      <p class="fw-hero-hours" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">10:00〜19:00​（最終受付 17:30）</span>　<span class="nw">火曜・​不定休</span></span></p>
+    </div>
+  </section>
+
+  <nav class="fw-chart" aria-label="色見本から作例へ">
+    <p class="fw-chart-label" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere" class="fw-chart-label-in">色​見本から​選ぶ</span></p>
+    <ul>
+      <li data-budoux><a href="#d-rose"><span class="tip tip--xl t-rose" aria-hidden="true"></span><span class="fw-chip-name">ローズ</span><span class="fw-chip-yen num">5,500円</span></a></li>
+      <li data-budoux><a href="#d-lame"><span class="tip tip--xl t-lame" aria-hidden="true"></span><span class="fw-chip-name">ラメ</span><span class="fw-chip-yen num">5,500円</span></a></li>
+      <li data-budoux><a href="#d-mirror"><span class="tip tip--xl t-mirror" aria-hidden="true"></span><span class="fw-chip-name">ミラー</span><span class="fw-chip-yen num">6,600円</span></a></li>
+      <li data-budoux><a href="#d-french"><span class="tip tip--xl t-french" aria-hidden="true"></span><span class="fw-chip-name">フレンチ</span><span class="fw-chip-yen num">6,600円</span></a></li>
+      <li data-budoux><a style="word-break:keep-all;overflow-wrap:anywhere" href="#d-mix"><span class="tip tip--xl t-mix" aria-hidden="true"></span><span class="fw-chip-name">ちぐは​ぐ</span><span class="fw-chip-yen num">​6,600円</span></a></li>
+      <li data-budoux><a href="#d-magnet"><span class="tip tip--xl t-bordeaux" aria-hidden="true"></span><span class="fw-chip-name">マグネット</span><span class="fw-chip-yen num">7,700円</span></a></li>
+      <li data-budoux><a href="#d-check"><span class="tip tip--xl t-check" aria-hidden="true"></span><span class="fw-chip-name">チェック</span><span class="fw-chip-yen num">7,700円</span></a></li>
+    </ul>
+  </nav>
+
+  <section class="fw-sec fw-design" id="design">
+    <div class="fw-head">
+      <p class="fw-label" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">デザインと​料金</span></p>
+      <h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">この​爪は、<span class="fw-mark">​いくら</span>ですか。</span></h2>
+      <p class="fw-head-lead" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">デザインの​値段は​3つだけです。</span><span class="nw">​写真の​爪は、</span><span class="nw">​どれも​その​値段で​できます。</span></span></p>
+      <ul class="fw-tags">
+        <li data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">どれも​税込</span></li>
+        <li data-budoux>約90分</li>
+        <li data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">2週間以内の​お直し無料</span></li>
+      </ul>
+    </div>
+
+    <div class="fw-tier fw-tier--1">
+      <div class="fw-tier-head">
+        <h3 data-budoux><span class="fw-tier-name">ワンカラー</span><span class="fw-tier-yen num">5,500<small>円</small></span></h3>
+        <p class="fw-tier-desc" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">1色で​塗ります。​ラメも、​グラデーションも​同じ​値段です。</span></p>
+      </div>
+      <div class="fw-cards fw-cards--2" data-assumed="作例と料金区分の対応は見本の事実">
+        <figure class="fw-card" id="d-rose">
+          <div class="fw-card-ph"><img src="img/g1d.webp" srcset="img/g1d-s.webp 480w, img/g1d.webp 960w" sizes="(min-width: 1216px) 520px, 46vw" width="960" height="1199" alt="ハンドクッションに乗せた、くすみローズ1色の爪" loading="lazy"><span class="fw-card-yen num">5,500円</span></div>
+          <figcaption data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="fw-card-name">くすみローズの​ワンカラー</span><span class="tips" aria-hidden="true"><span class="tip tip--thumb t-rose"></span><span class="tip t-rose"></span><span class="tip t-rose"></span><span class="tip t-rose"></span><span class="tip tip--pinky t-rose"></span></span></span></figcaption>
+        </figure>
+        <figure class="fw-card" id="d-lame">
+          <div class="fw-card-ph"><img src="img/g7d.webp" srcset="img/g7d-s.webp 480w, img/g7d.webp 960w" sizes="(min-width: 1216px) 520px, 46vw" width="960" height="960" alt="椅子の肘掛けに乗せた、先にゴールドのラメを重ねた爪" loading="lazy"><span class="fw-card-yen num">5,500円</span></div>
+          <figcaption data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="fw-card-name">ゴールドラメの​グラデーション</span><span class="tips" aria-hidden="true"><span class="tip tip--thumb t-lame"></span><span class="tip t-lame"></span><span class="tip t-lame"></span><span class="tip t-lame"></span><span class="tip tip--pinky t-lame"></span></span></span></figcaption>
+        </figure>
       </div>
     </div>
-    <div class="visual"><img src="img/hero.jpg" alt="サロンの施術席と、ヌードベージュに金箔をのせたネイル" width="800" height="1200"></div>
-  </div>
-</section>
 
-<section class="sec alt" id="concept">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">Fuwalu が​大切に​している​こと</span></h2></div>
-    <div class="concept">
-      <div><p class="num">01</p><h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">爪に​やさしい​施術</span></h3><p>削りすぎないフィルインを基本に、自爪の状態を見ながら長く楽しめるネイルをご提案します。</p></div>
-      <div><p class="num">02</p><h3 data-budoux>ゆったりマンツーマン</h3><p>施術は最初から最後まで同じスタッフが担当。他のお客様と時間が重ならないよう予約を調整しています。</p></div>
-      <div><p class="num">03</p><h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">デザインの​持ち込みOK</span></h3><p>インスタの画像をLINEで送っていただければ、事前にお見積もりをお伝えします。</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="menu">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux>メニュー・料金</h2></div>
-    <div class="menu-wrap">
-      <div class="menu-box">
-        <h3 data-budoux>Nail<span>ネイル</span></h3>
-        <dl><dt data-budoux>ハンド ワンカラー<small>ラメ・グラデーション可</small></dt><dd>¥5,500</dd></dl>
-        <dl><dt data-budoux>ハンド 定額デザインA<small>シンプル・ニュアンス</small></dt><dd>¥6,600</dd></dl>
-        <dl><dt data-budoux>ハンド 定額デザインB<small>マグネット・パーツ多め</small></dt><dd>¥7,700</dd></dl>
-        <dl><dt data-budoux>フット ワンカラー</dt><dd>¥6,600</dd></dl>
-        <dl><dt data-budoux>他店オフ</dt><dd>¥1,100</dd></dl>
+    <div class="fw-tier fw-tier--2">
+      <div class="fw-tier-head">
+        <h3 data-budoux><span class="fw-tier-name">定額デザインA</span><span class="fw-tier-yen num">6,600<small>円</small></span></h3>
+        <p class="fw-tier-desc" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">シンプルな​デザインと、</span><span class="nw">​ニュアンス系の​デザインです。</span></span></p>
       </div>
-      <div class="menu-box">
-        <h3 data-budoux>Eyelash<span>まつげ</span></h3>
-        <dl><dt data-budoux>まつげパーマ<small>トリートメント込み</small></dt><dd>¥5,500</dd></dl>
-        <dl><dt data-budoux>パリジェンヌ<span class="nb">ラッシュリフト</span></dt><dd>¥6,600</dd></dl>
-        <dl><dt data-budoux>まつげエクステ 100本</dt><dd>¥6,050</dd></dl>
-        <dl><dt data-budoux>まつげエクステ つけ放題</dt><dd>¥7,700</dd></dl>
-        <dl><dt data-budoux>ハンドケアのみ</dt><dd>¥3,300</dd></dl>
+      <div class="fw-cards fw-cards--3" data-assumed="作例と料金区分の対応は見本の事実">
+        <figure class="fw-card" id="d-mirror">
+          <div class="fw-card-ph"><img src="img/g4e.webp" srcset="img/g4e-s.webp 480w, img/g4e.webp 960w" sizes="(min-width: 1216px) 340px, (min-width: 640px) 31vw, 92vw" width="960" height="1199" alt="白い窓台に置いた、ピンクベージュの地に細いシルバーの線を流した爪" loading="lazy"><span class="fw-card-yen num">6,600円</span></div>
+          <figcaption data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="fw-card-name">シルバーミラーの​ニュアンス</span><span class="tips" aria-hidden="true"><span class="tip tip--thumb t-nude"></span><span class="tip t-mirror"></span><span class="tip t-mirror"></span><span class="tip t-mirror"></span><span class="tip tip--pinky t-nude"></span></span></span></figcaption>
+        </figure>
+        <figure class="fw-card" id="d-mix">
+          <div class="fw-card-ph"><img src="img/g5f.webp" srcset="img/g5f-s.webp 480w, img/g5f.webp 960w" sizes="(min-width: 1216px) 340px, (min-width: 640px) 31vw, 46vw" width="960" height="1199" alt="白いタオルの上に置いた、指ごとに色を変えた爪" loading="lazy"><span class="fw-card-yen num">6,600円</span></div>
+          <figcaption data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="fw-card-name">指ごとに​色を​変える<span class="nw">​「ちぐは​ぐ」</span></span><span class="tips" aria-hidden="true"><span class="tip tip--thumb t-camel"></span><span class="tip t-mauve"></span><span class="tip t-greige"></span><span class="tip t-ivory"></span><span class="tip tip--pinky t-beige"></span></span></span></figcaption>
+        </figure>
+        <figure class="fw-card" id="d-french">
+          <div class="fw-card-ph"><img src="img/g2f.webp" srcset="img/g2f-s.webp 480w, img/g2f.webp 960w" sizes="(min-width: 1216px) 340px, (min-width: 640px) 31vw, 46vw" width="960" height="1200" alt="白い机に置いた指先に寄って見た、ベージュの地に細い白のフレンチを入れた爪" loading="lazy"><span class="fw-card-yen num">6,600円</span></div>
+          <figcaption data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="fw-card-name">細い​白の​フレンチ</span><span class="tips" aria-hidden="true"><span class="tip tip--thumb t-french"></span><span class="tip t-french"></span><span class="tip t-french"></span><span class="tip t-french"></span><span class="tip tip--pinky t-french"></span></span></span></figcaption>
+        </figure>
       </div>
     </div>
-    <div class="coupon">
-      <div><b>はじめての方は<em>¥1,000</em>OFF</b><small>ご予約時に「ホームページを見た」とお伝えください</small></div>
-      <a href="#" class="btn btn-rsv" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">クーポンで​予約する</span></a>
-    </div>
-    <p class="note">※表示価格はすべて税込です（金額はサンプルです）</p>
-  </div>
-</section>
 
-<section class="sec alt" id="gallery">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux>デザイン見本</h2></div>
-    <div class="gallery">
-      <div class="g-card"><img src="img/g1.jpg" alt="ヌーディーベージュのニュアンスネイル" loading="lazy" width="600" height="600"><p>ニュアンスベージュ<small>定額A</small></p></div>
-      <div class="g-card"><img src="img/g2.jpg" alt="ミルキーホワイトのワンカラー" loading="lazy" width="600" height="600"><p>ミルキーホワイト<small>ワンカラー</small></p></div>
-      <div class="g-card"><img src="img/g3.jpg" alt="シャンパンゴールドのマグネットネイル" loading="lazy" width="600" height="600"><p>マグネットゴールド<small>定額B</small></p></div>
-      <div class="g-card"><img src="img/g4.jpg" alt="シアーなピンクベージュに白の細いフレンチ" loading="lazy" width="600" height="600"><p>シアーフレンチ<small>定額A</small></p></div>
-      <div class="g-card"><img src="img/g5.jpg" alt="くすみピンクのグラデーション" loading="lazy" width="600" height="600"><p>ピンクグラデ<small>ワンカラー</small></p></div>
-      <div class="g-card"><img src="img/g6.jpg" alt="グレージュに2本だけシルバーラメ" loading="lazy" width="600" height="600"><p>グレージュ×ラメ<small>定額B</small></p></div>
-    </div>
-    <div class="center"><a href="#" class="btn btn-ghost btn-lg" data-sample="ここにお店のInstagramが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">Instagramでもっと​見る</span></a></div>
-  </div>
-</section>
-
-<section class="sec" id="flow">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">はじめての​方へ</span></h2></div>
-    <ol class="flow">
-      <li><h3 data-budoux>ご予約</h3><p>LINEかお電話で。ご希望のデザイン画像があれば一緒に送ってください。</p></li>
-      <li><h3 data-budoux>カウンセリング</h3><p>爪の状態とご希望を伺い、デザインと料金を確定します。</p></li>
-      <li><h3 data-budoux>施術</h3><p>ハンドで約90分。お飲み物をご用意してお待ちしています。</p></li>
-      <li><h3 data-budoux>アフターケア</h3><p>2週間以内の浮き・欠けは無料でお直しします。</p></li>
-    </ol>
-  </div>
-</section>
-
-<section class="sec alt" id="voice">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">お客様の​声</span></h2></div>
-    <div class="voice">
-      <div><p class="stars">★★★★★</p><p>持ち込みの画像どおりに仕上げてもらえました。3週間たっても浮いてこないのが嬉しいです。</p><small>20代・会社員</small></div>
-      <div><p class="stars">★★★★★</p><p>子どもを連れて行けるサロンを探していました。キッズスペースがあって助かります。</p><small>30代・主婦</small></div>
-      <div><p class="stars">★★★★★</p><p>マンツーマンなので周りを気にせずゆっくりできます。まつげと同日にできるのも便利。</p><small>40代・自営業</small></div>
-    </div>
-    <p class="note" style="text-align:center">※このページの文章・お客様の声はすべてサンプルです</p>
-  </div>
-</section>
-
-<section class="sec" id="faq">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">よく​ある​ご質問</span></h2></div>
-    <div class="faq">
-      <details><summary data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">当日予約は​できますか？</span></summary><p>空きがあればお受けしています。LINEでお気軽にお問い合わせください。</p></details>
-      <details><summary data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">子ども​連れでも​大丈夫ですか？</span></summary><p>はい。キッズスペースをご用意しています。ご予約時にお知らせください。</p></details>
-      <details><summary data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">支払い​方法は？</span></summary><p>現金・クレジットカード・各種QRコード決済がご利用いただけます。</p></details>
-      <details><summary data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">駐車場は​ありますか？</span></summary><p>専用駐車場はございません。近隣のコインパーキングをご利用ください。</p></details>
-    </div>
-  </div>
-</section>
-
-<section class="sec alt" id="access">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux>店舗情報</h2></div>
-    <div class="access">
-      <div class="info">
-        <dl><dt data-budoux>店名</dt><dd>nail &amp; lash Fuwalu</dd></dl>
-        <dl><dt data-budoux>住所</dt><dd>〇〇県〇〇市〇〇町1-2-3 〇〇ビル2F</dd></dl>
-        <dl><dt data-budoux>アクセス</dt><dd>〇〇駅 東口から徒歩3分</dd></dl>
-        <dl><dt data-budoux>営業時間</dt><dd>10:00〜19:00（最終受付 17:30）</dd></dl>
-        <dl><dt data-budoux>定休日</dt><dd>毎週火曜日・不定休</dd></dl>
-        <dl><dt data-budoux>電話</dt><dd>000-0000-0000</dd></dl>
+    <div class="fw-tier fw-tier--3">
+      <div class="fw-tier-head">
+        <h3 data-budoux><span class="fw-tier-name">定額デザインB</span><span class="fw-tier-yen num">7,700<small>円</small></span></h3>
+        <p class="fw-tier-desc" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">マグネットや​柄、​パーツが​多めです。</span></p>
       </div>
-      <div class="map" aria-label="地図（サンプル）"><i class="pin"></i><span>ここにGoogleマップが入ります</span></div>
+      <div class="fw-cards fw-cards--2" data-assumed="作例と料金区分の対応は見本の事実">
+        <figure class="fw-card" id="d-magnet">
+          <div class="fw-card-ph"><img src="img/g3b.webp" srcset="img/g3b-s.webp 480w, img/g3b.webp 960w" sizes="(min-width: 1216px) 520px, 46vw" width="960" height="1199" alt="指先に寄って見た、深いボルドーのマグネットネイル" loading="lazy"><span class="fw-card-yen num">7,700円</span></div>
+          <figcaption data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="fw-card-name">ボルドーの​マグネット</span><span class="tips" aria-hidden="true"><span class="tip tip--thumb t-bordeaux"></span><span class="tip t-bordeaux"></span><span class="tip t-bordeaux"></span><span class="tip t-bordeaux"></span><span class="tip tip--pinky t-bordeaux"></span></span></span></figcaption>
+        </figure>
+        <figure class="fw-card" id="d-check">
+          <div class="fw-card-ph"><img src="img/g6.webp" srcset="img/g6-s.webp 480w, img/g6.webp 960w" sizes="(min-width: 1216px) 520px, 46vw" width="960" height="1199" alt="ボルドーとベージュのチェック柄の爪" loading="lazy"><span class="fw-card-yen num">7,700円</span></div>
+          <figcaption data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="fw-card-name">冬の​チェック</span><span class="tips" aria-hidden="true"><span class="tip tip--thumb t-wine"></span><span class="tip t-check"></span><span class="tip t-wine"></span><span class="tip t-check"></span><span class="tip tip--pinky t-wine"></span></span></span></figcaption>
+        </figure>
+      </div>
     </div>
-  </div>
-</section>
 
-<section class="sec" id="contact">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux>お問い合わせ</h2></div>
-    <form class="form" id="form">
-      <label for="f-name">お名前<em>必須</em></label>
-      <input type="text" id="f-name" required placeholder="山田 花子">
-      <label for="f-contact">電話番号またはメールアドレス<em>必須</em></label>
-      <input type="text" id="f-contact" required placeholder="090-0000-0000">
-      <label for="f-menu">ご希望のメニュー</label>
-      <select id="f-menu"><option>ハンド ワンカラー</option><option>ハンド 定額デザイン</option><option>フット</option><option>まつげパーマ</option><option>まつげエクステ</option><option>その他・相談したい</option></select>
-      <label for="f-date">ご希望の日時</label>
-      <input type="text" id="f-date" placeholder="例）11月20日 14時以降">
-      <label for="f-msg">ご質問・ご要望</label>
-      <textarea id="f-msg" placeholder="デザインのイメージなど"></textarea>
-      <button class="btn btn-rsv btn-lg" type="submit" data-budoux>送信する</button>
-    </form>
-  </div>
-</section>
+    <div class="fw-bring" data-assumed="持ち込みデザインの扱いは見本の事実">
+      <span class="fw-ico fw-ico--lg" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-chat"/></svg></span>
+      <div class="fw-bring-text">
+        <h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">やりたい​デザインの​画像は、​LINEで​送ってください。</span></h3>
+        <p data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">6,600円と​7,700円の</span><span class="nw">​どちらに​なるか、</span><span class="nw">​来店の​前に​お返事します。</span></span></p>
+      </div>
+      <a class="btn btn--line" href="https://line.me/R/ti/p/%40000aaaaa" data-sample="ここにお店のLINEが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">LINEで​予約・相談</span></a>
+    </div>
+  </section>
+
+  <section class="fw-band" aria-label="予約">
+    <div class="fw-band-in">
+      <div class="fw-badge fw-badge--white fw-band-badge"><small>はじめての方</small><b>1,000円</b><small>引き</small></div>
+      <div class="fw-band-text">
+        <p class="fw-band-label" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">1日4名までの​完全予約制</span></p>
+        <p class="fw-band-title" data-assumed="受付時間の扱いは見本の事実" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">予約サイトは、</span><span class="nw">​24時間​受け付けています。</span></span></p>
+      </div>
+      <div class="fw-band-cta">
+        <a class="btn btn--light" href="#" data-sample="ここにお店の予約サイトが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">予約サイトで​予約する</span></a>
+        <a class="btn btn--line" href="https://line.me/R/ti/p/%40000aaaaa" data-sample="ここにお店のLINEが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">LINEで​予約・相談</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="fw-sec fw-sec--pale" id="price">
+    <div class="fw-head">
+      <p class="fw-label" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">その​ほかの​料金</span></p>
+      <h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">デザインの​ほかに</span><span class="nw">​かかる​もの</span></span></h2>
+      <p class="fw-head-lead" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">すべて​税込です。</span></p>
+    </div>
+    <div class="fw-pay">
+      <div class="fw-menu">
+        <h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">オフと​長さ出しと​パーツ</span></h3>
+        <table class="fw-list">
+          <tbody>
+            <tr class="is-free"><th scope="row">当店のジェル・<wbr>付け替えのオフ</th><td data-budoux><span class="num">0</span>円</td></tr>
+            <tr><th scope="row">他店の<wbr>ジェルのオフ</th><td data-budoux><span class="num">1,100</span>円</td></tr>
+            <tr><th scope="row">当店のジェル・<wbr>オフだけ</th><td data-budoux><span class="num">2,200</span>円</td></tr>
+            <tr><th scope="row">長さ出し（1本）</th><td data-budoux><span class="num">550</span>円</td></tr>
+            <tr><th scope="row">パーツ（1個）</th><td data-budoux><span class="num">110</span>円から</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fw-menu">
+        <h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">フットと​ケアだけの​メニュー</span></h3>
+        <table class="fw-list">
+          <tbody>
+            <tr><th scope="row">フットの<wbr>ワンカラー</th><td data-budoux><span class="num">6,600</span>円</td></tr>
+            <tr><th scope="row">ハンドケアだけ</th><td data-budoux><span class="num">3,300</span>円</td></tr>
+          </tbody>
+        </table>
+        <figure class="fw-menu-photo"><img src="img/hero-mix3.webp" srcset="img/hero-mix3-s.webp 640w, img/hero-mix3.webp 1280w" sizes="(min-width: 900px) 500px, 84vw" width="1280" height="853" alt="タオルの上の指先3本に寄って見た、指ごとに色を変えた爪" loading="lazy"></figure>
+      </div>
+      <div class="fw-slip" data-assumed="料金表の金額を足し引きした例">
+        <p class="fw-slip-label" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">お会計の​例</span></p>
+        <p class="fw-slip-case" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">はじめての​方が、​他店の​ジェルを​付けたまま<span class="nw">​「冬の​チェック」に</span>​する​とき</span></p>
+        <dl>
+          <div><dt data-budoux>定額デザインB</dt><dd data-budoux>7,700円</dd></div>
+          <div><dt data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">他店の​ジェルの​オフ</span></dt><dd data-budoux>1,100円</dd></div>
+          <div><dt data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">はじめての​方の​割引</span></dt><dd data-budoux>−1,000円</dd></div>
+          <div class="fw-slip-total"><dt data-budoux>合計</dt><dd data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="num">7,800</span>円<small>​（税込）</small></span></dd></div>
+        </dl>
+      </div>
+      <div class="fw-slip" data-assumed="料金表の金額を足し引きした例">
+        <p class="fw-slip-label" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">お会計の​例</span></p>
+        <p class="fw-slip-case" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">2回目の​方が、​ワンカラーに​付け替えて、​長さ出しを​2本足すとき</span></p>
+        <dl>
+          <div><dt data-budoux>ワンカラー</dt><dd data-budoux>5,500円</dd></div>
+          <div><dt data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">付け替えの​オフ</span></dt><dd data-budoux>0円</dd></div>
+          <div><dt data-budoux>長さ出し 2本</dt><dd data-budoux>1,100円</dd></div>
+          <div class="fw-slip-total"><dt data-budoux>合計</dt><dd data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="num">6,600</span>円<small>​（税込）</small></span></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="fw-sec fw-sec--deep" id="lash">
+    <div class="fw-head">
+      <p class="fw-label" data-budoux>まつげ</p>
+      <h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">まつげパーマと​エクステ</span></h2>
+      <p class="fw-head-lead" data-assumed="同日予約と担当は見本の事実" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">ネイルと​同じ​日に​予約できます。</span><span class="nw">​担当は、​美容師免許を​持つ​あやです。</span></span></p>
+    </div>
+    <div class="fw-lash2">
+      <div class="fw-lash-kind">
+        <figure><img src="img/lash-perm3.webp" srcset="img/lash-perm3-s.webp 500w, img/lash-perm3.webp 1000w" sizes="(min-width: 1216px) 548px, (min-width: 640px) 46vw, 92vw" width="1000" height="666" alt="横から見た、根元から上向きにカールしたまつげ" loading="lazy"></figure>
+        <p class="fw-lash-kind-name" data-budoux>パーマ</p>
+        <div class="fw-lash-menu">
+          <div>
+            <h3 data-budoux><span class="fw-lash-name">まつげパーマ</span><span class="fw-lash-yen num">5,500<small>円</small></span></h3>
+            <p class="fw-lash-desc" data-budoux><span class="nw">トリートメント込み</span></p>
+          </div>
+          <div>
+            <h3 data-budoux><span class="fw-lash-name">パリジェンヌ<wbr>ラッシュリフト</span><span class="fw-lash-yen num">6,600<small>円</small></span></h3>
+            <p class="fw-lash-desc" data-assumed="施術の一般的な説明" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">根元から​立ち上げる​パーマです。</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="fw-lash-kind">
+        <figure><img src="img/lash-ext3.webp" srcset="img/lash-ext3-s.webp 500w, img/lash-ext3.webp 1000w" sizes="(min-width: 1216px) 548px, (min-width: 640px) 46vw, 92vw" width="1000" height="666" alt="目を閉じたところを上から見た、長さと本数を足したまつげ" loading="lazy"></figure>
+        <p class="fw-lash-kind-name" data-budoux>エクステ</p>
+        <div class="fw-lash-menu">
+          <div>
+            <h3 data-budoux><span class="fw-lash-name">まつげエクステ <span class="nw">100本</span></span><span class="fw-lash-yen num">6,050<small>円</small></span></h3>
+            <p class="fw-lash-desc" data-assumed="本数の数え方は見本の事実" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">両目あわせて​100本です。</span></p>
+          </div>
+          <div>
+            <h3 data-budoux><span class="fw-lash-name">まつげエクステ <span class="nw">つけ放題</span></span><span class="fw-lash-yen num">7,700<small>円</small></span></h3>
+            <p class="fw-lash-desc" data-assumed="施術の一般的な説明" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">本数を​決めずに​付けます。</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="fw-lash-note" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">まつげの​施術は、</span><span class="nw">​美容師免許を​持つスタッフが、</span><span class="nw">​美容所の​届出を​した​店内で​行います。</span><span class="nw">​すべて​税込です。</span></span></p>
+  </section>
+
+  <section class="fw-sec fw-sec--pink fw-room" id="room">
+    <div class="fw-head">
+      <p class="fw-label" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">お店の​こと</span></p>
+      <h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">最初から​最後まで、</span><span class="nw"><span class="fw-mark">​同じ​人</span>が。</span></span></h2>
+      <p class="fw-head-lead" data-assumed="スタッフの名前は仮" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">ネイルは​みずき、</span><span class="nw">​まつげは​美容師免許を​持つ​あやが</span><span class="nw">​担当します。</span><span class="nw">​途中で​人は​替わりません。</span></span></p>
+    </div>
+    <div class="fw-room-grid">
+      <figure class="fw-room-photo">
+        <img src="img/room.webp" srcset="img/room-s.webp 720w, img/room.webp 1400w" sizes="(min-width: 1216px) 640px, 92vw" width="1400" height="933" alt="窓ぎわにネイルデスクを置いた店内" loading="lazy">
+      </figure>
+      <ul class="fw-points">
+        <li data-budoux><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-one"/></svg></span><b>マンツーマン</b><p class="fw-point-text" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">最初から​最後まで、​同じ​スタッフです。</span></p></li>
+        <li data-budoux><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-four"/></svg></span><b>1日4名まで</b><p class="fw-point-text" data-budoux><span class="nw">完全予約制です。</span></p></li>
+        <li data-budoux><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-kids"/></svg></span><b>キッズスペース</b><p class="fw-point-text" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">店内に​あります。​お子さまと​一緒に​来られます。</span></p></li>
+        <li data-budoux><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-fix"/></svg></span><b>お直し無料</b><p class="fw-point-text" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">2週間以内の​浮きや​欠けは、​無料で​お直しします。</span></p></li>
+      </ul>
+    </div>
+    <dl class="fw-staff" data-assumed="スタッフの名前は仮">
+      <div><dt data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="tip tip--lg t-rose" aria-hidden="true"></span>ネイルの​担当</span></dt><dd data-budoux>みずき</dd></div>
+      <div><dt data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="tip tip--lg t-bordeaux" aria-hidden="true"></span>まつげの​担当​（美容師免許）</span></dt><dd data-budoux>あや</dd></div>
+    </dl>
+  </section>
+
+  <section class="fw-sec" id="reserve">
+    <div class="fw-head">
+      <p class="fw-label" data-budoux>予約</p>
+      <h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">予約と​キャンセルの​決まり</span></h2>
+    </div>
+    <dl class="fw-rules">
+      <div><dt data-budoux><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-phone"/></svg></span>予約のしかた</dt><dd data-assumed="受付時間の扱いは見本の事実" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">予約サイトは​24時間​受け付けています。​LINEは​営業時間内に​お返事します。​電話は​営業時間内に​受け付けています。</span></dd></div>
+      <div><dt data-budoux><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-cal"/></svg></span>当日の予約</dt><dd data-assumed="当日予約の扱いは見本の事実" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">空きが​あれば​受けられます。​LINEか​電話で​聞いてください。</span></dd></div>
+      <div><dt data-budoux><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-x"/></svg></span>キャンセル</dt><dd data-assumed="キャンセル規定は見本の事実" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">前日までは​無料です。​当日は、​施術料金の​50%を​いただきます。</span></dd></div>
+      <div><dt data-budoux><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-run"/></svg></span>遅れそうなとき</dt><dd data-assumed="遅刻の扱いは見本の事実" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">15分以上​遅れると、​デザインか​日にちを​変える​ことがあります。</span></dd></div>
+      <div><dt data-budoux><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-gift"/></svg></span>はじめての方</dt><dd data-budoux>1,000円引きです。</dd></div>
+      <div><dt data-budoux><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-pay"/></svg></span>お支払い</dt><dd data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">現金、​クレジットカード、​QRコード決済から​選べます。</span></dd></div>
+    </dl>
+    <div class="fw-book">
+      <div class="fw-book-main">
+        <p class="fw-book-label" data-assumed="受付時間の扱いは見本の事実" data-budoux>24時間受付</p>
+        <p class="fw-book-title" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">予約は、​予約サイトから。</span></p>
+        <a class="btn btn--light btn--big" href="#" data-sample="ここにお店の予約サイトが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">予約サイトで​予約する</span></a>
+      </div>
+      <ul class="fw-book-other">
+        <li data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><a class="btn btn--line" href="https://line.me/R/ti/p/%40000aaaaa" data-sample="ここにお店のLINEが入ります" data-budoux="">LINEで​予約・相談</a><span class="fw-book-note">デザインの​画像も​送れます</span></span></li>
+        <li data-budoux><a class="fw-tel" href="tel:000-0000-0000" data-sample="スマホではここを押すとお店に電話がかかります">000-0000-0000</a><span class="fw-book-note">電話は営業時間内<span class="nw">（10:00〜19:00）</span></span></li>
+      </ul>
+      <figure class="fw-qr"><img src="img/qr-sample.svg" width="232" height="232" alt="LINEのQRコードの見本（読み取れません）" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section class="fw-sec fw-sec--pale" id="access">
+    <div class="fw-head">
+      <p class="fw-label" data-budoux>アクセス</p>
+      <h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">〇〇駅 東口から</span><span class="nw">​歩いて<span class="fw-mark">​3分</span>。</span></span></h2>
+    </div>
+    <div class="fw-access">
+      <div class="fw-access-route">
+        <ol class="fw-route" data-assumed="道順は見本の事実">
+          <li data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">東口を​出て、​正面の​通りを​まっすぐ​進みます。</span></li>
+          <li data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">2つ目の​信号を、​左に​曲がります。</span></li>
+          <li data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">右手の​〇〇ビルの​階段を、​2階へ​上がります。</span></li>
+        </ol>
+        <figure class="fw-entrance" data-assumed="入口の様子は見本の事実">
+          <img src="img/entrance3.webp" srcset="img/entrance3-s.webp 480w, img/entrance3.webp 960w" sizes="(min-width: 900px) 520px, 84vw" width="960" height="768" alt="階段を上がった先の廊下にある、白いドアの入口" loading="lazy">
+          <figcaption data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">2階の​入口です。​白い​ドアが​目印です。</span></figcaption>
+        </figure>
+      </div>
+      <div class="fw-access-info">
+        <div class="fw-info-card">
+          <div class="fw-info-row"><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg></span><p class="fw-addr" data-budoux>〇〇県〇〇市〇〇町1-2-3 <span class="nw">〇〇ビル2F</span></p></div>
+          <div class="fw-info-row"><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-car"/></svg></span><p data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">専用の​駐車場は​ありません。​近くの​コインパーキングを​使ってください。</span></p></div>
+          <a class="btn btn--ghost" href="#" data-sample="ここにGoogleマップが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">Google マップで​開く</span></a>
+        </div>
+        <div class="fw-info-card">
+          <table class="fw-week">
+            <caption>営業する曜日</caption>
+            <thead>
+              <tr><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th><th scope="col">日</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-budoux><span class="tip tip--lg t-rose" role="img" aria-label="営業"></span></td>
+                <td class="is-off" data-budoux><span class="tip tip--lg t-none" aria-hidden="true"></span>休み</td>
+                <td data-budoux><span class="tip tip--lg t-rose" role="img" aria-label="営業"></span></td>
+                <td data-budoux><span class="tip tip--lg t-rose" role="img" aria-label="営業"></span></td>
+                <td data-budoux><span class="tip tip--lg t-rose" role="img" aria-label="営業"></span></td>
+                <td data-budoux><span class="tip tip--lg t-rose" role="img" aria-label="営業"></span></td>
+                <td data-budoux><span class="tip tip--lg t-rose" role="img" aria-label="営業"></span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="fw-week-note" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">色が​塗ってある​曜日が​営業日です。</span></p>
+          <p class="fw-week-hours" data-budoux><span class="fw-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-clock"/></svg></span><span><b class="num">10:00〜19:00</b><span class="nw">（最終受付 17:30）</span></span></p>
+          <p class="fw-week-note" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">火曜の​ほかに、​不定休が​あります。</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fw-band fw-band--photo" aria-label="当日の予約">
+    <div class="fw-band-in">
+      <div class="fw-band-text">
+        <p class="fw-band-label" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">当日の​予約</span></p>
+        <p class="fw-band-title" data-assumed="当日予約の扱いは見本の事実" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">空きが​あれば、</span><span class="nw">​当日も​受けられます。</span></span></p>
+        <p class="fw-band-sub" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">LINEか​電話で​聞いてください。</span></p>
+      </div>
+      <div class="fw-band-cta">
+        <a class="btn btn--line" href="https://line.me/R/ti/p/%40000aaaaa" data-sample="ここにお店のLINEが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">LINEで​予約・相談</span></a>
+        <a class="fw-tel fw-tel--light" href="tel:000-0000-0000" data-sample="スマホではここを押すとお店に電話がかかります">000-0000-0000</a>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer class="ft">
-  <div class="inner">
-    <div class="ft-row">
-      <div>
-        <a href="#top" class="logo">Fuwalu</a>
-        <div class="sns"><a href="#" data-sample="ここにお店のInstagramが入ります">Instagram</a><a href="#" data-sample="ここにお店のLINEが入ります">LINE</a></div>
-      </div>
-      <p>© nail &amp; lash Fuwalu（架空の店舗）</p>
-    </div>
-    <div class="flash-cta">
-      <p>このホームページは <b>Flash</b> の見本です。<br>お店の写真と文章に差し替えて、月額9,900円でお作りします。</p>
-      <div class="row">
-        <a href="https://line.me/R/ti/p/@667amiig" class="btn btn-line" target="_blank" rel="noopener" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">Flashに LINEで​相談する</span></a>
-        <a href="https://flash22hp-del.github.io/" class="btn btn-flash" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">Flashの​ページを​見る</span></a>
-      </div>
-    </div>
-  </div>
+<footer class="fw-footer">
+  <p class="fw-logo" data-budoux><span class="tip tip--logo t-rose" aria-hidden="true"></span><span class="fw-logo-text"><span class="fw-logo-name">Fuwalu</span><span class="fw-logo-sub">ネイル・まつげ</span></span></p>
+  <p data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">営業 10:00〜19:00​（最終受付 17:30）</span>　<span class="nw">休み 火曜・​不定休</span>　<span class="nw">完全予約制</span></span></p>
+  <p class="fw-foot-addr" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">〇〇県〇〇市〇〇町1-2-3 <span class="nw">〇〇ビル2F</span>　<span class="nw">〇〇駅 東口から​徒歩3分</span></span></p>
+  <p class="fw-foot-contact" data-budoux><a class="fw-foot-tel" href="tel:000-0000-0000" data-sample="スマホではここを押すとお店に電話がかかります">000-0000-0000</a><a class="fw-textlink" href="https://line.me/R/ti/p/%40000aaaaa" data-sample="ここにお店のLINEが入ります">LINEで予約・相談</a></p>
+  <p class="fw-foot-note" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="fw-line">© nail &amp; lash Fuwalu​（架空の​店）</span><span class="fw-line">​この​ホームページは Flash の​見本です。</span><a href="https://flash22hp-del.github.io/">​Flash の​ページを​見る</a></span></p>
 </footer>
 
-<div class="float" id="float"><a href="https://line.me/R/ti/p/%40000aaaaa" class="btn btn-rsv" data-sample="ここにお店の予約ページ（LINE・ホットペッパー等）が入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">LINEで​予約する</span></a></div>
+<nav class="sticky-cta" aria-label="予約">
+  <a class="btn" href="#" data-sample="ここにお店の予約サイトが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">予約サイトで​予約</span></a>
+  <a class="btn btn--line" href="https://line.me/R/ti/p/%40000aaaaa" data-sample="ここにお店のLINEが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">LINEで​予約・相談</span></a>
+</nav>
 <div class="toast" id="toast" role="status"></div>
-
 <script>
-// 見本用：お店のリンクが入る場所を押したら説明を出す（実際の納品では href を差し替えて data-sample を消す）
 const toast = document.getElementById("toast");
 let timer;
 const showToast = (msg) => {
@@ -396,14 +420,6 @@ const showToast = (msg) => {
 };
 document.querySelectorAll("[data-sample]").forEach((a) => {
   a.addEventListener("click", (e) => { e.preventDefault(); showToast(a.dataset.sample); });
-});
-// SP: 最初の画面を過ぎたら下部の予約ボタンを出す
-const fl = document.getElementById("float");
-new IntersectionObserver(([e]) => fl.classList.toggle("show", !e.isIntersecting))
-  .observe(document.querySelector(".hero-cta"));
-document.getElementById("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  showToast("ここで入力内容がお店のメールに届きます");
 });
 </script>
 </body>

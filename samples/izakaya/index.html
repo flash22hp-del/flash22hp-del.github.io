@@ -1,368 +1,390 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>酒と肴 ひよりび（サンプル）| Flash テンプレート</title>
-<meta name="description" content="Flash のホームページ見本（架空の居酒屋）。">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>酒と肴 ひよりび（見本）｜〇〇駅 西口 徒歩2分の居酒屋</title>
+<meta name="description" content="（見本）〇〇駅 西口から徒歩2分、カウンター8席と小上がりの居酒屋。炭で焼く焼き鳥と燗酒。17:00〜24:00、日曜休み。電話・ネット・LINEで予約できます。">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://flash22hp-del.github.io/samples/izakaya/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://flash22hp-del.github.io/samples/izakaya/">
-<meta property="og:title" content="酒と肴 ひよりび（サンプル）| Flash テンプレート">
-<meta property="og:description" content="Flash のホームページ見本（架空の居酒屋）。">
+<meta property="og:title" content="酒と肴 ひよりび（見本）｜〇〇駅 西口 徒歩2分の居酒屋">
+<meta property="og:description" content="（見本）カウンター8席と小上がりの居酒屋。炭で焼く焼き鳥と燗酒。17:00〜24:00、日曜休み。">
 <meta property="og:image" content="https://flash22hp-del.github.io/samples/izakaya/img/og.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23b5452f'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23fff' font-family='serif'%3Eひ%3C/text%3E%3C/svg%3E">
+<meta property="og:url" content="https://flash22hp-del.github.io/samples/izakaya/">
+<meta name="theme-color" content="#1a1511">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-/* ▼ 配色はここだけ変えればサイト全体が変わる */
-:root{
-  --ink:#1f1b18;
-  --ink2:#2b2622;
-  --paper:#f4ede2;
-  --paper2:#ebe1d2;
-  --text:#2a241f;
-  --sub:#6e6155;
-  --red:#b5452f;
-  --red-dk:#963624;
-  --gold:#c9a463;
-  --line:#d9ccb9;
-  --mincho:"Shippori Mincho",serif;
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&amp;family=Shippori+Mincho+B1:wght@600;800&amp;display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/counter.webp" fetchpriority="high">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "酒と肴 ひよりび",
+  "description": "架空の店の見本です。カウンター8席と小上がりの居酒屋。",
+  "url": "https://flash22hp-del.github.io/samples/izakaya/",
+  "image": "https://flash22hp-del.github.io/samples/izakaya/img/og.jpg",
+  "telephone": "+81-00-0000-0000",
+  "priceRange": "¥¥",
+  "servesCuisine": ["居酒屋", "焼き鳥"],
+  "acceptsReservations": true,
+  "paymentAccepted": "現金, クレジットカード, QRコード決済",
+  "address": { "@type": "PostalAddress", "addressCountry": "JP", "addressRegion": "〇〇県", "addressLocality": "〇〇市", "streetAddress": "〇〇町4-5-6 1F" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 35.00000, "longitude": 135.00000 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "17:00", "closes": "24:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "00:00", "closes": "00:00" }
+  ]
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--text);font-family:"Noto Sans JP",sans-serif;line-height:1.9;font-size:15px;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit;text-decoration:none}
-.inner{max-width:1080px;margin:0 auto;padding:0 20px}
-.nb{display:inline-block}
-
-.sample-bar{background:#000;color:#eee;font-size:12px;text-align:center;padding:8px 16px;line-height:1.6}
-.sample-bar a{color:#ffd400;text-decoration:underline;font-weight:700;display:inline-block;padding:3px 0}
-
-/* header */
-.hd{position:sticky;top:0;z-index:20;background:rgba(31,27,24,.95);color:var(--paper);border-bottom:1px solid #3a332d}
-.hd .inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
-.logo{font-family:var(--mincho);font-weight:700;font-size:22px;letter-spacing:.12em;line-height:1.2}
-.logo small{display:block;font-size:10px;letter-spacing:.3em;color:var(--gold);font-family:"Noto Sans JP"}
-.nav{display:flex;gap:26px;font-size:13px;letter-spacing:.1em}
-.nav a:hover{color:var(--gold)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;letter-spacing:.08em;transition:.2s;cursor:pointer;border:0;font-family:inherit;border-radius:4px}
-.btn-red{background:var(--red);color:#fff;padding:11px 22px;font-size:13px}
-.btn-red:hover{background:var(--red-dk)}
-.btn-line-w{border:1px solid rgba(244,237,226,.7);color:var(--paper);padding:11px 22px;font-size:13px}
-.btn-line-w:hover{background:var(--paper);color:var(--ink)}
-.btn-lg{padding:16px 32px;font-size:15px}
-
-/* hero */
-.hero{position:relative;min-height:620px;display:flex;align-items:flex-end;color:var(--paper);background:var(--ink)}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,16,13,.85) 0%,rgba(20,16,13,.45) 55%,rgba(20,16,13,.1) 100%)}
-.hero .inner{position:relative;z-index:1;width:100%;padding-top:80px;padding-bottom:80px}
-.hero h1{font-family:var(--mincho);font-weight:700;font-size:44px;line-height:1.55;letter-spacing:.1em;margin:0 0 18px}
-.hero p{font-size:14.5px;max-width:460px;opacity:.92}
-.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.hero .hours{margin-top:24px;font-size:12.5px;letter-spacing:.08em;opacity:.85}
-
-/* section */
-.sec{padding:96px 0}
-.sec.dark{background:var(--ink);color:var(--paper)}
-.sec.alt{background:var(--paper2)}
-.sh{margin-bottom:48px;text-align:center}
-.sh h2{font-family:var(--mincho);font-weight:700;font-size:30px;letter-spacing:.14em}
-
-/* news */
-.news{max-width:760px;margin:0 auto;border-top:1px solid var(--line)}
-.news li{list-style:none;display:flex;gap:24px;padding:16px 4px;border-bottom:1px solid var(--line);font-size:14px}
-.news time{color:var(--sub);font-size:13px;white-space:nowrap;font-family:var(--mincho)}
-.news .tag{background:var(--red);color:#fff;font-size:11px;padding:1px 8px;border-radius:2px;margin-right:8px;white-space:nowrap}
-
-/* kodawari */
-.kodawari{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.kodawari img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:4px}
-.kodawari ol{list-style:none;counter-reset:k}
-.kodawari li{counter-increment:k;padding:20px 0;border-bottom:1px solid #3a332d}
-.kodawari li:first-child{padding-top:0}
-.kodawari h3{font-family:var(--mincho);font-size:20px;letter-spacing:.08em;margin-bottom:6px}
-.kodawari h3::before{content:"其の" counter(k);display:block;font-size:12px;color:var(--gold);letter-spacing:.3em;margin-bottom:2px}
-.kodawari p{font-size:13.5px;opacity:.85}
-
-/* menu */
-.dishes{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.dish img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:4px}
-.dish h3{font-family:var(--mincho);font-size:16px;margin-top:12px;letter-spacing:.06em}
-.dish p{font-size:12.5px;color:var(--sub)}
-.dish b{display:block;color:var(--red);font-size:15px;margin-top:2px}
-.drinks{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.drinks div{background:#fffaf2;border:1px solid var(--line);border-radius:4px;padding:24px}
-.drinks h3{font-family:var(--mincho);font-size:17px;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:8px;letter-spacing:.08em}
-.drinks dl{display:flex;justify-content:space-between;font-size:13.5px;padding:5px 0}
-.drinks dd{font-weight:700}
-.note{font-size:12px;color:var(--sub);margin-top:16px;text-align:right}
-.dark .note{color:#a89a8b}
-
-/* course */
-.course-top{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;margin-bottom:40px}
-.course-top img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
-.course-top h3{font-family:var(--mincho);font-size:24px;letter-spacing:.08em;line-height:1.6}
-.course-top h3 em{font-style:normal;color:var(--gold)}
-.course-top p{font-size:14px;opacity:.88;margin-top:12px}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.plan{border:1px solid #4a4038;border-radius:4px;padding:28px 24px;position:relative}
-.plan.pop{border-color:var(--gold)}
-.plan.pop::before{content:"いちばん人気";position:absolute;top:-12px;left:24px;background:var(--gold);color:var(--ink);font-size:11px;font-weight:700;padding:2px 10px;border-radius:2px}
-.plan h4{font-family:var(--mincho);font-size:19px;letter-spacing:.08em}
-.plan .price{font-family:var(--mincho);font-size:30px;color:var(--gold);margin:6px 0 2px}
-.plan .price small{font-size:13px;color:var(--paper);margin-left:4px}
-.plan .meta{font-size:12px;opacity:.75;margin-bottom:12px}
-.plan ul{list-style:none;font-size:13px;border-top:1px solid #4a4038;padding-top:12px}
-.plan li{padding:3px 0}
-.plan li::before{content:"・";color:var(--gold)}
-.center{text-align:center;margin-top:40px}
-
-/* room */
-.room{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.room img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
-.seats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
-.seats div{background:#fffaf2;border:1px solid var(--line);border-radius:4px;text-align:center;padding:14px 6px}
-.seats b{display:block;font-family:var(--mincho);font-size:26px;color:var(--red);line-height:1.3}
-.seats span{font-size:12px;color:var(--sub)}
-.room p{font-size:14px}
-
-/* info */
-.info-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.info dl{display:grid;grid-template-columns:96px 1fr;border-bottom:1px solid var(--line);padding:13px 0;font-size:14px}
-.info dt{color:var(--sub);font-size:13px}
-.map{border-radius:4px;border:1px solid var(--line);min-height:300px;position:relative;overflow:hidden;background:
-  linear-gradient(90deg,transparent 0 46%,#fff 46% 50%,transparent 50%),
-  linear-gradient(0deg,transparent 0 58%,#fff 58% 62%,transparent 62%),
-  linear-gradient(35deg,transparent 0 70%,#fbf6ee 70% 73%,transparent 73%),
-  #e4d9c8}
-.map .pin{position:absolute;left:calc(48% - 14px);top:calc(60% - 40px);width:28px;height:28px;background:var(--red);border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 4px 10px rgba(0,0,0,.2)}
-.map .pin::after{content:"";position:absolute;inset:9px;background:#fff;border-radius:50%}
-.map span{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.9);font-size:11.5px;padding:4px 10px;border-radius:999px;color:var(--sub)}
-
-/* reserve */
-.reserve{text-align:center}
-.reserve .tel{font-family:var(--mincho);font-size:40px;letter-spacing:.08em;color:var(--gold);display:inline-block;margin:6px 0 4px}
-.reserve .small{font-size:13px;opacity:.8}
-.reserve .cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
-
-/* footer */
-.ft{background:#120f0d;color:#bfb2a3;padding:48px 0 110px;font-size:12.5px}
-.ft-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
-.ft .logo{color:var(--paper)}
-.ft .sns{display:flex;gap:16px;margin-top:12px}
-.ft .sns a{text-decoration:underline;display:inline-block;padding:4px 2px}
-.flash-cta{margin-top:40px;border-top:1px solid #2e2925;padding-top:32px;text-align:center}
-.flash-cta p{color:#fff;font-size:14px;margin-bottom:14px}
-.flash-cta p b{color:#ffd400}
-.flash-cta .row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.btn-line{background:#05873b;color:#fff;padding:13px 26px;font-size:14px;border-radius:999px}
-.btn-line:hover{background:#046d30}
-.btn-flash{background:#ffd400;color:#141414;padding:13px 26px;font-size:14px;border-radius:999px}
-
-/* SP固定ボタン */
-.float{position:fixed;left:10px;right:10px;bottom:10px;z-index:30;display:none;gap:8px;opacity:0;transform:translateY(20px);pointer-events:none;transition:.25s}
-.float.show{opacity:1;transform:none;pointer-events:auto}
-.float .btn{flex:1;padding:15px 8px;font-size:14px;box-shadow:0 10px 24px -8px rgba(0,0,0,.5)}
-.float .btn-dark{background:var(--ink);color:var(--paper);border:1px solid var(--gold)}
-
-.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:#000;color:#fff;font-size:13px;padding:12px 20px;border-radius:10px;opacity:0;pointer-events:none;transition:.25s;z-index:50;width:max-content;max-width:calc(100% - 32px);text-align:center;line-height:1.6}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-
-@media (max-width:767px){
-  body{font-size:14px}
-  .nav{display:none}
-  .hd .btn-red{padding:8px 14px;font-size:12px}
-  .hero{min-height:560px}
-  .hero::after{background:linear-gradient(0deg,rgba(20,16,13,.9) 0%,rgba(20,16,13,.55) 55%,rgba(20,16,13,.25) 100%)}
-  .hero h1{font-size:30px}
-  .hero .inner{padding-top:60px;padding-bottom:48px}
-  .sec{padding:72px 0}
-  .sh h2{font-size:24px}
-  .news li{flex-direction:column;gap:2px}
-  .kodawari,.course-top,.room,.info-wrap{grid-template-columns:1fr;gap:28px}
-  .dishes{grid-template-columns:1fr 1fr;gap:16px}
-  .drinks,.plans{grid-template-columns:1fr}
-  .reserve .tel{font-size:30px}
-  .info dl{grid-template-columns:80px 1fr}
-  .float{display:flex}
-}
-</style>
+</script>
 </head>
 <body>
-
-<div class="sample-bar">これは <b>Flash</b> のホームページ見本です（架空のお店）。この見た目で月額9,900円。<a href="https://flash22hp-del.github.io/">Flashについて見る</a></div>
-
-<header class="hd">
-  <div class="inner">
-    <a href="#top" class="logo">酒と肴 ひよりび<small>HIYORIBI</small></a>
-    <nav class="nav">
-      <a href="#kodawari">こだわり</a>
-      <a href="#menu">お品書き</a>
-      <a href="#course">宴会コース</a>
-      <a href="#room">店内</a>
-      <a href="#access">アクセス</a>
-    </nav>
-    <a href="#reserve" class="btn btn-red" data-budoux>ご予約</a>
-  </div>
+<svg class="sprite" aria-hidden="true" width="0" height="0">
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.500c.6 0 1 .4 1 1 0 1.300.2 2.500.6 3.600.1.300 0 .7-.2 1l-2.300 2.200z"/></symbol>
+  <symbol id="i-line" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3C6.500 3 2 6.600 2 11c0 2.500 1.500 4.800 3.800 6.200L5 21l4.300-2.300c.9.2 1.800.3 2.700.3 5.500 0 10-3.600 10-8s-4.500-8-10-8z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" d="M4 6.500h16v13H4zM4 10.500h16M8 3.500v4M16 3.500v4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.100 2 5 5.100 5 9c0 5.200 7 13 7 13s7-7.800 7-13c0-3.900-3.100-7-7-7zm0 9.500a2.500 2.500 0 110-5 2.500 2.500 0 010 5z"/></symbol>
+</svg>
+<header>
+<p class="sample-bar" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">架空の​店の​見本です<a href="https://flash22hp-del.github.io/">Flash なら​月額9,900円</a></span></p>
+<div class="site-head">
+  <a class="logo" href="#top" aria-label="酒と肴 ひよりび">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="5" width="28" height="2.5" fill="#8a6f52"/><rect x="4" y="7.5" width="7.2" height="19" fill="#34478a"/><rect x="12.4" y="7.5" width="7.2" height="19" fill="#34478a"/><rect x="20.8" y="7.5" width="7.2" height="19" fill="#34478a"/><circle cx="16" cy="16" r="3.6" fill="#f2a93b"/></svg>
+    <span><small>酒と肴</small>ひよりび</span>
+  </a>
+  <nav class="site-nav" aria-label="ページ内">
+    <a href="#shinagaki">品書き</a>
+    <a class="nav-pc" href="#seki">席</a>
+    <a href="#enkai">宴会</a>
+    <a href="#basho">場所</a>
+    <a class="nav-tel" href="tel:000-0000-0000" data-sample="スマホではここを押すとお店に電話がかかります"><svg aria-hidden="true"><use href="#i-tel"/></svg>000-0000-0000</a>
+  </nav>
+</div>
 </header>
 
 <main id="top">
-<section class="hero">
-  <img src="img/hero.jpg" alt="木のカウンターに並ぶ料理と日本酒" width="1200" height="800">
-  <div class="inner">
-    <h1 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">旬の​肴と、<br>ちょうど​いい​一杯。</span></h1>
-    <p>駅から歩いて2分。カウンター8席と個室2部屋の、小さな居酒屋です。仕事帰りのひとり飲みから、<span class="nb">宴会まで。</span></p>
-    <div class="cta">
-      <a href="#" class="btn btn-red btn-lg" data-sample="ここにネット予約のページが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">ネットで​予約する</span></a>
-      <a href="tel:000-0000-0000" class="btn btn-line-w btn-lg" data-sample="スマホではここを押すとお店に電話がかかります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">電話で​予約する</span></a>
-    </div>
-    <p class="hours">営業 <span class="nb">17:00〜24:00（L.O. 23:00）</span>／ <span class="nb">日曜定休</span></p>
-  </div>
-</section>
-
-<section class="sec" id="news">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux>お知らせ</h2></div>
-    <ul class="news">
-      <li><time>2026.11.10</time><span><span class="tag">宴会</span>忘年会のご予約を受け付けています。12月の金・土は埋まりやすいのでお早めに。</span></li>
-      <li><time>2026.11.01</time><span><span class="tag">新メニュー</span>冬季限定「牡蠣と白菜の土鍋ご飯」はじめました。</span></li>
-      <li><time>2026.10.20</time><span><span class="tag">営業</span>年末年始の営業日のお知らせ（12/30〜1/3 休業）</span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="sec dark" id="kodawari">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">ひよりびの​こだわり</span></h2></div>
-    <div class="kodawari">
-      <img src="img/k1.jpg" alt="板前が魚をさばく手元" loading="lazy" width="600" height="600">
-      <ol>
-        <li><h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">朝どれの​魚</span></h3><p>毎朝、市場で店主が目利きした魚だけを仕入れています。その日のおすすめは黒板でご案内。</p></li>
-        <li><h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">だしから​手づくり</span></h3><p>だし巻き玉子もおでんも、昆布とかつお節でひいた一番だしから。やさしい味わいです。</p></li>
-        <li><h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">料理に​合う​地酒</span></h3><p>全国の地酒を常時15種類。料理に合わせたおすすめもお気軽にどうぞ。</p></li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="menu">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux>お品書き</h2></div>
-    <div class="dishes">
-      <div class="dish"><img src="img/d1.jpg" alt="旬の刺身の盛り合わせ" loading="lazy" width="600" height="600"><h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">旬の​刺身 五種盛り</span></h3><p>その日の朝どれから</p><b>¥1,680</b></div>
-      <div class="dish"><img src="img/d2.jpg" alt="だし巻き玉子" loading="lazy" width="600" height="600"><h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">だし​巻き玉子</span></h3><p>注文を受けてから焼きます</p><b>¥680</b></div>
-      <div class="dish"><img src="img/d3.jpg" alt="鶏の唐揚げ" loading="lazy" width="600" height="600"><h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">名物 鶏の​唐揚げ</span></h3><p>しょうが醤油の二度揚げ</p><b>¥780</b></div>
-      <div class="dish"><img src="img/d4.jpg" alt="土鍋の炊き込みご飯" loading="lazy" width="600" height="600"><h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">季節の​土鍋ご飯</span></h3><p>2〜3人前・炊き上がり30分</p><b>¥1,480</b></div>
-    </div>
-    <div class="drinks">
-      <div><h3 data-budoux>ビール・サワー</h3><dl><dt data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">生ビール​（中）</span></dt><dd>¥600</dd></dl><dl><dt data-budoux>瓶ビール</dt><dd>¥700</dd></dl><dl><dt data-budoux>レモンサワー</dt><dd>¥500</dd></dl><dl><dt data-budoux>ハイボール</dt><dd>¥500</dd></dl></div>
-      <div><h3 data-budoux>日本酒</h3><dl><dt data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">本日の​地酒​（一合）</span></dt><dd>¥750〜</dd></dl><dl><dt data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">飲み​比べ三種</span></dt><dd>¥1,200</dd></dl><dl><dt data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">熱燗​（一合）</span></dt><dd>¥600</dd></dl></div>
-      <div><h3 data-budoux>焼酎・<span class="nb">ソフトドリンク</span></h3><dl><dt data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">芋・麦​（グラス）</span></dt><dd>¥550〜</dd></dl><dl><dt data-budoux>ウーロン茶</dt><dd>¥350</dd></dl><dl><dt data-budoux>自家製<span class="nb">ジンジャーエール</span></dt><dd>¥450</dd></dl></div>
-    </div>
-    <p class="note">※価格はすべて税込です（金額はサンプルです）</p>
-  </div>
-</section>
-
-<section class="sec dark" id="course">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux>宴会コース</h2></div>
-    <div class="course-top">
-      <img src="img/course.jpg" alt="宴会コースの料理が並んだ座卓" loading="lazy" width="1200" height="800">
-      <div>
-        <h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">忘年会・​新年会、<br><em>4名様から</em>​承ります。</span></h3>
-        <p>すべて2時間飲み放題付き。個室は最大10名様まで。アレルギーや苦手な食材は、ご予約時にお知らせください。</p>
+  <section class="hero" aria-label="酒と肴 ひよりび">
+    <img class="hero__ph" src="img/counter.webp" width="1200" height="800" alt="木のカウンターに刺身の皿と徳利とお猪口。奥に器の並ぶ棚と行灯" fetchpriority="high">
+    <div class="hero__in">
+      <h1 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">旬の​肴と、<br>ちょうど​いい​一杯。</span></h1>
+      <p class="hero__lead" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">〇〇駅 西口から​歩いて​2分。​カウンター8席と​小上がり2卓の、​小さな​居酒屋です。​仕事帰りの​ひとり飲みから、​宴会まで。</span></p>
+      <div class="hero__cta">
+        <a class="btn btn--yoyaku" href="#" data-sample="ここにお店のネット予約のページが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">ネットで​予約する</span></a>
+        <a class="btn btn--denwa" href="tel:000-0000-0000" data-sample="スマホではここを押すとお店に電話がかかります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">電話で​予約する</span></a>
       </div>
+      <p class="hero__hours"><span class="nw">営業 17:00〜24:00（L.O. 23:00）</span>／<span class="nw">日曜定休（祝前日は営業）</span></p>
     </div>
-    <div class="plans">
-      <div class="plan"><h4 data-budoux>竹コース</h4><p class="price">¥4,000<small>税込</small></p><p class="meta">全6品・飲み放題2時間</p><ul><li>前菜三種</li><li>刺身三種盛り</li><li>名物 鶏の唐揚げ</li><li>季節の焼き物</li><li>土鍋ご飯</li><li>甘味</li></ul></div>
-      <div class="plan pop"><h4 data-budoux>松コース</h4><p class="price">¥5,000<small>税込</small></p><p class="meta">全7品・飲み放題2時間</p><ul><li>前菜三種</li><li>刺身五種盛り</li><li>だし巻き玉子</li><li>名物 鶏の唐揚げ</li><li>季節の鍋</li><li>土鍋ご飯</li><li>甘味</li></ul></div>
-      <div class="plan"><h4 data-budoux>特選コース</h4><p class="price">¥6,500<small>税込</small></p><p class="meta">全8品・飲み放題2.5時間</p><ul><li>先付</li><li>刺身七種盛り</li><li>和牛の炙り</li><li>天ぷら盛り合わせ</li><li>季節の鍋</li><li>土鍋ご飯</li><li>甘味</li><li>地酒も飲み放題</li></ul></div>
-    </div>
-    <p class="note">※コース内容は仕入れにより変わります（内容・金額はサンプルです）</p>
-    <div class="center"><a href="#" class="btn btn-red btn-lg" data-sample="ここに宴会予約のページが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">宴会を​予約する</span></a></div>
-  </div>
-</section>
+  </section>
 
-<section class="sec alt" id="room">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux>店内・個室</h2></div>
-    <div class="room">
-      <img src="img/room.jpg" alt="掘りごたつの個室" loading="lazy" width="1200" height="800">
-      <div>
-        <div class="seats">
-          <div><b>8</b><span>カウンター席</span></div>
-          <div><b>12</b><span>テーブル席</span></div>
-          <div><b>2</b><span>個室（4〜10名）</span></div>
+  <aside class="oshirase" aria-label="お知らせ" data-assumed>
+    <div class="oshirase__in">
+      <h2 class="oshirase__t" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">年末年始の​お休み</span></h2>
+      <p data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">12月30日から</span><span class="nw">​1月3日まで​休みます。</span><span class="nw">​年明けは​1月4日の​17時から、</span><span class="nw">​のれんを​出します。</span></span></p>
+    </div>
+  </aside>
+
+  <section class="sec sec--yoru" id="yoru">
+    <div class="sec__head">
+      <p class="tag" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">ひよりびの​夜</span></p>
+      <h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">のれんを​くぐって、<span class="nw"><em>​まずは​一杯</em>。</span></span></h2>
+    </div>
+    <ul class="yoru">
+      <li class="yoru__card" data-budoux>
+        <div class="yoru__ph">
+          <img src="img/noren-in.webp" width="1200" height="800" alt="店の中から見た、紺ののれんと格子戸" loading="lazy">
+          <p class="maru" data-assumed data-budoux><small>お通し</small><b><i>440</i>円</b><small>おひとり</small></p>
         </div>
-        <p>掘りごたつの個室は、足を伸ばしてゆっくりくつろげます。接待や顔合わせにもご利用ください。全席禁煙（店外に喫煙所あり）。</p>
+        <div class="yoru__tx">
+          <h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">まずは、<span class="nw">​お通しと​一杯。</span></span></h3>
+          <p data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">席に​着いたら、​季節の​小鉢を​ひとつ出します。​燗酒でも、​生ビールでも。</span></p>
+        </div>
+      </li>
+      <li class="yoru__card" data-budoux>
+        <div class="yoru__ph">
+          <img src="img/grill.webp" width="1200" height="800" alt="炭の上の網で焼いている焼き鳥。ねぎま、つくね" loading="lazy">
+        </div>
+        <div class="yoru__tx">
+          <h3 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">串は、<span class="nw">​目の前で​焼きます。</span></span></h3>
+          <p data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">焼き場を​囲む​L字の​カウンターです。​串が​焼けるのを​見ながら、​一杯どうぞ。</span></p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="sec sec--menu" id="shinagaki">
+    <div class="sec__head">
+      <p class="tag" data-budoux>品書き</p>
+      <h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">焼きものから、<span class="nw"><em>​締め</em>まで。</span></span></h2>
+      <p class="sec__lead" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">値段は​すべて​税込です。</span></p>
+    </div>
+    <div class="menu">
+      <article class="mcard mcard--yaki">
+        <div class="mcard__ph">
+          <img src="img/yakitori.webp" width="640" height="799" alt="炭で焼いた焼き鳥の3本盛り。ねぎま、つくね、もも" loading="lazy">
+          <p class="maru" data-assumed data-budoux><small>一本</small><b><i>200</i>円</b><small>から</small></p>
+        </div>
+        <div class="mcard__tx">
+          <h3 class="mcard__t" data-budoux>焼きもの</h3>
+          <p class="mcard__note" data-assumed data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">炭で​焼きます。​塩かたれで。</span></p>
+          <ul class="mlist">
+            <li data-assumed data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span>もも</span><b>​220<small>円</small></b></span></li>
+            <li data-assumed data-budoux><span>ねぎま</span><b>220<small>円</small></b></li>
+            <li data-assumed data-budoux><span>つくね</span><b>250<small>円</small></b></li>
+            <li data-assumed data-budoux><span>皮</span><b>200<small>円</small></b></li>
+            <li data-assumed data-budoux><span>砂肝</span><b>200<small>円</small></b></li>
+            <li data-assumed data-budoux><span>手羽先</span><b>280<small>円</small></b></li>
+            <li data-assumed data-budoux><span>3本盛り</span><b>640<small>円</small></b></li>
+            <li data-assumed data-budoux><span>5本盛り</span><b>980<small>円</small></b></li>
+          </ul>
+        </div>
+      </article>
+      <article class="mcard mcard--sashi">
+        <div class="mcard__ph">
+          <img src="img/sashimi.webp" width="640" height="799" alt="刺身の3種盛り" loading="lazy">
+        </div>
+        <div class="mcard__tx">
+          <h3 class="mcard__t" data-budoux>刺身</h3>
+          <ul class="mlist">
+            <li data-assumed data-budoux><span>刺身3種盛り</span><b>1,280<small>円</small></b></li>
+            <li data-assumed data-budoux><span>刺身5種盛り</span><b>1,980<small>円</small></b></li>
+            <li data-assumed data-budoux><span>しめ鯖</span><b>780<small>円</small></b></li>
+          </ul>
+        </div>
+      </article>
+      <article class="mcard mcard--sakana">
+        <div class="mcard__ph">
+          <img src="img/dashimaki.webp" width="640" height="799" alt="大根おろしを添えた、だし巻き玉子" loading="lazy">
+        </div>
+        <div class="mcard__tx">
+          <h3 class="mcard__t" data-budoux>肴</h3>
+          <ul class="mlist">
+            <li data-assumed data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span>だし​巻き玉子</span><b>680<small>円</small></b></span></li>
+            <li data-assumed data-budoux><span>ポテトサラダ</span><b>480<small>円</small></b></li>
+            <li data-assumed data-budoux><span>冷やしトマト</span><b>420<small>円</small></b></li>
+            <li data-assumed data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span>鶏の​唐揚げ</span><b>720<small>円</small></b></span></li>
+            <li data-assumed data-budoux><span>厚揚げ焼き</span><b>520<small>円</small></b></li>
+            <li data-assumed data-budoux><span>漬物盛り</span><b>450<small>円</small></b></li>
+          </ul>
+        </div>
+      </article>
+      <article class="mcard mcard--shime">
+        <div class="mcard__ph">
+          <img src="img/donabe.webp" width="640" height="799" alt="きのこと鶏の土鍋ご飯" loading="lazy">
+          <p class="maru maru--kon" data-assumed data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><small>炊き上がりまで</small><b><i>​30</i>分</b></span></p>
+        </div>
+        <div class="mcard__tx">
+          <h3 class="mcard__t" data-budoux>締め</h3>
+          <p class="mcard__note" data-assumed data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">土鍋ご飯は、​きの​こと鶏で、​1合です。</span></p>
+          <ul class="mlist">
+            <li data-assumed data-budoux><span>土鍋ご飯</span><b>1,480<small>円</small></b></li>
+            <li data-assumed data-budoux><span>焼きおにぎり</span><b>380<small>円</small></b></li>
+            <li data-assumed data-budoux><span>お茶漬け</span><b>520<small>円</small></b></li>
+          </ul>
+        </div>
+      </article>
+      <article class="mcard mcard--drink" id="ippai">
+        <div class="mcard__ph mcard__ph--zu">
+          <svg class="tokkuri" viewBox="0 0 200 160" aria-hidden="true">
+            <path class="tk-a" d="M62 28h36v10c0 10-6 16-6 26 0 8 18 20 18 46v18c0 8-6 14-14 14H64c-8 0-14-6-14-14v-18c0-26 18-38 18-46 0-10-6-16-6-26z"/>
+            <path class="tk-b" d="M60 22h40v9H60z"/>
+            <path class="tk-a" d="M124 104h48l-5 30c-1 5-5 8-10 8h-18c-5 0-9-3-10-8z"/>
+            <path class="tk-c" d="M80 4c-6 6 6 8 0 15M148 80c-6 6 6 8 0 16"/>
+          </svg>
+          <p class="maru" data-assumed data-budoux><small>生ビール</small><b><i>580</i>円</b></p>
+        </div>
+        <div class="mcard__tx">
+          <h3 class="mcard__t" data-budoux>飲み物</h3>
+          <ul class="mlist mlist--two">
+            <li data-assumed data-budoux><span>生ビール</span><b>580<small>円</small></b></li>
+            <li data-assumed data-budoux><span>瓶ビール</span><b>680<small>円</small></b></li>
+            <li data-assumed data-budoux><span>燗酒 1合</span><b>620<small>円</small></b></li>
+            <li data-assumed data-budoux><span>冷酒 1合</span><b>780<small>円</small></b></li>
+            <li data-assumed data-budoux><span>地酒 1合</span><b>880<small>円</small></b></li>
+            <li data-assumed data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span>焼酎 芋か​麦</span><b>520<small>円</small></b></span></li>
+            <li data-assumed data-budoux><span>ハイボール</span><b>480<small>円</small></b></li>
+            <li data-assumed data-budoux><span>レモンサワー</span><b>480<small>円</small></b></li>
+            <li data-assumed data-budoux><span>梅酒</span><b>520<small>円</small></b></li>
+            <li data-assumed data-budoux><span>ウーロン茶</span><b>320<small>円</small></b></li>
+          </ul>
+          <p class="mcard__foot" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span data-assumed="">お通しは、​おひとり440円です。</span>​20歳未満の​方と、​車を​運転される​方には、​お酒を​出せません。</span></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <aside class="yoyaku" aria-label="予約">
+    <div class="yoyaku__in">
+      <div class="yoyaku__tx">
+        <p class="tag tag--sumi" data-budoux>ご予約</p>
+        <p class="yoyaku__t" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">今夜の​席は、<span class="nw">​電話で​どうぞ。</span></span></p>
+        <p class="yoyaku__note" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">電話の​受付は 15:00〜23:00、​日曜を​除きます。<span class="nw">​ネット予約は​24時間​受け付けます。</span></span></p>
+      </div>
+      <div class="cta-col">
+        <a class="btn btn--tel btn--sumi" href="tel:000-0000-0000" data-sample="スマホではここを押すとお店に電話がかかります" data-budoux><svg aria-hidden="true"><use href="#i-tel"/></svg><span><small>電話で予約</small><b>000-0000-0000</b></span></a>
+        <div class="cta-pair">
+          <a class="btn btn--net" href="#" data-sample="ここにお店のネット予約のページが入ります" data-budoux><svg aria-hidden="true"><use href="#i-cal"/></svg><span>ネットで予約</span></a>
+          <a class="btn btn--line" href="https://line.me/R/ti/p/%40000aaaaa" data-sample="ここにお店のLINEが入ります" data-budoux><svg aria-hidden="true"><use href="#i-line"/></svg><span>LINEで予約</span></a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </aside>
 
-<section class="sec" id="access">
-  <div class="inner">
-    <div class="sh"><h2 data-budoux>店舗情報</h2></div>
-    <div class="info-wrap">
-      <div class="info">
-        <dl><dt data-budoux>店名</dt><dd>酒と肴 ひよりび</dd></dl>
-        <dl><dt data-budoux>住所</dt><dd>〇〇県〇〇市〇〇町4-5-6 1F</dd></dl>
-        <dl><dt data-budoux>アクセス</dt><dd>〇〇駅 西口から徒歩2分</dd></dl>
-        <dl><dt data-budoux>営業時間</dt><dd>17:00〜24:00（L.O. 23:00）</dd></dl>
-        <dl><dt data-budoux>定休日</dt><dd>日曜日（祝前日は営業）</dd></dl>
-        <dl><dt data-budoux>席数</dt><dd>30席（個室2部屋）</dd></dl>
-        <dl><dt data-budoux>お支払い</dt><dd>現金・クレジットカード・QRコード決済</dd></dl>
+  <section class="sec sec--seki" id="seki">
+    <div class="seki">
+      <picture class="seki__ph">
+        <source media="(min-width: 900px)" srcset="img/hero.webp" width="800" height="1200">
+        <img src="img/room.webp" width="1440" height="960" alt="灯りの下の店内。木のカウンターと、燗酒の徳利" loading="lazy">
+      </picture>
+      <div class="seki__body">
+      <div class="sec__head">
+        <p class="tag" data-budoux>席</p>
+        <h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">おひとりなら、<span class="nw"><em>​カウンター</em>へ。</span></span></h2>
+        <p class="sec__lead" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">焼き場が​目の前です。​4名からは、​奥の​小上がりへ​どうぞ。</span></p>
       </div>
-      <div class="map" aria-label="地図（サンプル）"><i class="pin"></i><span>ここにGoogleマップが入ります</span></div>
+      <ul class="suji">
+        <li data-budoux>
+          <p class="suji__k" data-budoux>カウンター</p>
+          <p class="suji__n" data-budoux><b>8</b>席</p>
+          <p class="suji__d" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">おひとり、​おふたりで。​焼き場を​囲む​L字です。</span></p>
+        </li>
+        <li data-budoux>
+          <p class="suji__k" data-budoux>小上がり</p>
+          <p class="suji__n" data-budoux><b>2</b>卓</p>
+          <p class="suji__d" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">掘り​ごたつです。<span data-assumed="">​1卓に​4〜5名。</span>​つなげると​10名まで​座れます。</span></p>
+        </li>
+        <li data-budoux>
+          <p class="suji__k" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">たば​こ</span></p>
+          <p class="suji__n suji__n--word" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">全席禁​煙</span></p>
+          <p class="suji__d" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">灰皿は​店の​外に​置いています。</span></p>
+        </li>
+      </ul>
+      <figure class="seki__map" data-assumed>
+        <svg viewBox="0 0 400 282" role="img" aria-label="席の図。入口ののれんを入って左に焼き場とL字のカウンター8席、奥に小上がり2卓">
+          <rect class="m-room" x="6" y="6" width="388" height="244" rx="6"/>
+          <rect class="m-agari" x="204" y="18" width="178" height="80" rx="4"/>
+          <rect class="m-table" x="222" y="34" width="62" height="48" rx="3"/>
+          <rect class="m-table" x="302" y="34" width="62" height="48" rx="3"/>
+          <rect class="m-yakiba" x="22" y="22" width="84" height="172"/>
+          <rect class="m-hi" x="46" y="84" width="34" height="56" rx="4"/>
+          <path class="m-counter" d="M106 22 H126 V214 H22 V194 H106 Z"/>
+          <g class="m-seat"><circle cx="144" cy="38" r="8"/><circle cx="144" cy="70" r="8"/><circle cx="144" cy="102" r="8"/><circle cx="144" cy="134" r="8"/><circle cx="144" cy="166" r="8"/><circle cx="40" cy="232" r="8"/><circle cx="72" cy="232" r="8"/><circle cx="104" cy="232" r="8"/></g>
+          <g class="m-noren"><rect x="252" y="244" width="76" height="3" class="m-rod"/><rect x="255" y="247" width="22" height="22"/><rect x="279" y="247" width="22" height="22"/><rect x="303" y="247" width="22" height="22"/></g>
+          <text x="64" y="62" text-anchor="middle" class="m-t m-t--on">焼き場</text>
+          <text x="164" y="176" class="m-t">カウンター 8席</text>
+          <text x="293" y="122" text-anchor="middle" class="m-t">小上がり 2卓</text>
+          <text x="336" y="270" class="m-t m-t--s">入口</text>
+        </svg>
+        <figcaption data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">入口は​紺ののれん。<span class="nw">​入って​左が​カウンター、</span><span class="nw">​奥が​小上がりです。</span></span></figcaption>
+      </figure>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="sec dark" id="reserve">
-  <div class="inner reserve">
-    <div class="sh"><h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">ご予約・​お問い合わせ</span></h2></div>
-    <p class="small">お電話でのご予約</p>
-    <a href="tel:000-0000-0000" class="tel" data-sample="スマホではここを押すとお店に電話がかかります">000-0000-0000</a>
-    <p class="small">受付 15:00〜23:00（日曜除く）</p>
-    <div class="cta">
-      <a href="#" class="btn btn-red btn-lg" data-sample="ここにネット予約のページが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">ネットで​予約する​（24時間）</span></a>
-      <a href="#" class="btn btn-line-w btn-lg" data-sample="ここにお店のLINEが入ります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">LINEで​問い合わせる</span></a>
+  <section class="sec sec--enkai" id="enkai">
+    <div class="sec__head">
+      <p class="tag" data-budoux>宴会</p>
+      <h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">大勢の​日は、<span class="nw"><em>​小上がり</em>で。</span></span></h2>
+      <p class="sec__lead" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">掘り​ごたつの​2卓を​つなげて、​10名まで。​どの​コースも、​飲み放題付きです。</span></p>
     </div>
-  </div>
-</section>
+    <div class="enkai__ph">
+      <img src="img/koagari.webp" width="1200" height="800" alt="小上がり。掘りごたつの座卓が2つ並び、座布団が置いてある" loading="lazy">
+    </div>
+    <ul class="courses">
+      <li class="course" data-budoux>
+        <h3 data-budoux>竹</h3>
+        <p class="course__price" data-budoux><b>4,000</b>円</p>
+        <p class="course__time" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">2時間の​飲み放題付き</span></p>
+        <p class="course__what" data-assumed data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">お通し、​刺身3種盛り、​焼き鳥3本、​だし​巻き玉子、​鶏の​唐揚げ、​漬物盛り、​焼きおにぎりの​7品。</span></p>
+      </li>
+      <li class="course" data-budoux>
+        <h3 data-budoux>松</h3>
+        <p class="course__price" data-budoux><b>5,000</b>円</p>
+        <p class="course__time" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">2時間の​飲み放題付き</span></p>
+        <p class="course__what" data-assumed data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">竹の​刺身が​5種盛りに、​焼き鳥が​5本に、​締めが​土鍋ご飯に​替わります。</span></p>
+      </li>
+      <li class="course course--toku" data-budoux>
+        <h3 data-budoux>特選</h3>
+        <p class="course__price" data-budoux><b>6,500</b>円</p>
+        <p class="course__time" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">2時間半、​地酒も​飲み放題</span></p>
+        <p class="course__what" data-assumed data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">料理は​松と​同じ。​地酒まで​飲めて、​30分長く​座れます。</span></p>
+      </li>
+    </ul>
+    <p class="enkai__terms" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">値段は​おひとり分で、​税込です。<span data-assumed="">​予約は​前日の​20時までに。​キャンセル料は、​前日が​半額、​当日は​全額です。</span></span></p>
+    <div class="cta-row cta-row--center">
+      <a class="btn btn--tel" href="tel:000-0000-0000" data-sample="スマホではここを押すとお店に電話がかかります" data-budoux><svg aria-hidden="true"><use href="#i-tel"/></svg><span><small>宴会を電話で相談</small><b>000-0000-0000</b></span></a>
+      <a class="btn btn--net" href="#" data-sample="ここにお店のネット予約のページが入ります" data-budoux><svg aria-hidden="true"><use href="#i-cal"/></svg><span>ネットで予約</span></a>
+      <a class="btn btn--line" href="https://line.me/R/ti/p/%40000aaaaa" data-sample="ここにお店のLINEが入ります" data-budoux><svg aria-hidden="true"><use href="#i-line"/></svg><span>LINEで予約</span></a>
+    </div>
+  </section>
+
+  <section class="sec sec--basho" id="basho">
+    <div class="sec__head">
+      <p class="tag tag--kon" data-budoux>場所</p>
+      <h2 data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">紺ののれんが、<span class="nw"><em>​目印</em>です。</span></span></h2>
+      <p class="sec__lead" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">〇〇駅 西口から、​徒歩2分です。</span></p>
+    </div>
+    <div class="basho">
+      <div class="basho__ph">
+        <img src="img/entrance.webp" width="800" height="1200" alt="夜の路地。紺ののれんと格子戸、足もとに行灯" loading="lazy">
+      </div>
+      <div class="basho__tx">
+        <ol class="michi" data-assumed>
+          <li data-budoux><p data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">〇〇駅の​西口を​出て、​左へ。</span></p></li>
+          <li data-budoux><p data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">最初の​角を​曲がって、​路地に​入ります。</span></p></li>
+          <li data-budoux><p data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">紺ののれんが​見えたら、​そこです。​1階です。</span></p></li>
+        </ol>
+        <div class="weekbox">
+          <ul class="week" aria-label="月曜から土曜は営業、日曜は休み"><li data-budoux><b>月</b></li><li data-budoux><b>火</b></li><li data-budoux><b>水</b></li><li data-budoux><b>木</b></li><li data-budoux><b>金</b></li><li data-budoux><b>土</b></li><li class="is-off" data-budoux><b>日</b></li></ul>
+          <p data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">の​れんが​出ている​日は、​17:00〜24:00。​ラストオーダーは​23:00です。​日曜は​休みますが、​祝前日の​日曜は​開けます。</span></p>
+        </div>
+        <dl class="terms">
+          <div><dt data-budoux>住所</dt><dd data-budoux>〇〇県〇〇市〇〇町4-5-6 1F</dd></div>
+          <div><dt data-budoux>電話</dt><dd data-budoux><a class="tel nw" href="tel:000-0000-0000" data-sample="スマホではここを押すとお店に電話がかかります">000-0000-0000</a><span class="terms__note">受付 <span class="nw">15:00〜23:00</span>　<span class="nw">日曜を除く</span></span></dd></div>
+          <div><dt data-budoux>予約</dt><dd data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">電話、​ネット予約、​LINE。​ネット予約は​24時間​受け付けます。</span></dd></div>
+          <div><dt data-budoux>支払い</dt><dd data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">現金、​クレジットカード、​QRコード決済</span></dd></div>
+        </dl>
+        <a class="btn btn--map" href="#" data-sample="ここにGoogleマップが入ります" data-budoux><svg aria-hidden="true"><use href="#i-pin"/></svg><span>地図を開く</span></a>
+      </div>
+    </div>
+  </section>
+
+  <aside class="shime" aria-label="ご来店">
+    <div class="noren noren--big" aria-hidden="true"><i>ひ</i><i>よ</i><i>り</i><i>び</i></div>
+    <div class="shime__in">
+      <p class="shime__t" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="nw">のれんを​出して、</span><span class="nw">​お待ちしています。</span></span></p>
+      <p class="shime__note" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">17:00〜24:00、​日曜休み。<span class="nw">​〇〇駅 西口から​徒歩2分です。</span></span></p>
+      <div class="cta-row cta-row--center">
+        <a class="btn btn--tel" href="tel:000-0000-0000" data-sample="スマホではここを押すとお店に電話がかかります" data-budoux><svg aria-hidden="true"><use href="#i-tel"/></svg><span><small>電話で予約</small><b>000-0000-0000</b></span></a>
+        <a class="btn btn--net" href="#" data-sample="ここにお店のネット予約のページが入ります" data-budoux><svg aria-hidden="true"><use href="#i-cal"/></svg><span>ネットで予約</span></a>
+        <a class="btn btn--line" href="https://line.me/R/ti/p/%40000aaaaa" data-sample="ここにお店のLINEが入ります" data-budoux><svg aria-hidden="true"><use href="#i-line"/></svg><span>LINEで予約</span></a>
+      </div>
+    </div>
+  </aside>
 </main>
 
-<footer class="ft">
-  <div class="inner">
-    <div class="ft-row">
-      <div>
-        <a href="#top" class="logo">酒と肴 ひよりび</a>
-        <div class="sns"><a href="#" data-sample="ここにお店のInstagramが入ります">Instagram</a><a href="#" data-sample="ここにお店のLINEが入ります">LINE</a></div>
-      </div>
-      <p>© 酒と肴 ひよりび（架空の店舗）</p>
-    </div>
-    <div class="flash-cta">
-      <p>このホームページは <b>Flash</b> の見本です。<br>お店の写真と文章に差し替えて、月額9,900円でお作りします。</p>
-      <div class="row">
-        <a href="https://line.me/R/ti/p/@667amiig" class="btn btn-line" target="_blank" rel="noopener" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">Flashに LINEで​相談する</span></a>
-        <a href="https://flash22hp-del.github.io/" class="btn btn-flash" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">Flashの​ページを​見る</span></a>
-      </div>
-    </div>
+<footer class="site-foot">
+  <p class="site-foot__name" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><small>酒と​肴</small> ひよりび</span></p>
+  <div class="site-foot__facts">
+    <p data-budoux><span class="k">営業</span><span class="nw">17:00〜24:00</span>　<span class="nw">L.O. 23:00</span></p>
+    <p data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere"><span class="k">休み</span>日曜日　<span class="nw">祝前日は​営業</span></span></p>
+    <p data-budoux><span class="k">住所</span>〇〇県〇〇市〇〇町4-5-6 1F</p>
   </div>
+  <p class="note" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">20歳未満の​方の​飲酒は、​法律で​禁じられています。</span></p>
+  <p class="note" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">© 酒と​肴 ひよりび　架空の​店です。<span class="nw">​この​ホームページは</span><span class="nw">​Flash の​見本です。</span><a href="https://flash22hp-del.github.io/">​Flash の​ページを​見る</a></span></p>
 </footer>
 
-<div class="float" id="float">
-  <a href="tel:000-0000-0000" class="btn btn-dark" data-sample="スマホではここを押すとお店に電話がかかります" data-budoux><span style="word-break:keep-all;overflow-wrap:anywhere">電話で​予約</span></a>
-  <a href="#" class="btn btn-red" data-sample="ここにネット予約のページが入ります" data-budoux>ネット予約</a>
-</div>
-<div class="toast" id="toast" role="status"></div>
+<nav class="sticky-cta" aria-label="予約">
+  <a class="btn btn--tel" href="tel:000-0000-0000" data-sample="スマホではここを押すとお店に電話がかかります" data-budoux><svg aria-hidden="true"><use href="#i-tel"/></svg><span><b>000-0000-0000</b></span></a>
+  <a class="btn btn--net" href="#" data-sample="ここにお店のネット予約のページが入ります" data-budoux><span>ネット予約</span></a>
+  <a class="btn btn--line" href="https://line.me/R/ti/p/%40000aaaaa" data-sample="ここにお店のLINEが入ります" data-budoux><span>LINE</span></a>
+</nav>
 
+<div class="toast" id="toast" role="status"></div>
 <script>
-// 見本用：お店のリンクが入る場所を押したら説明を出す（実際の納品では href を差し替えて data-sample を消す）
 const toast = document.getElementById("toast");
 let timer;
 const showToast = (msg) => {
@@ -374,10 +396,6 @@ const showToast = (msg) => {
 document.querySelectorAll("[data-sample]").forEach((a) => {
   a.addEventListener("click", (e) => { e.preventDefault(); showToast(a.dataset.sample); });
 });
-// SP: 最初の画面を過ぎたら下部の予約ボタンを出す
-const fl = document.getElementById("float");
-new IntersectionObserver(([e]) => fl.classList.toggle("show", !e.isIntersecting))
-  .observe(document.querySelector(".hero .cta"));
 </script>
 </body>
 </html>

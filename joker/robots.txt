@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://flash22hp-del.github.io/joker/sitemap.xml
