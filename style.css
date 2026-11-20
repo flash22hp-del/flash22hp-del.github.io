@@ -507,7 +507,8 @@ small { font-size: inherit; }
   .tag-yen .y { font-size: 1.125rem; }
   .tag-yen { gap: 2px 3px; }
   .tag-yen .yen { font-size: 9.4vw; }
-  .plan-yen .n { font-size: 11.5vw; }
+  .plan-yen .n { font-size: 11vw; }
+  .plan-yen { gap: 2px 3px; }
   .plan-yen .m { font-size: 0.9375rem; }
   .plan-yen .t { font-size: 0.75rem; }
   .plan-spec { padding-inline: 16px; }
