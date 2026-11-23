@@ -364,3 +364,5 @@ a:focus-visible,summary:focus-visible{outline:3px solid currentColor;outline-off
   .ft-in{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1.2fr) auto;gap:48px}
   .ft-cta{flex-direction:column}
 }
+/* 見出しの改行位置を固定する（2026-11-23。書体の読み込み前後で行数が変わり、下が押し下げられていた） */
+@media (min-width:768px){.br-sp{display:none}}

@@ -748,3 +748,6 @@ em { font-style: normal; }
 }
 .obi li > span { display: contents; }
 .obi small, .obi b { display: block; }
+/* 下のページの頭の帯（2〜3項目）: 項目の数だけ等幅に並べる。PC は中身の幅（2026-11-23） */
+.obi--ph { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); margin-block-start: 6px; }
+@media (min-width: 900px) { .obi--ph { inline-size: auto; } }

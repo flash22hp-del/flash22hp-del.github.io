@@ -239,7 +239,7 @@ li > span[style*="keep-all"]:only-child, .maru > span[style*="keep-all"]:only-ch
 
 /* 席 */
 .sec--seki { background: var(--sumi); padding-block-start: 0; }
-.seki__ph img { inline-size: calc(100% + var(--gutter) * 2); max-inline-size: none; margin-inline: calc(var(--gutter) * -1); block-size: clamp(230px, 56vw, 420px); object-fit: cover; object-position: 50% 60%; }
+.seki__ph img { inline-size: calc(100% + var(--gutter) * 2); max-inline-size: none; margin-inline: calc(var(--gutter) * -1); block-size: clamp(230px, 56vw, 420px); object-fit: cover; object-position: 50% 74%; }
 .seki__body { position: relative; margin-block-start: -34px; }
 .sec--seki .sec__head { margin-block-end: 28px; }
 .sec--seki .tag { box-shadow: 0 0 0 5px var(--sumi); }
