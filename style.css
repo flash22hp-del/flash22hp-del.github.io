@@ -667,3 +667,204 @@ small { font-size: inherit; }
 
 /* BudouX の包み（span）を、横並びの値段の行では素通しにする（月額・数字・円の間の空きを保つ） */
 .top-price > span:only-child { display: contents; }
+
+
+/* ==== 2026-11-25 作り直し（本人 OK）: ページ全体の作り（試作 lp-design-try/site/craft.css をそのまま） ==== */
+/* ページ全体の作り（2026-11-25 試作・本人「進めて」）。料金の段（fee2.css）で決めた作りを、ほかの段にも広げる
+   1) 質感: 太い黒枠＋ずらした黒い影は、押すボタン（LINE・見本を開く・選択肢・やめる月）だけに残す。
+            箱・板は「白い板＋細い線＋柔らかい影」に。業種の札も箱として扱う
+   2) 文字の強弱: 説明の文は普通の太さ。太いのは見出し・名前・値段・値・ボタンだけ
+   3) 色: 黒×黄はそのまま。薄い黄はトークの地・相談の帯・「どのプランにも」だけ
+   4) 余白: 段の上下を広く
+   1画面目（本人が選んだ壁）は、説明の文の太さだけ変える。見出しの組み方は段ごとに違うまま（中央に置くのは料金の段だけ） */
+
+:root {
+  --c-line: #ebe9e3;
+  --c-sub: #5b5b5b;
+  --c-tint: #fff9dc;
+  --c-shadow: 0 1px 2px rgba(20, 20, 20, 0.06), 0 10px 28px rgba(20, 20, 20, 0.09);
+  --c-shadow-up: 0 1px 2px rgba(20, 20, 20, 0.06), 0 16px 34px rgba(20, 20, 20, 0.13);
+  --section-y: clamp(72px, 10vw, 128px);
+}
+
+/* ---- ヘッダー ---- */
+.hd { box-shadow: 0 1px 0 var(--c-line); }
+.hd-what { font-weight: 400; }
+
+/* ---- 1画面目: 説明の文の太さだけ ---- */
+.top-note, .top-lead { font-weight: 400; }
+
+/* ---- 見本: 業種の札は白い板。選んだ札は墨地に黄の字＋黄の縁 ---- */
+.pk { border: 1px solid var(--c-line); border-radius: 16px; box-shadow: var(--c-shadow); }
+.pk img { border-block-end: 0; }
+.pk:hover { transform: translateY(-2px); box-shadow: var(--c-shadow-up); }
+.pk[aria-pressed="true"] { background: var(--ink); color: var(--yellow); border-color: var(--ink); transform: none; box-shadow: 0 0 0 3px var(--yellow), var(--c-shadow); }
+.shows { border-block-start: 0; padding-block-start: clamp(12px, 2vw, 28px); }
+.dev-cap { border: 1px solid var(--c-line); box-shadow: var(--c-shadow); }
+.tag-price { border-block-start: 1px solid var(--c-line); }
+.tag-price dt { font-weight: 400; color: var(--c-sub); }
+
+/* ---- 頼み方: 手順は白い板。頭は白、トークの部分は薄い黄の地（吹き出しが浮く） ---- */
+.talk-say .them .bub { font-weight: 400; }
+.step { background: var(--white); border: 1px solid var(--c-line); border-radius: 20px; box-shadow: var(--c-shadow); }
+.step-head { background: var(--white); border-block-end: 1px solid var(--c-line); border-radius: 20px 20px 0 0; }
+.step-body { background: var(--c-tint); border-radius: 0 0 20px 20px; }
+.log-more { font-weight: 400; }
+
+/* ---- 相談の帯: 枠と硬い影をやめ、薄い黄の面だけ ---- */
+.band-in { background: var(--c-tint); border: 0; border-radius: 24px; box-shadow: none; }
+.band-co { font-weight: 400; }
+.band-co b { border-width: 1px; }
+.go-qrbox { border: 1px solid var(--c-line); box-shadow: var(--c-shadow); }
+
+/* ---- 最初の1通: 道具の外枠は白い板。頭の墨の帯はそのまま ---- */
+.first { border: 1px solid var(--c-line); box-shadow: var(--c-shadow); }
+.first-bar p { font-weight: 400; color: #e2e2e2; }
+.q-rest { font-weight: 400; color: var(--c-sub); }
+
+/* ---- 締め ---- */
+.ask-lead, .ask-co { font-weight: 400; }
+/* 電話の札（11/25）: 主役の LINE のボタンの下に、白い板で。番号は押すと電話がかかる */
+.ask-tel { display: inline-grid; justify-items: center; gap: 4px; min-inline-size: min(100%, 360px); padding: 14px 28px 16px; border-radius: 22px; background: var(--white); color: var(--ink); text-decoration: none; }
+.ask-tel:hover .ask-tel-n { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.2em; }
+.ask-tel-l { font: 800 0.9375rem/1.4 var(--font-head); font-feature-settings: "palt"; }
+.ask-tel-n { display: flex; align-items: center; gap: 8px; font: 800 clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem)/1.15 var(--font-head); letter-spacing: 0.02em; white-space: nowrap; }
+.ask-tel-n .ic { inline-size: 28px; block-size: 28px; flex: none; }
+.ask-tel-h { font-size: 0.8125rem; line-height: 1.5; color: var(--c-sub); text-align: center; }
+.ask-tel-hl { margin-inline-end: 0.4em; } /* 「受付」と時刻の間は空白文字でなく余白で空ける（英数字と日本語の間に手で空白を入れない決まり） */
+.ask-tel-note { font-size: 0.875rem; line-height: 1.7; color: #e2e2e2; max-inline-size: 30em; }
+@media (max-width: 760px) {
+  .ask-tel { inline-size: 100%; padding-inline: 16px; }
+  .ask-tel-n { font-size: min(1.75rem, 8vw); }
+}
+
+
+/* ==== 2026-11-25 作り直し（本人 OK）: 料金の段（試作 lp-design-try/site/fee2.css をそのまま） ==== */
+/* 料金の段の試作（2026-11-24・2周目 11/25）。中身は公開版と同じで、作りだけを変える
+   1) 質感: 太い黒枠＋ずらした黒い影をやめ、白い板＋柔らかい影。硬い影はボタンだけに残す
+   2) 文字の強弱: 太いのは見出し・プラン名・値段・値だけ。説明は普通の太さ
+   3) 絵: ライトの見本をパソコンとスマホの枠に入れ、黄の台に載せて値段と結びつける
+   4) 余白: 見出しの周りと板の間を広く
+   2周目: 地は白（灰色はくすむ）／作り方の一言と見本をプランの板の中へ／PC は決まりを横並びに
+   黒地に黄の大きな値段・丸い札・端末の枠（本人が好きなもの）は残す */
+
+.fee2 {
+  --f2-line: #ebe9e3;
+  --f2-sub: #5b5b5b;
+  --f2-tint: #fff9dc;
+  --f2-shadow: 0 1px 2px rgba(20, 20, 20, 0.06), 0 10px 28px rgba(20, 20, 20, 0.09);
+  background: var(--white);
+  padding-block: clamp(72px, 10vw, 128px);
+}
+
+/* 見出し: 中央に置き、周りを空ける。黄は文字の下の帯（マーカー）だけ */
+.f2-head { display: grid; justify-items: center; text-align: center; gap: 14px; margin-block-end: clamp(32px, 4.4vw, 52px); }
+.f2-label { display: inline-block; padding: 4px 16px; border-radius: 999px; background: var(--ink); color: var(--yellow); font: 800 0.8125rem/1.6 var(--font-head); letter-spacing: 0.08em; }
+.fee2 .f2-head h2 { font: 800 clamp(1.75rem, 1.1rem + 2.8vw, 3rem)/1.45 var(--font-head); font-feature-settings: "palt"; letter-spacing: 0.01em; }
+.f2-mark { background: linear-gradient(transparent 64%, var(--yellow) 64%, var(--yellow) 92%, transparent 92%); padding-inline: 2px; }
+.f2-lead { font-weight: 400; font-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem); line-height: 1.8; color: #333; }
+
+/* 見本の絵: パソコンとスマホの枠を、黄の台に載せる */
+.f2-show { display: grid; justify-items: center; gap: 16px; margin-block-end: clamp(40px, 5.4vw, 64px); }
+.f2-devices { position: relative; isolation: isolate; inline-size: min(100%, 640px); padding: 0 12% 0 0; }
+.f2-devices::before { /* 黄の台 */
+  content: ""; position: absolute; z-index: -1; inset-inline: -5%; inset-block: 46% -34px;
+  background: var(--yellow); border-radius: 24px;
+}
+.f2-pc { background: #1e1e1e; border-radius: 14px 14px 4px 4px; padding: clamp(6px, 1vw, 10px); box-shadow: var(--f2-shadow); }
+.f2-pc img { display: block; inline-size: 100%; block-size: auto; border-radius: 4px; }
+.f2-pc::after { /* パソコンの台 */
+  content: ""; position: absolute; inset-inline: -3% 9%; inset-block-end: -10px; block-size: 10px;
+  background: linear-gradient(#d9d8d4, #b9b8b3); border-radius: 0 0 14px 14px;
+}
+.f2-sp { position: absolute; inset-inline-end: 0; inset-block-end: -18px; inline-size: 27%; background: #1e1e1e; border-radius: clamp(14px, 2.4vw, 24px); padding: clamp(3px, 0.6vw, 6px); box-shadow: 0 14px 30px rgba(20, 20, 20, 0.22); }
+.f2-sp img { display: block; inline-size: 100%; block-size: auto; border-radius: clamp(11px, 2vw, 19px); }
+.f2-show figcaption { margin-block-start: 50px; font-size: 0.875rem; line-height: 1.7; color: var(--f2-sub); text-align: center; }
+.f2-show figcaption b { color: var(--ink); }
+
+/* プラン: 3枚の板。上は黒地に黄の大きな値段、その下に作り方の一言、決まり、見本。行の高さは3枚でそろえる */
+.f2-plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(7, auto); gap: 0 clamp(8px, 2vw, 24px); }
+.f2-plan { display: grid; grid-row: span 7; grid-template-rows: subgrid; background: var(--white); border: 1px solid var(--f2-line); border-radius: 20px; box-shadow: var(--f2-shadow); overflow: hidden; }
+.f2-top { background: var(--ink); color: var(--white); text-align: center; padding: clamp(18px, 2.2vw, 28px) 8px clamp(18px, 2.2vw, 26px); }
+.f2-name { font: 800 clamp(0.875rem, 0.7rem + 0.7vw, 1.25rem)/1.3 var(--font-head); font-feature-settings: "palt"; }
+.f2-price { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; column-gap: 3px; margin-block-start: clamp(10px, 1.2vw, 14px); color: var(--yellow); font-family: var(--font-head); font-weight: 800; font-feature-settings: "palt"; line-height: 1; white-space: nowrap; }
+.f2-price small { inline-size: 100%; margin-block-end: 6px; color: #cfcfcf; font: 400 clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem)/1.2 var(--font-body); } /* 12px 以上（11/25 移し替えで 11px を直した） */
+.f2-price b { font-size: clamp(1.375rem, 0.6rem + 3.6vw, 3.5rem); letter-spacing: -0.02em; }
+.f2-price span { font-size: clamp(0.8125rem, 0.7rem + 0.5vw, 1.375rem); }
+.f2-desc { display: flex; align-items: center; justify-content: center; padding: 14px 10px; text-align: center; font-size: clamp(0.8125rem, 0.78rem + 0.2vw, 0.9375rem); line-height: 1.6; border-block-end: 1px solid var(--f2-line); } /* 白地: 行数が違っても空きが目立たない */
+.f2-spec { display: contents; }
+.f2-spec > div { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 12px 8px; text-align: center; }
+.f2-spec > div + div { border-block-start: 1px solid var(--f2-line); }
+.f2-spec dt { font-size: 0.8125rem; line-height: 1.4; color: var(--f2-sub); }
+.f2-spec dd { font-weight: 700; font-size: clamp(0.9375rem, 0.85rem + 0.4vw, 1.125rem); line-height: 1.45; word-break: keep-all; overflow-wrap: anywhere; } /* 折れるのは <wbr> の所だけ */
+.f2-spec dd small { display: block; font-weight: 400; font-size: 0.8125rem; line-height: 1.45; color: var(--f2-sub); }
+.f2-spec > .f2-sample { gap: 6px; padding-block: 14px 16px; } /* ほかの行と同じく上下中央（注記の長いスタンダードと高さがそろって見える） */
+.f2-sample dt { padding: 0 10px; border-radius: 999px; background: var(--yellow); color: var(--ink); font: 800 0.75rem/1.75 var(--font-head); }
+.f2-sample dd { font-weight: 400; font-size: 0.875rem; line-height: 1.6; }
+.f2-sample dd small { margin-block-start: 4px; font-size: 0.8125rem; line-height: 1.55; } /* スマホでも 13px（表の字の基準） */
+
+/* どのプランにも: 薄い黄の面 */
+.f2-incl { margin-block-start: clamp(16px, 2.4vw, 28px); background: var(--f2-tint); border-radius: 20px; padding: clamp(20px, 3vw, 32px) clamp(18px, 3vw, 36px); }
+.f2-incl h3 { font: 800 clamp(1.0625rem, 0.95rem + 0.5vw, 1.375rem)/1.4 var(--font-head); font-feature-settings: "palt"; }
+.f2-incl ul { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-block-start: 14px; }
+.f2-incl li { display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+.f2-incl .ic { flex: none; inline-size: 24px; block-size: 24px; padding: 4px; border-radius: 50%; background: var(--ink); color: var(--yellow); }
+.f2-incl small { display: block; font-size: 0.8125rem; color: var(--f2-sub); }
+.fee2 .fee-note { margin-block-start: 18px; color: var(--f2-sub); }
+
+/* やめた月の早見: 黒い板はそのまま。説明の太さだけ普通に */
+.fee2 .quit { box-shadow: var(--f2-shadow); }
+.fee2 .rule-end, .fee2 .calc-sum dt { font-weight: 400; }
+
+/* 支払いと解約: 白い板に */
+.fee2 .terms-box { background: var(--white); border: 1px solid var(--f2-line); border-radius: 20px; box-shadow: var(--f2-shadow); padding: clamp(22px, 3.2vw, 40px) clamp(18px, 3.2vw, 40px) clamp(18px, 2.6vw, 32px); }
+.fee2 .terms { border-block-start: 0; }
+.fee2 .terms > div { border-block-end-color: var(--f2-line); }
+.fee2 .terms > div:last-child { border-block-end: 0; }
+.fee2 .fee-terms { font-weight: 400; color: var(--f2-sub); }
+
+/* PC: 板が広いので、決まりは左に項目・右に値の横並び（間延びを防ぐ） */
+@media (min-width: 1000px) {
+  .f2-desc { padding: 16px 24px; }
+  .f2-spec > div { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 16px; padding: 15px 24px; text-align: start; }
+  .f2-spec dt { flex: none; font-size: 0.875rem; }
+  .f2-spec dd { text-align: end; }
+  .f2-spec > .f2-sample { align-items: center; padding-block: 15px 18px; }
+  .f2-sample dt { margin-block-start: 2px; }
+  .f2-sample dd { flex: 1; text-align: start; }
+}
+
+@media (min-width: 761px) {
+  .f2-paren { white-space: nowrap; } /* 板に幅があるときは括弧の中で折らない */
+}
+
+@media (max-width: 760px) {
+  .f2-head { gap: 12px; }
+  .fee2 .f2-head h2 { font-size: min(1.75rem, 7.2vw); }
+  .f2-devices { padding-inline-end: 14%; }
+  .f2-devices::before { inset-inline: -2%; inset-block-end: -26px; border-radius: 18px; }
+  .f2-sp { inline-size: 29%; inset-block-end: -14px; }
+  .f2-show figcaption { margin-block-start: 40px; }
+  .f2-plans { gap: 0 6px; }
+  .f2-plan { border-radius: 14px; }
+  .f2-top { padding: 16px 4px 18px; }
+  .f2-price { margin-block-start: 10px; column-gap: 1px; }
+  .f2-price small { margin-block-end: 5px; }
+  .f2-price b { font-size: min(1.375rem, 5.6vw); }
+  .f2-desc { padding: 12px 5px; font-size: 0.8125rem; line-height: 1.55; }
+  .f2-spec > div { padding: 10px 4px; }
+  .f2-spec dd { font-size: 0.875rem; }
+  .f2-sample dd { font-size: 0.8125rem; }
+  .f2-incl ul { flex-direction: column; gap: 10px; }
+  .fee2 .terms-box { padding-inline: 16px; }
+}
+
+@media (max-width: 360px) {
+  .f2-name { font-size: min(0.875rem, 4vw); white-space: nowrap; } /* 「スタンダード」を1行に */
+  .f2-price b { font-size: 5.2vw; } /* 板の幅が約89px。「24,800円」を1行に */
+  .f2-desc { padding-inline: 3px; font-size: min(0.8125rem, 3.5vw); } /* 「テンプレートを」を1行に */
+  .f2-spec > div { padding-inline: 2px; }
+  .f2-spec dd { font-size: 0.75rem; } /* 「10ページまで」を1行に */
+  .f2-sample dd { font-size: min(0.8125rem, 3.7vw); }
+  .f2-sample dd small { font-size: 0.75rem; } /* 板の幅が約89px */
+}
