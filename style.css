@@ -966,3 +966,15 @@ small { font-size: inherit; }
 /* 2026-11-25 料金の板から「6か月一括」の行を外した（本人「6か月支払いみたいなやつもいらん」）。行の数を 7 → 6 に */
 .f2-plans { grid-template-rows: repeat(6, auto); }
 .f2-plan { grid-row: span 6; }
+
+/* 2026-11-25 売りを本人の言葉に: 「高クオリティなホームページが、制作費0円。」「月額9,900円から」「運用管理・修正込み」 */
+.top h1 .top-sub { font-size: 0.62em; margin-block-end: 6px; }
+.top-main { display: block; font-size: 1.4em; line-height: 1.12; }
+.top-terms .top-tag { font-size: 1rem; padding: 10px 18px; }
+.band-co { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.band-co-i { display: inline-flex; align-items: center; white-space: nowrap; }
+.ask-mail-l { margin-inline-end: 0.6em; }
+@media (max-width: 760px) { .top-terms .top-tag { font-size: 0.875rem; padding: 8px 14px; } }
+
+/* 帯の中の電話番号: 見た目はそのまま、押せる範囲だけ上下に広げる（44px 以上） */
+.band-co-i a { display: inline-block; padding-block: 11px; margin-block: -11px; }
