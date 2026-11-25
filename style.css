@@ -693,6 +693,15 @@ small { font-size: inherit; }
 
 /* ---- 1画面目: 説明の文の太さだけ ---- */
 .top-note, .top-lead { font-weight: 400; }
+/* 11/25 丸い札2つを外して1画面目が約126px 縮み、次の見出しが下の固定ボタンに半分隠れた。
+   スマホは1画面目を画面の高さいっぱいにし、文字は下に寄せる（空いた上は見本の壁が見える）。
+   壁を暗くする帯は、文字の組（.top-in）の頭を起点にして、外す前と同じ所から暗くなるようにする */
+@media (max-width: 760px) {
+  .top { display: flex; flex-direction: column; min-block-size: calc(100vh - var(--hd-h)); min-block-size: calc(100svh - var(--hd-h)); }
+  .top::after { background: none; }
+  .top-in { margin-block-start: auto; }
+  .top-in::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, rgba(30, 30, 30, 0) 0, rgba(30, 30, 30, 0.2) 100px, var(--ink) 250px); }
+}
 
 /* ---- 見本: 業種の札は白い板。選んだ札は墨地に黄の字＋黄の縁 ---- */
 .pk { border: 1px solid var(--c-line); border-radius: 16px; box-shadow: var(--c-shadow); }
@@ -710,6 +719,7 @@ small { font-size: inherit; }
 .step-head { background: var(--white); border-block-end: 1px solid var(--c-line); border-radius: 20px 20px 0 0; }
 .step-body { background: var(--c-tint); border-radius: 0 0 20px 20px; }
 .log-more { font-weight: 400; }
+@media (min-width: 900px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } } /* 11/25 04「やめるとき」を外し、02・03 の2枚（3列だと穴が空く） */
 
 /* ---- 相談の帯: 枠と硬い影をやめ、薄い黄の面だけ ---- */
 .band-in { background: var(--c-tint); border: 0; border-radius: 24px; box-shadow: none; }
@@ -819,7 +829,7 @@ small { font-size: inherit; }
 .fee2 .terms { border-block-start: 0; }
 .fee2 .terms > div { border-block-end-color: var(--f2-line); }
 .fee2 .terms > div:last-child { border-block-end: 0; }
-.fee2 .fee-terms { font-weight: 400; color: var(--f2-sub); }
+.fee2 .fee-terms { font-weight: 400; color: var(--f2-sub); margin-block-start: 6px; font-size: 0.875rem; line-height: 1.75; } /* 11/25 支払いと解約の欄を外し、利用規約へのリンクだけ注記の下に */
 
 /* PC: 板が広いので、決まりは左に項目・右に値の横並び（間延びを防ぐ） */
 @media (min-width: 1000px) {

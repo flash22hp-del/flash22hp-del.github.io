@@ -84,34 +84,4 @@
   showPanel(answers["業種"], false);
   render();
 
-  // やめた月の早見（毎月払い）。利用規約 第7条: 最低契約期間は6か月。6か月より前にやめるときは、6か月に足りない月の月額をまとめて払う
-  const MIN_MONTHS = 6;
-  const Z = "\u200B"; // 文節の切れ目（iPhone で語の途中で折れないように、注記の文に入れておく）
-  const NOTE_EARLY = ["6か月目の", "終わりまで", "公開して、", "解約に", "なります。"].join(Z);
-  const NOTE_FREE = ["次回の", "お支払い日の", "前日までに", "連絡すれば、", "お支払い済みの", "期間が", "終わった", "ところで", "解約に", "なります。"].join(Z);
-  const planButtons = $$(".qp");
-  const monthButtons = $$(".qm");
-  const fmt = (n) => n.toLocaleString("ja-JP");
-  let quit = { plan: planButtons[0].dataset.plan, yen: Number(planButtons[0].dataset.yen), month: 2 };
-  const renderQuit = () => {
-    const rest = Math.max(MIN_MONTHS - quit.month, 0); // 6か月に足りない月数
-    const paid = quit.yen * quit.month;
-    const due = quit.yen * rest;
-    planButtons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.plan === quit.plan)));
-    monthButtons.forEach((b) => b.setAttribute("aria-pressed", String(Number(b.dataset.m) === quit.month)));
-    $("#calcPlan").textContent = quit.plan;
-    $("#calcMonth").textContent = `${quit.month}か月`;
-    $("#calcPaidM").textContent = `${quit.month}か月分`;
-    $("#calcPaid").textContent = fmt(paid);
-    $("#calcDueM").textContent = rest > 0 ? `残り${rest}か月分` : "追加のお支払い";
-    $("#calcDue").textContent = rest > 0 ? fmt(due) : "なし";
-    $("#calcDueY").hidden = rest === 0;
-    $("#calcTotalM").textContent = `${quit.month + rest}か月分`;
-    $("#calcTotal").textContent = fmt(paid + due);
-    $("#calcNote").textContent = rest > 0 ? NOTE_EARLY : NOTE_FREE;
-  };
-  const setQuit = (patch) => { quit = { ...quit, ...patch }; renderQuit(); };
-  planButtons.forEach((b) => b.addEventListener("click", () => setQuit({ plan: b.dataset.plan, yen: Number(b.dataset.yen) })));
-  monthButtons.forEach((b) => b.addEventListener("click", () => setQuit({ month: Number(b.dataset.m) })));
-  renderQuit();
 })();
