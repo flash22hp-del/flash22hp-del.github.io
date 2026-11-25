@@ -731,9 +731,7 @@ small { font-size: inherit; }
 .ask-tel-n { display: flex; align-items: center; gap: 8px; font: 800 clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem)/1.15 var(--font-head); letter-spacing: 0.02em; white-space: nowrap; }
 .ask-tel-n .ic { inline-size: 28px; block-size: 28px; flex: none; }
 .ask-tel-h { font-size: 0.8125rem; line-height: 1.5; color: var(--c-sub); text-align: center; }
-.ask-tel-hl { margin-inline-end: 0.4em; } /* 「受付」と時刻の間は空白文字でなく余白で空ける（英数字と日本語の間に手で空白を入れない決まり） */
-.ask-tel-note { font-size: 0.875rem; line-height: 1.7; color: #e2e2e2; max-inline-size: 30em; }
-@media (max-width: 760px) {
+.ask-tel-hl { margin-inline-end: 0.4em; } /* 「受付」と時刻の間は空白文字でなく余白で空ける（英数字と日本語の間に手で空白を入れない決まり） */@media (max-width: 760px) {
   .ask-tel { inline-size: 100%; padding-inline: 16px; }
   .ask-tel-n { font-size: min(1.75rem, 8vw); }
 }
