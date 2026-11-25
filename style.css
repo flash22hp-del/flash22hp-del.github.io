@@ -962,3 +962,7 @@ small { font-size: inherit; }
   .faq-a { padding: 0 14px 16px; column-gap: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { .faq-i summary::after { transition: none; } }
+
+/* 2026-11-25 料金の板から「6か月一括」の行を外した（本人「6か月支払いみたいなやつもいらん」）。行の数を 7 → 6 に */
+.f2-plans { grid-template-rows: repeat(6, auto); }
+.f2-plan { grid-row: span 6; }
